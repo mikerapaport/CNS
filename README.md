@@ -1,2 +1,2 @@
 # CNS
-A nonprofit project to help make the Chenango Nursery School's registration process into a Web App
+A nonprofit project to help make the Chenango Nursery School's registration process into a Web App.
