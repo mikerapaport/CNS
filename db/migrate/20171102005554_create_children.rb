@@ -21,7 +21,7 @@ class CreateChildren < ActiveRecord::Migration[5.1]
       t.boolean :w6
       t.boolean :w7
       t.boolean :w8
-      t.primary_key :parent_id
+      t.integer :parent_id
 
       t.timestamps
     end
