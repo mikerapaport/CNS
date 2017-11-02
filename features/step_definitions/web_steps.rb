@@ -76,9 +76,16 @@ end
 # TODO: Add support for checkbox, select or option
 # based on naming conventions.
 #
+# When /^(?:|I )fill in the following:$/ do |fields|
+#   fields.rows_hash.each do |name, value|
+#     When %{I fill in "#{name}" with "#{value}"}
+#   end
+# end
+
 When /^(?:|I )fill in the following:$/ do |fields|
   fields.rows_hash.each do |name, value|
-    When %{I fill in "#{name}" with "#{value}"}
+    #When %{I fill in "#{name}" with "#{value}"}
+    fill_in(name, :with => value)
   end
 end
 
@@ -226,7 +233,7 @@ Then /^the "([^"]*)" checkbox(?: within (.*))? should not be checked$/ do |label
     end
   end
 end
- 
+
 Then /^(?:|I )should be on (.+)$/ do |page_name|
   current_path = URI.parse(current_url).path
   if current_path.respond_to? :should
@@ -240,8 +247,8 @@ Then /^(?:|I )should have the following query string:$/ do |expected_pairs|
   query = URI.parse(current_url).query
   actual_params = query ? CGI.parse(query) : {}
   expected_params = {}
-  expected_pairs.rows_hash.each_pair{|k,v| expected_params[k] = v.split(',')} 
-  
+  expected_pairs.rows_hash.each_pair{|k,v| expected_params[k] = v.split(',')}
+
   if actual_params.respond_to? :should
     actual_params.should == expected_params
   else
@@ -251,4 +258,24 @@ end
 
 Then /^show me the page$/ do
   save_and_open_page
+end
+
+Given /^these Children/ do |table|
+    table.hashes.each do |h|
+        Child.create!(h)
+    end
+end
+
+When /^I write "(.+)" in "(.+)"$/ do |comments, form_field|
+    fill_in('comments', :with => :comments)
+end
+
+Then /^I should see that "(.+)" has a dob of "(.+)"$/ do |name, info|
+    row = all('.child').find('tr') { |el| el.text =~ Regexp.new(name) }
+    expect(row.find('.dob').text).to eq info
+end
+
+Then /^I should see that "(.+)" is registered for "(.+)"$/ do |name, days|
+    row = all('.child').find('tr') { |el| el.text =~ Regexp.new(name) }
+    expect(row.find('.days').text).to eq days
 end
