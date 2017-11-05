@@ -12,6 +12,32 @@
 
 ActiveRecord::Schema.define(version: 20171103170659) do
 
+  create_table "children", force: :cascade do |t|
+    t.string "name"
+    t.string "dob"
+    t.string "daylength"
+    t.boolean "monday"
+    t.boolean "tuesday"
+    t.boolean "wednesday"
+    t.boolean "thursday"
+    t.boolean "friday"
+    t.string "infant_tod"
+    t.text "comments"
+    t.integer "after_school_len"
+    t.boolean "attending_rec_program"
+    t.boolean "w1"
+    t.boolean "w2"
+    t.boolean "w3"
+    t.boolean "w4"
+    t.boolean "w5"
+    t.boolean "w6"
+    t.boolean "w7"
+    t.boolean "w8"
+    t.integer "parent_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
