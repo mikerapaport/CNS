@@ -45,7 +45,7 @@ group :development do
   gem 'spring-commands-rspec'
 end
 group :development, :test do
-  gem 'cucumber'
+  gem 'cucumber-rails', :require => false
   gem 'factory_girl_rails'
   gem 'faker'
   gem 'rspec-rails'
@@ -56,5 +56,6 @@ group :production do
 end
 group :test do
   gem 'database_cleaner'
+  gem 'simplecov', :require => false
   gem 'launchy'
 end
