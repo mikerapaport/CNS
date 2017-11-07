@@ -8,13 +8,6 @@ Feature: Display a child's schedule
       | name           | dob        | program  | days           | hours                        | comments |
       | Mike Rapaport  | 10/10/1995 | ?????    | M, T, W, Th, F | "Full Day (7:30AM - 5:30PM)" |          |
 
-      %p= "Date of Birth: #{@child.dob}"
-      %p= "Enrolled in #{@child.program}" #Should add program field
-      %p= "Days of week enrolled: #{@days}"
-      %p= "Time enrolled: #{@hours}"
-      %p= "Comments: #{@child.comments}"
-      =link_to("Back to Parent page", parent_path)
-
   Scenario: Child has a full schedule
     Given I am on the parents page
     When I follow "View Schedule"
