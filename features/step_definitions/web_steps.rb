@@ -266,8 +266,15 @@ Given /^these Children/ do |table|
     end
 end
 
+Given /^these Parents/ do |table|
+    table.hashes.each do |h|
+        Parent.create!(h)
+    end
+end
+
+
 When /^I write "(.+)" in "(.+)"$/ do |comments, form_field|
-    fill_in('comments', :with => :comments)
+    fill_in(form_field, :with => comments)
 end
 
 Then /^I should see that "(.+)" has a dob of "(.+)"$/ do |name, info|

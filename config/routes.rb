@@ -4,4 +4,6 @@ Rails.application.routes.draw do
   resources :parents
   resources :children
 
+  root "parents#index"
+
 end

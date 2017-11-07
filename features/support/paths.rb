@@ -24,6 +24,15 @@ module NavigationHelpers
         when /^the create new child page$/
             self.send(["new", "child"].push('path').join('_').to_sym)
 
+        when /^the parents page$/
+            self.send(["parents"].push('path').join('_').to_sym)
+
+        when /^the create new parent page$/
+            self.send(["new", "parent"].push('path').join('_').to_sym)
+
+        when /^the update parent page$/
+            self.send(["edit", "parent"].push('path').join('_').to_sym)
+
     else
       begin
         page_name =~ /^the (.*) page$/
