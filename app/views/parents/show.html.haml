@@ -1,0 +1,41 @@
+%h1 Parent Portal
+
+-if flash[:warning]
+    %h1= "#{flash[:warning]}"
+
+-if flash[:notice]
+    %h1= "#{flash[:notice]}"
+
+%table
+    %caption
+        Parent details for
+        %span.parent_name= @parent.name
+
+
+    %tr
+        %th Name
+        %th Home Address
+        %th Primary Phone Number
+        %th Secondary Phone Number
+        %th Primary Email
+        %th Secondary Email
+
+    %tr
+        %td= "#{@parent.name}"
+        %td= "#{@parent.address}"
+        %td= "#{@parent.phone}"
+        %td= "#{@parent.cell}"
+        %td= "#{@parent.email}"
+        %td= "#{@parent.email2}"
+
+=link_to("Edit parent info", edit_parent_path(@parent))
+
+%table
+    %tr
+        %th Name
+        %th DOB
+
+    -@children.each do |x|
+        %tr
+            %td= x.name
+            %td= x.dob

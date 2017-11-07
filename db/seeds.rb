@@ -5,3 +5,8 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+Parent.delete_all
+
+Parent.create!(:name => "Sam Burt", :address => "25 Brettwood Rd", :phone => "617 784 0617", :email => "sburt@gmail.com")
+Parent.create!(:name => "John Peterson", :address => "25 Brettwood Rd", :phone => "617 784 0617", :email => "sburt@gmail.com")
