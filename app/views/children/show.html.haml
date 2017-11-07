@@ -1,9 +1,0 @@
-#main.container
-  %h3.header #{@child.name}
-
-  %p= "Date of Birth: #{@child.dob}"
-  %p= "Enrolled in #{@child.program}" #Should add program field
-  %p= "Days of week enrolled: #{@days}"
-  %p= "Time enrolled: #{@hours}"
-  %p= "Comments: #{@child.comments}"
-  =link_to("Back to Parent page", parent_path)
