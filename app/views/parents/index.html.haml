@@ -1,0 +1,13 @@
+%h1 All Parents
+
+-if flash[:notice]
+    %h3= "#{flash[:notice]}"
+
+%table
+    %tr
+        %th name
+    -@parents.each do |x|
+        %tr
+            %th= link_to("#{x.name}", parent_path(x))
+
+=link_to("New parent", new_parent_path)

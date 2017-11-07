@@ -1,4 +1,4 @@
-Feature: Create a new rental property
+Feature: Create a new child
   As parent
   so that I can register my child for CNS
   I want to be able to select the correct registration form and fill it out

@@ -3,16 +3,18 @@ class CreateChildren < ActiveRecord::Migration[5.1]
     create_table :children do |t|
       t.string :name
       t.string :dob
-      t.string :daylength
+      t.string :program
+      t.string :time
+      # t.string :daylength
       t.boolean :monday
       t.boolean :tuesday
       t.boolean :wednesday
       t.boolean :thursday
       t.boolean :friday
-      t.string :infant_tod
+      # t.string :infant_tod
       t.text :comments
-      t.integer :after_school_len
-      t.boolean :attending_rec_program
+      # t.integer :after_school_len
+      # t.boolean :attending_rec_program
       t.boolean :w1
       t.boolean :w2
       t.boolean :w3
