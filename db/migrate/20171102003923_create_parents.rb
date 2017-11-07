@@ -7,6 +7,7 @@ class CreateParents < ActiveRecord::Migration[5.1]
       t.string :cell
       t.string :email
       t.string :email2
+      t.integer :user_id
 
       t.timestamps
     end

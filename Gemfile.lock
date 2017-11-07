@@ -347,6 +347,7 @@ DEPENDENCIES
   devise
   factory_girl_rails
   faker
+  haml
   haml-rails
   high_voltage
   html2haml
