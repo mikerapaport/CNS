@@ -16,9 +16,8 @@ class ParentsController < ApplicationController
     def create
         p = Parent.new(create_update_params)
         if p.save
-            if check_valid_info = false
+            if !(check_valid_info)
                 redirect_to edit_parent_path(p) and return
-                return
             end
             flash[:notice] = "New parent '#{p.name}' created"
             redirect_to parents_path and return
@@ -37,7 +36,7 @@ class ParentsController < ApplicationController
         id = params[:id]
         p = Parent.find(id)
         if !(check_valid_info())
-            redirect_to parents_path(p) and return
+            redirect_to parent_path(p) and return
         end
         p.update(create_update_params)
         if p.save
@@ -57,25 +56,25 @@ class ParentsController < ApplicationController
         def check_valid_info()
             parent_hash = params[:parent]
             if !(parent_hash[:email] =~ /.+@.+\..+/)
-                flash[:warning] = "Error, invalid email #{params[:email]}"
+                flash[:warning] = "Error, invalid email"
                 return false
             end
             if !(parent_hash[:email2].nil?) && !(parent_hash[:email2] =~ /.+@.+\..+/)
                 flash[:warning] = "Error, invalid secondary email"
                 return false
             end
-            if parent_hash[:name].nil?
-                flash[:warning] = "Error, invalid name"
-                return false
-            end
-            if parent_hash[:address].nil?
-                flash[:warning] = "Error, invalid address"
-                return false
-            end
-            if parent_hash[:phone].nil?
-                flash[:warning] = "Error, invalid phone"
-                return false
-            end
+            # if parent_hash[:name].nil?
+            #     flash[:warning] = "Error, invalid name"
+            #     return false
+            # end
+            # if parent_hash[:address].nil?
+            #     flash[:warning] = "Error, invalid address"
+            #     return false
+            # end
+            # if parent_hash[:phone].nil?
+            #     flash[:warning] = "Error, invalid phone"
+            #     return false
+            # end
             return true
         end
     #end #May not need this end

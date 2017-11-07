@@ -1,5 +1,8 @@
 -if flash[:warning]
-    %h2= #{flash[:warning]}
+    %h2= "#{flash[:warning]}"
+
+-if flash[:notice]
+    %h2= "#{flash[:notice]}"
 
 %h2 Update or correct parent information
 

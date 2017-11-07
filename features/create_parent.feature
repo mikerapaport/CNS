@@ -19,3 +19,14 @@ Feature: Create a new parent
     And I press "Create Parent"
     Then I should be on the parents page
     And I should see "New parent 'mark' created"
+
+  Scenario: Create a new parent with an invalid email
+    Given I am on the create new parent page
+    When I fill in the following:
+          | Name                   | Jayson Taytum                 |
+          | Primary Phone Number   | 1234234                       |
+          | Address                | 13 oak drive                  |
+
+    When I write "123412skljagdlf" in "Primary Email"
+    And I press "Create Parent"
+    And I should see "Error, invalid email"

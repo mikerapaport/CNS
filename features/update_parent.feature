@@ -20,3 +20,20 @@ Feature: Update an existing parent profile
     And I press "Update Parent"
     Then I should see "411"
     And I should see "meals@wheels.com"
+
+  Scenario: Updating a parent with an invalid email address
+    Given I am on the parents page
+    When I follow "Sam Burt"
+    When I follow "Edit parent info"
+    And I fill in "Primary Email" with "notgood.nobueno"
+    And I press "Update Parent"
+    Then I should see "Error, invalid email"
+    And I should see "samcoburt@gmail.com"
+
+  Scenario: Updating a parent with an invalid secondary email address
+    Given I am on the parents page
+    When I follow "Sam Burt"
+    When I follow "Edit parent info"
+    And I fill in "Secondary Email" with "notgood.nobueno"
+    And I press "Update Parent"
+    Then I should see "Error, invalid secondary email"
