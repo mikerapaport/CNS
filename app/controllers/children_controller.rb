@@ -10,7 +10,7 @@ class ChildrenController < ApplicationController
   end
 
   def show
-    id = params[id]
+    id = params[:id]
     @child = Child.find(id)
 
     @days = ""
