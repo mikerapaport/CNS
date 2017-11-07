@@ -59,10 +59,10 @@ class ParentsController < ApplicationController
                 flash[:warning] = "Error, invalid email"
                 return false
             end
-            if !(parent_hash[:email2].nil?) && !(parent_hash[:email2] =~ /.+@.+\..+/)
-                flash[:warning] = "Error, invalid secondary email"
-                return false
-            end
+            # if !(parent_hash[:email2].nil?) && !(parent_hash[:email2] =~ /.+@.+\..+/)
+            #     flash[:warning] = "Error, invalid secondary email"
+            #     return false
+            # end
             # if parent_hash[:name].nil?
             #     flash[:warning] = "Error, invalid name"
             #     return false
