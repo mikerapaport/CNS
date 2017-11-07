@@ -1,97 +1,115 @@
 #main
 
-%h3.header Registration
+  %h3.header Registration
 
-=form_for Child.new do |c|
-  .field
-    =f.label :name "Child's Name"
-    =f.text_field :name
+  =form_for @child, :method => :post do |c|
+    .field
+      =c.label :name, "Child's Name"
+      =c.text_field :name
 
-    =f.label :dob "Date of Birth"
-    =f.date_field
-  .field
-    =f.label :address "Address"
-    =f.text_field :address
+    .field
+      =c.label :dob, "Date of Birth"
+      =c.date_field
 
-    =f.label :phone "Phone"
-    =f.telephone
+    .field
+      =c.label :address, "Address"
+      =c.text_field :address
 
-    =f.label :cell "Cell"
-    =f.telephone
+    .field
+      =c.label :phone, "Phone"
+      =f.telephone
 
-    =f.label :email "Email"
-    =f.email_field :email_field
+    .field
+      =c.label :cell, "Cell"
+      =c.telephone
 
-    =f.label :email2 "Second Email"
-    =f.email_field :email_field
-  .field
-    =f.label :program "Program Enrollment"
-    =f.select options={"10 Month", "Summer"}
+    .field
+      =c.label :email, "Email"
+      =c.email_field :email_field
 
-    =f.label :child_age "Child Class"
-    =f.select options={"Infant", "Early Childhood", "Post HCS Pre-K", "HCS After-school"}
+    .field
+      =c.label :email2, "Second Email"
+      =c.email_field :email_field
 
-    %p 10 Month Program Days
-    =f.label :monday :tuesday :wednesday :thursday :friday "5 Day"
-    =f.check_box :monday :tuesday :wednesday :thursday :friday
+    .field
+      =c.label :program, "Program Enrollment"
+      =c.select options={"10 Month", "Summer"}
 
-    =f.label :monday :wednesday :firday "3 Day"
-    =f.check_box :monday :wednesday :friday
+    .field
+      =c.label :child_age, "Child Class"
+      =c.select options={"Infant", "Early Childhood", "Post HCS Pre-K", "HCS After-school"}
 
-    =f.label :tuesday :thursday "2 Day"
-    =f.check_box :tuesday :thursday
+    .field
+      %p 10 Month Program Days
+      =c.label :monday :tuesday :wednesday :thursday :friday "5 Day"
+      =c.check_box :monday :tuesday :wednesday :thursday :friday
 
-    %p Full Day:    7:30 AM -  5:30 PM
-    %p Half Day:    7:30 AM - 12:30 PM  or  12:30 PM - 5:30 PM
-    %p Post Pre-K:  11:30 AM - 5:30 PM
-    =f.label :time "Day Length"
-    =f.select options={"Full Day", "Half Day Morning", "Half Day Afternoon", "Post HCS Pre-K"}
+    .field
+      =c.label :monday :wednesday :firday "3 Day"
+      =c.check_box :monday :wednesday :friday
 
-    %p After School
-    =f.label :monday "Monday"
-    =f.check_box :monday
+    .field
+      =c.label :tuesday :thursday "2 Day"
+      =c.check_box :tuesday :thursday
 
-    =f.label :tuesday "Tuesday"
-    =f.check_box :tuesday
+      %p Full Day:    7:30 AM -  5:30 PM
+      %p Half Day:    7:30 AM - 12:30 PM  or  12:30 PM - 5:30 PM
+      %p Post Pre-K:  11:30 AM - 5:30 PM
 
-    =f.label :wednesday "Wednesday"
-    =f.check_box :wednesday
+    .field
+      =c.label :time, "Day Length"
+      =c.select options={"Full Day", "Half Day Morning", "Half Day Afternoon", "Post HCS Pre-K"}
 
-    =f.label :thursday "Thursday"
-    =f.check_box :thursday
+    .field
+      %p After School
+      =c.label :monday, "Monday"
+      =c.check_box :monday
 
-    =f.label :friday "Friday"
-    =f.check_box :friday
+    .field
+      =c.label :tuesday, "Tuesday"
+      =c.check_box :tuesday
+    .field
+      =c.label :wednesday, "Wednesday"
+      =c.check_box :wednesday
+    .field
+      =c.label :thursday, "Thursday"
+      =c.check_box :thursday
+    .field
+      =c.label :friday, "Friday"
+      =c.check_box :friday
+      %br
+    .field
+      %p Summer Program
+      =c.label :w1, "Week 1"
+      =c.check_box :w1
+    .field
+      =c.label :w2, "Week 2"
+      =c.check_box :w2
+    .field
+      =c.label :w3, "Week 3"
+      =c.check_box :w3
+    .field
+      =c.label :w4, "Week 4"
+      =c.check_box :w4
+    .field
+      =c.label :w5, "Week 5"
+      =c.check_box :w5
+    .field
+      =c.label :w6, "Week 6"
+      =c.check_box :w6
+    .field
+      =c.label :w7, "Week 7"
+      =c.check_box :w7
+    .field
+      =c.label :w8, "Week 8"
+      =c.check_box :w8
     %br
-    %p Summer Program
-    =f.label :w1 "Week 1"
-    =f.check_box :w1
+    .field
+      =c.label :comments, "Additional Information"
+      =c.text_area :comments
 
-    =f.label :w2 "Week 2"
-    =f.check_box :w2
-
-    =f.label :w3 "Week 3"
-    =f.check_box :w3
-
-    =f.label :w4 "Week 4"
-    =f.check_box :w4
-
-    =f.label :w5 "Week 5"
-    =f.check_box :w5
-
-    =f.label :w6 "Week 6"
-    =f.check_box :w6
-
-    =f.label :w7 "Week 7"
-    =f.check_box :w7
-
-    =f.label :w8 "Week 8"
-    =f.check_box :w8
-  %br
-  =f.label :comments "Additional Information"
-  =f.text_area :comments
-
-  =f.label :signature
-  =f.text_field
-
-  =f.submit
+    .field
+      =c.label :signature
+      =c.text_field
+    .field
+      =c.submit "Register"
