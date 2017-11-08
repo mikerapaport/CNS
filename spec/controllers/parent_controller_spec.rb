@@ -1,4 +1,4 @@
-# # require 'rails_helper'
+# require 'rails_helper'
 # #
 # # RSpec.describe ParentController, type: :controller do
 # #
@@ -22,7 +22,7 @@
 #
 #             #Parent.should_receive(:edit).and_return(p)
 #             p.should_receive(:update).and_return(nil)
-#
+# 
 #             post :update, :parent
 #             response.should redirect_to(edit_parent_path(p))
 #         end
