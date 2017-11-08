@@ -227,6 +227,31 @@
         0,
         0,
         null,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        null,
+        0,
+        0,
+        0,
+        0,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
         0
       ],
       "/Users/ljsubaldo/Documents/Senior Year 2017-2018/Fall Semester 2017/Software Engineering/CNS/app/controllers/parents_controller.rb": [
@@ -437,7 +462,7 @@
         0
       ]
     },
-    "timestamp": 1510077825
+    "timestamp": 1510102973
   },
   "Cucumber Features": {
     "coverage": {
@@ -490,7 +515,7 @@
       ],
       "/Users/ljsubaldo/Documents/Senior Year 2017-2018/Fall Semester 2017/Software Engineering/CNS/app/models/child.rb": [
         1,
-        null,
+        1,
         1,
         null,
         null
@@ -695,6 +720,31 @@
         0,
         0,
         null,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        null,
+        0,
+        0,
+        0,
+        0,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
         0
       ],
       "/Users/ljsubaldo/Documents/Senior Year 2017-2018/Fall Semester 2017/Software Engineering/CNS/app/controllers/users_controller.rb": [
@@ -877,6 +927,6 @@
         0
       ]
     },
-    "timestamp": 1510093995
+    "timestamp": 1510103400
   }
 }

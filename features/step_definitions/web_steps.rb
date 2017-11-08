@@ -272,7 +272,6 @@ Given /^these Parents/ do |table|
     end
 end
 
-
 When /^I write "(.+)" in "(.+)"$/ do |comments, form_field|
     fill_in(form_field, :with => comments)
 end

@@ -9,56 +9,56 @@
 
     .field
       =c.label :dob, "Date of Birth"
-      =c.date_field
+      =c.date_field :dob
 
-    .field
-      =c.label :address, "Address"
-      =c.text_field :address
+    -# .field
+    -#   =c.label :address, "Address"
+    -#   =c.text_field :address
 
-    .field
-      =c.label :phone, "Phone"
-      =f.telephone
+    -# .field
+    -#   =c.label :phone, "Phone"
+    -#   =f.telephone
+    -#
+    -# .field
+    -#   =c.label :cell, "Cell"
+    -#   =c.telephone
+    -#
+    -# .field
+    -#   =c.label :email, "Email"
+    -#   =c.email_field :email_field
+    -#
+    -# .field
+    -#   =c.label :email2, "Second Email"
+    -#   =c.email_field :email_field
 
-    .field
-      =c.label :cell, "Cell"
-      =c.telephone
-
-    .field
-      =c.label :email, "Email"
-      =c.email_field :email_field
-
-    .field
-      =c.label :email2, "Second Email"
-      =c.email_field :email_field
-
-    .field
-      =c.label :program, "Program Enrollment"
-      =c.select options={"10 Month", "Summer"}
-
-    .field
-      =c.label :child_age, "Child Class"
-      =c.select options={"Infant", "Early Childhood", "Post HCS Pre-K", "HCS After-school"}
+    -# .field
+    -#   =c.label :program, "Program Enrollment"
+    -#   =c.select options_for_select([["10 Month", 1], ["Summer", 2]])
+    -#
+    -# .field
+    -#   =c.label :child_age, "Child Class"
+    -#   =c.select options_for_select([["Infant", 1], ["Early Childhood", 2], ["Post HCS Pre-K", 3], ["HCS After-school", 4]])
 
     .field
       %p 10 Month Program Days
-      =c.label :monday :tuesday :wednesday :thursday :friday "5 Day"
-      =c.check_box :monday :tuesday :wednesday :thursday :friday
+      =c.label :friday, "5 Day"
+      =c.check_box :friday
 
     .field
-      =c.label :monday :wednesday :firday "3 Day"
-      =c.check_box :monday :wednesday :friday
+      =c.label :wednesday, "3 Day"
+      =c.check_box :wednesday
 
     .field
-      =c.label :tuesday :thursday "2 Day"
-      =c.check_box :tuesday :thursday
+      =c.label :tuesday, "2 Day"
+      =c.check_box :tuesday
 
       %p Full Day:    7:30 AM -  5:30 PM
       %p Half Day:    7:30 AM - 12:30 PM  or  12:30 PM - 5:30 PM
       %p Post Pre-K:  11:30 AM - 5:30 PM
 
-    .field
-      =c.label :time, "Day Length"
-      =c.select options={"Full Day", "Half Day Morning", "Half Day Afternoon", "Post HCS Pre-K"}
+    -# .field
+    -#   =c.label :time, "Day Length"
+    -#   =c.select options_for_select([["Full Day", 1], ["Half Day Morning", 2], ["Half Day Afternoon", 3], ["Post HCS Pre-K", 4]])
 
     .field
       %p After School
@@ -108,8 +108,8 @@
       =c.label :comments, "Additional Information"
       =c.text_area :comments
 
-    .field
-      =c.label :signature
-      =c.text_field
+    -# .field
+    -#   =c.label :signature, "Signature"
+    -#   =c.text_field :signature
     .field
       =c.submit "Register"

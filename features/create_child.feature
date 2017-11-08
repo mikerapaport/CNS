@@ -5,8 +5,8 @@ Feature: Create a new child
 
   Background: The parent already has a child
     Given these Children:
-      | name         | dob        | daylength  | monday | tuesday | wednesday | thursday | friday | infant_tod | comments                | after_school_len | attending_rec_program | w1  | w2  | w3  | w4  | w5  | w6  | w7  | w8  | parent_id |
-      | John Stewart | 12/12/2008 | full       | true   | false   | true      | false    | true   | nil        | He's a really sweet boy | nil              | nil                   | nil | nil | nil | nil | nil | nil | nil | nil | 1         |
+      | name         | dob        | monday | tuesday | wednesday | thursday | friday | comments                | w1  | w2  | w3  | w4  | w5  | w6  | w7  | w8  | parent_id |
+      | John Stewart | 12/12/2008 | true   | false   | true      | false    | true   | He's a really sweet boy | nil | nil | nil | nil | nil | nil | nil | nil | 1         |
 
   Scenario: Create a new child who is in pre-k and is registered for three days
     Given I am on the create new child page

@@ -46,4 +46,29 @@ class ChildrenController < ApplicationController
     end
   end
 
+  def create
+    c = Child.new(create_update_params)
+    if c.save
+        flash[:notice] = "New child '#{c.name}' created"
+        redirect_to children_path
+    else
+        flash[:warning] = "Error creating new child"
+        redirect_to new_child_path(c)
+    end
+  end
+
+  private
+      def create_update_params
+          params.require(:child).permit(:name, :dob, :program, :time, :monday, :tuesday, :wednesday, :thursday, :friday, :comments, :w1, :w2, :w3, :w4, :w5, :w6, :w7, :w8)
+      end
+
+      # def check_valid_info()
+      #     child_hash = params[:child]
+      #     if !(parent_hash[:email] =~ /.+@.+\..+/)
+      #         flash[:warning] = "Error, invalid email"
+      #         return false
+      #     end
+      #     return true
+      # end
+
 end
