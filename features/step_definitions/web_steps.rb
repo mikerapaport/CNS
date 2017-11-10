@@ -260,6 +260,8 @@ Then /^show me the page$/ do
   save_and_open_page
 end
 
+
+# give parent name, for child create, add on parent
 Given /^these Children/ do |table|
     table.hashes.each do |h|
         Child.create!(h)
