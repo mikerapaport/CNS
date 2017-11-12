@@ -11,9 +11,12 @@ class ChildrenController < ApplicationController
   end
 
   def show
+    @parent = Parent.find(params[:parent_id])
     id = params[:id]
     @child = Child.find(id)
-    
+
+
+
     # @days = ""
     # if @child.monday
     #   @days += "M, "
