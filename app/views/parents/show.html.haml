@@ -38,5 +38,5 @@
 
     -@children.each do |x|
         %tr
-            %td= link_to("#{x.name}", parent_child_path(x))
+            %td= link_to("#{x.name}", parent_child_path(@parent, x))
             %td= x.dob
