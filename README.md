@@ -5,7 +5,7 @@ Description
 -----------
 This is a web app designed to automate and digitize the Chenango Valley Nursery School's class and summer registration process. 
 
-The development for this application is not-for-profit, and made by students at Colgate University.
+This project was designed and developed by students at Colgate University.
 
 
 Ruby on Rails
@@ -23,9 +23,14 @@ Learn more about [Installing Rails](http://railsapps.github.io/installing-rails.
 Contributors
 ------------
 Laura Bunn
+
 Sam Burt
+
 Zach Harris
+
 Michael Rapaport
+
 Zoila Rodriguez
+
 Leslie Subaldo
 
