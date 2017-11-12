@@ -5,16 +5,24 @@ class CreateChildren < ActiveRecord::Migration[5.1]
       t.string :dob
       t.string :program
       t.string :time
-      # t.string :daylength
-      t.boolean :monday
-      t.boolean :tuesday
-      t.boolean :wednesday
-      t.boolean :thursday
-      t.boolean :friday
-      # t.string :infant_tod
+      t.boolean :mtwrf
+      t.boolean :mwf
+      t.boolean :tr
+      t.boolean :m2
+      t.boolean :m3
+      t.boolean :t2
+      t.boolean :t3
+      t.boolean :w2
+      t.boolean :w3
+      t.boolean :r2
+      t.boolean :r3
+      t.boolean :f2
+      t.boolean :f3
+      t.boolean :full
+      t.boolean :half_morning
+      t.boolean :half_afternoon
       t.text :comments
-      # t.integer :after_school_len
-      # t.boolean :attending_rec_program
+      t.boolean :attending_rec
       t.boolean :w1
       t.boolean :w2
       t.boolean :w3
