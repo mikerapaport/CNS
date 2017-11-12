@@ -34,11 +34,11 @@ class ChildrenController < ApplicationController
       @days.chop!.chop!
     end
 
-    if @days.mtwrf
+    if @child.mtwrf
       @days = "M, T, W, Th, F"
-    elsif @days.mwf
+    elsif @child.mwf
       @days = "M, W, F"
-    elsif @days.tr
+    elsif @child.tr
       @days = "T, Th"
     end
 
