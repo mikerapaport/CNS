@@ -33,6 +33,9 @@ module NavigationHelpers
         when /^the update parent page$/
             self.send(["edit", "parent"].push('path').join('_').to_sym)
 
+        when /^the children page$/
+            self.send(["children"].push('path').join('_').to_sym)
+
     else
       begin
         page_name =~ /^the (.*) page$/

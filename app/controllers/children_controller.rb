@@ -47,13 +47,17 @@ class ChildrenController < ApplicationController
   end
 
   def create
-    c = Child.new(create_update_params)
-    if c.save
-        flash[:notice] = "New child '#{c.name}' created"
-        redirect_to children_path
+    @parent = Parent.find(params[:parent_id])
+    @child = Child.new(create_update_params)
+    @parent.children << @child
+
+
+    if @child.save
+        flash[:notice] = "New child '#{@child.name}' created"
+        redirect_to parent_children_path
     else
         flash[:warning] = "Error creating new child"
-        redirect_to new_child_path(c)
+        redirect_to new_parent_child_path
     end
   end
 

@@ -29,7 +29,7 @@
         %td= "#{@parent.email2}"
 
 =link_to("Edit parent info", edit_parent_path(@parent))
-=link_to("Register Children", new_child_path)
+=link_to("Register Children", new_parent_child_path(@parent))
 
 %table
     %tr
@@ -38,5 +38,5 @@
 
     -@children.each do |x|
         %tr
-            %td= link_to("#{x.name}", child_path(x))
+            %td= link_to("#{x.name}", parent_child_path(x))
             %td= x.dob
