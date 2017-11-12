@@ -1,50 +1,36 @@
-Cns Starter
+CNS Registration Portal Web Application
 ================
 
-[![Deploy to Heroku](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
-
-This application was generated with the [rails_apps_composer](https://github.com/RailsApps/rails_apps_composer) gem
-provided by the [RailsApps Project](http://railsapps.github.io/).
-
-Rails Composer is supported by developers who purchase our RailsApps tutorials.
-
-Problems? Issues?
+Description
 -----------
+This is a web app designed to automate and digitize the Chenango Valley Nursery School's class and summer registration process. 
 
-Need help? Ask on Stack Overflow with the tag 'railsapps.'
+This project was designed and developed by students at Colgate University.
 
-Your application contains diagnostics in the README file. Please provide a copy of the README file when reporting any issues.
-
-If the application doesn't work as expected, please [report an issue](https://github.com/RailsApps/rails_apps_composer/issues)
-and include the diagnostics.
 
 Ruby on Rails
 -------------
 
-This application requires:
+This application uses:
 
 - Ruby 2.4.1
 - Rails 5.1.4
 
 Learn more about [Installing Rails](http://railsapps.github.io/installing-rails.html).
 
-Getting Started
----------------
 
-Documentation and Support
--------------------------
 
-Issues
--------------
-
-Similar Projects
-----------------
-
-Contributing
+Contributors
 ------------
+Laura Bunn
 
-Credits
--------
+Sam Burt
 
-License
--------
+Zach Harris
+
+Michael Rapaport
+
+Zoila Rodriguez
+
+Leslie Subaldo
+
