@@ -1,11 +1,14 @@
 class ChildrenController < ApplicationController
 
   def new
+
     @child = Child.new()
   end
 
   def index
-    @children = Child.all
+    @parent = Parent.find(params[:parent_id])
+    @children = @parent.children
+
 
   end
 
