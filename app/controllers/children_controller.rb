@@ -8,8 +8,6 @@ class ChildrenController < ApplicationController
   def index
     @parent = Parent.find(params[:parent_id])
     @children = @parent.children
-
-
   end
 
   def show
@@ -17,23 +15,31 @@ class ChildrenController < ApplicationController
     @child = Child.find(id)
 
     @days = ""
-    if @child.monday
+    if @child.m2 || @child.m3
       @days += "M, "
     end
-    if @child.tuesday
+    if @child.t2 || @child.t3
       @days += "T, "
     end
-    if @child.wednesday
+    if @child.w2 || @child.w3
       @days += "W, "
     end
-    if @child.thursday
+    if @child.r2 || @child.r3
       @days += "Th, "
     end
-    if @child.friday
+    if @child.f2 || @child.f3
       @days += "F"
     end
     if @days =~ /, $/
       @days.chop!.chop!
+    end
+
+    if @days.mtwrf
+      @days = "M, T, W, Th, F"
+    elsif @days.mwf
+      @days = "M, W, F"
+    elsif @days.tr
+      @days = "T, Th"
     end
 
     @hours = ""
@@ -43,9 +49,8 @@ class ChildrenController < ApplicationController
       @hours = "Half Day Morning (7:30AM - 12:30PM)"
     elsif @child.time == "Half Day Afternoon"
       @hours = "Half Day Afternoon (12:30PM - 5:30PM)"
-    elsif @child.time == "Post HCS Pre-K"
-      @hours = "11:30AM - 5:30"
-    # elsif @child.time == ""
+    elsif @child.program == "Post HCS Pre-K"
+      @hours = "11:30AM - 5:30PM"
     end
   end
 
