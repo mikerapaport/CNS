@@ -1,4 +1,4 @@
-%h2 Infant Registration
+%h2 Early Childhood Registration
 
 =form_for @child, :method => :post, :url => parent_children_path do |c|
   .field
@@ -9,8 +9,5 @@
     =render 'yearly_template', form: c
   - else
     =render 'summer_template', form: c
-
-    =c.label :half_afternoon "Half Day:  12:30 AM -  5:30 PM"
-    =c.check_box :half_afternoon
 
   =c.submit

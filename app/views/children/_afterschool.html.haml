@@ -1,0 +1,46 @@
+%h2 After school Registration
+
+=form_for @child, :method => :post, :url => parent_children_path do |c|
+  .field
+    =c.label :program, "Program"
+    =c.select :program, options_for_select([["10 Month", "10 Month"], ["Summer", "Summer"]])
+
+  - if (:program == "10 Month")
+    %p Days and Times
+    .field
+      =c.label :m1 "Monday 2:30 PM - 4:30 PM"
+      =c.check_box :m1
+    .field
+      =c.label :m2 "Monday 2:30 PM - 5:30 PM"
+      =c.check_box :m2
+    .field
+      =c.label :t1 "Tuesday 2:30 PM - 4:30 PM"
+      =c.check_box :t1
+    .field
+      =c.label :t2 "Tuesday 2:30 PM - 5:30 PM"
+      =c.check_box :t2
+    .field
+      =c.label :w1 "Wednesday 2:30 PM - 4:30 PM"
+      =c.check_box :w1
+    .field
+      =c.label :w2 "Wednesday 2:30 PM - 5:30 PM"
+      =c.check_box :w2
+    .field
+      =c.label :r1 "Thursday 2:30 PM - 4:30 PM"
+      =c.check_box :r1
+    .field
+      =c.label :r2 "Thursday 2:30 PM - 5:30 PM"
+      =c.check_box :r2
+    .field
+      =c.label :f1 "Friday 2:30 PM - 4:30 PM"
+      =c.check_box :f1
+    .field
+      =c.label :f2 "Friday 2:30 PM - 5:30 PM"
+      =c.check_box :f2
+  - else
+    =render 'summer_template', form: c
+    .field
+      =c.label :attending_rec "Is your child attending the Hamilton Summer Rec Program?"
+      =c.check_box :attending_rec
+
+  =c.submit
