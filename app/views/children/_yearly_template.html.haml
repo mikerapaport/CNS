@@ -1,0 +1,21 @@
+
+=form_for @child, :method => :post, :url => parent_children_path do |c|
+
+  .field
+    =c.label :mtwrf, "M, T, W, Th, F (5 days)"
+    =c.check_box :mtwrf
+  .field
+    =c.label :mwf, "M, W, F (3 days)"
+    =c.check_box :mwf
+  .field
+    =c.label :tr, "T, Th (2 days)"
+    =c.check_box :tr
+  %p
+  .field
+    =c.label :full, "Full Day:   7:30 AM -  5:30 PM"
+    =c.check_box :full
+  .field
+    =c.label :half_morning, "Half Day:   7:30 AM - 12:30 PM"
+    =c.check_box :half_morning
+
+  -# =c.submit

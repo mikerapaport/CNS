@@ -1,0 +1,16 @@
+%h2 Infant Registration
+
+=form_for @child, :method => :post do |c|
+  .field
+    =c.label :program, "Program"
+    =c.select :program, options_for_select([["10 Month", "10 Month"], ["Summer", "Summer"]])
+
+  - if (:program == "10 Month")
+    =render 'yearly_template', form: c
+  - else
+    =render 'summer_template', form: c
+
+    =c.label :half_afternoon "Half Day:  12:30 AM -  5:30 PM"
+    =c.check_box :half_afternoon
+
+  =c.submit

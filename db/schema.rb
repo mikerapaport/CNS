@@ -15,6 +15,7 @@ ActiveRecord::Schema.define(version: 20171103170659) do
   create_table "children", force: :cascade do |t|
     t.string "name"
     t.string "dob"
+    t.string "status"
     t.string "program"
     t.string "time"
     t.boolean "mtwrf"

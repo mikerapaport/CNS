@@ -3,6 +3,7 @@ class CreateChildren < ActiveRecord::Migration[5.1]
     create_table :children do |t|
       t.string :name
       t.string :dob
+      t.string :status
       t.string :program
       t.string :time
       t.boolean :mtwrf
