@@ -15,8 +15,6 @@ class ChildrenController < ApplicationController
     id = params[:id]
     @child = Child.find(id)
 
-
-
     # @days = ""
     # if @child.monday
     #   @days += "M, "
