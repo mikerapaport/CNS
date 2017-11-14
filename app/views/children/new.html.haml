@@ -15,17 +15,11 @@
       =c.label :status, "Child Program"
       =c.select :status, options_for_select([["Infant", "Infant"], ["Early Childhood", "Early Childhood"], ["Post HCS Pre-K", "Post HCS Pre-K"], ["HCS After-school", "HCS After-school"]])
       -# div #A, B,
-    .field -# - if (:status == "Infant")
-      =render 'infant', form: c
-
-    .field
-      =render 'early_childhood', form: c
-
-    .field
-      =render 'post_pre-k', form: c
-
-    .field
-      =render 'afterschool', form: c 
+      -# - if (:status == "Infant")
+    =render 'infant', form: c
+    =render 'early_childhood', form: c
+    =render 'post_pre-k', form: c
+    -# =render 'afterschool', form: c 
 
     -# .field
     -#   =c.label :address, "Address"
