@@ -4,8 +4,9 @@
   .field
     =c.label :program, "Program"
     =c.select :program, options_for_select([["10 Month", "10 Month"], ["Summer", "Summer"]])
-
+    -# div and javascript
   - if (:program == "10 Month")
+    %h3 10 Month Program
     =render 'yearly_template', form: c
   - else
     =render 'summer_template', form: c
@@ -13,4 +14,4 @@
     =c.label :half_afternoon "Half Day:  12:30 AM -  5:30 PM"
     =c.check_box :half_afternoon
 
-  =c.submit
+  -# =c.submit

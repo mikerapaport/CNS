@@ -5,7 +5,8 @@
     =c.label :program, "Program"
     =c.select :program, options_for_select([["10 Month", "10 Month"], ["Summer", "Summer"]])
 
-  - if (:program == "10 Month")
+  -# - if (:program == "10 Month")
+  %h3 10 Month Program
     %p Days and Times
     .field
       =c.label :m1 "Monday 2:30 PM - 4:30 PM"
@@ -37,7 +38,8 @@
     .field
       =c.label :f2 "Friday 2:30 PM - 5:30 PM"
       =c.check_box :f2
-  - else
+  -# - else
+  %h3 Summer Program
     =render 'summer_template', form: c
     .field
       =c.label :attending_rec "Is your child attending the Hamilton Summer Rec Program?"

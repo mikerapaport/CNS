@@ -3,7 +3,7 @@
 =form_for @child, :method => :post, :url => parent_children_path do |c|
 
   =render 'yearly_template', form: c
-  %p
+  %p Weekly Options
   .field
     =c.label :w1, "Week 1"
     =c.check_box :w1
