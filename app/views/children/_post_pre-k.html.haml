@@ -1,7 +1,7 @@
 %h2 Post HCS Pre-K Registration
 
 =form_for @child, :method => :post, :url => parent_children_path do |c|
-  %p "Hours will be 11:30 AM - 5:30 PM"
+  %p Hours will be 11:30 AM - 5:30 PM
   .field
     =c.label :mtwrf, "M, T, W, Th, F (5 days)"
     =c.check_box :mtwrf
@@ -11,4 +11,5 @@
   .field
     =c.label :tr, "T, Th (2 days)"
     =c.check_box :tr
-  =c.submit
+    
+  -# =c.submit
