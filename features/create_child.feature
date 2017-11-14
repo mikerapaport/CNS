@@ -10,8 +10,8 @@ Feature: Create a new child
       | Sam Burt  | 25 Brettwood rd      | 911    |      | samcoburt@gmail.com    |        |
 
     Given these Children:
-      | name         | dob        | monday | tuesday | wednesday | thursday | friday | comments                | w1  | w2  | w3  | w4  | w5  | w6  | w7  | w8  | parent_id |
-      | John Stewart | 12/12/2008 | true   | false   | true      | false    | true   | He's a really sweet boy | nil | nil | nil | nil | nil | nil | nil | nil | 1         |
+      | name         | dob        | mtwrf  | comments                | w1  | w2  | w3  | w4  | w5  | w6  | w7  | w8  | parent_id |
+      | John Stewart | 12/12/2008 | true   | He's a really sweet boy | nil | nil | nil | nil | nil | nil | nil | nil | 1         |
 
   Scenario: Create a new child who is in pre-k
     Given I am on the create new child page
