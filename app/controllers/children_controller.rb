@@ -1,7 +1,6 @@
 class ChildrenController < ApplicationController
 
   def new
-
     @child = Child.new()
   end
 
@@ -59,7 +58,6 @@ class ChildrenController < ApplicationController
     @parent = Parent.find(params[:parent_id])
     @child = Child.new(create_update_params)
     @parent.children << @child
-
 
     if @child.save
         flash[:notice] = "New child '#{@child.name}' created"

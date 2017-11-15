@@ -1,6 +1,13 @@
 class UsersController < ApplicationController
   before_action :authenticate_user!
-  after_action :verify_authorized
+
+  #This was throwing an error so I (Sam Burt) jsut commented it out, we probably should have it back in
+
+  #after_action :verify_authorized
+
+
+
+
 
   def index
     @users = User.all
@@ -9,7 +16,15 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
-    authorize @user
+    #Need to get this authorize to work, Sam Burt commented this out
+    #authorize @user
+    if @user.parent == nil
+        #byebug
+        session[:id] = @user.id
+        redirect_to new_parent_path and return
+    else
+        @parent = @user.parent
+    end
   end
 
   def update

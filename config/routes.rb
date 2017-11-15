@@ -12,6 +12,8 @@ Rails.application.routes.draw do
     resources :users
     root to: "users#index"
   end
+  #After loggin in, user may be redirected to this root? (Check devise documentation)
+  
   root to: 'visitors#index'
   devise_for :users
   resources :users

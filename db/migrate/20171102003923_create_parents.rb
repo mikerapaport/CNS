@@ -9,6 +9,7 @@ class CreateParents < ActiveRecord::Migration[5.1]
       t.string :email2
       t.integer :user_id
 
+
       t.timestamps
     end
   end

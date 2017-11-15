@@ -1,5 +1,10 @@
 - if user_signed_in?
-  %li= link_to 'My Parent Page', parents_path
+
+  -# How do we pass the parent id to this so we go to the parent show page
+  -# Need to access the parent_id from the user, what controller page is used for this page?
+  -# %li= link_to 'My Parent Page', parents_path
+
+  %li= link_to 'My Parent Page', user_path(current_user)
   %li= link_to 'Edit account', edit_user_registration_path
   %li= link_to 'Sign out', destroy_user_session_path, :method=>'delete'
 - else

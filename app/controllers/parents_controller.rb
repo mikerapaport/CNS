@@ -3,7 +3,8 @@ class ParentsController < ApplicationController
     def show
         @parent = Parent.find(params[:id])
         @children = @parent.children
-        
+        @user = @parent.user
+        #byebug
     end
 
     def index
@@ -16,12 +17,19 @@ class ParentsController < ApplicationController
 
     def create
         p = Parent.new(create_update_params)
+        user = User.find(session[:id])
+        p.user_id = session[:id]
+        #byebug
+
         if p.save
             if !(check_valid_info)
                 redirect_to edit_parent_path(p) and return
             end
             flash[:notice] = "New parent '#{p.name}' created"
-            redirect_to parents_path and return
+            #user = session[:user]
+            #name = user.name
+            #user.parent << p
+            redirect_to user_path(user) and return
         else
             flash[:warning] = "Error creating new parent"
             redirect_to new_parent_path(p) and return
