@@ -60,13 +60,15 @@ class ChildrenController < ApplicationController
     @child = Child.new(create_update_params)
     @parent.children << @child
 
-
+    # check validity of what someone filled in
+    # write custom validations before sending person to next form
+    # create custom routes?
     if @child.save
         flash[:notice] = "New child '#{@child.name}' created"
-        redirect_to parent_children_path
+        redirect_to parent_children_path(@parent) and return
     else
         flash[:warning] = "Error creating new child"
-        redirect_to new_parent_child_path
+        redirect_to new_parent_child_path(@parent) and return
     end
   end
 
