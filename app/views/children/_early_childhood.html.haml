@@ -1,3 +1,5 @@
+=javascript_include_tag 'forms'
+
 %h2 Early Childhood Registration
 
 =form_for @child, :method => :post, :url => parent_children_path do |c|
@@ -5,9 +7,8 @@
     =c.label :program, "Program"
     =c.select :program, options_for_select([["10 Month", "10 Month"], ["Summer", "Summer"]])
 
-  - if (:program == "10 Month")
-    =render 'yearly_template', form: c
-  - else
-    =render 'summer_template', form: c
+  %h3 10 Month Program
+  =render 'yearly_template', form: c
+  =render 'summer_template', form: c
 
-  =c.submit
+  -# =c.submit

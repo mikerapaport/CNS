@@ -22,7 +22,7 @@ module NavigationHelpers
     #   when /^(.*)'s profile page$/i
     #     user_profile_path(User.find_by_login($1))
         when /^the create new child page$/
-            self.send(["new", "child"].push('path').join('_').to_sym)
+            self.send(["new", "parent", "child"].push('path').join('_').to_sym)
 
         when /^the parents page$/
             self.send(["parents"].push('path').join('_').to_sym)

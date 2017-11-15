@@ -1,3 +1,5 @@
+=javascript_include_tag 'forms'
+
 #main
 
   %h3.header Registration
@@ -13,12 +15,17 @@
 
     .field
       =c.label :status, "Child Program"
-      =c.select :status, options_for_select([["Infant", "Infant"], ["Early Childhood", "Early Childhood"], ["Post HCS Pre-K", "Post HCS Pre-K"], ["HCS After-school", "HCS After-school"]])
+      =c.select :status, options_for_select([["Select a Program", "Select a Program"], ["Infant", "Infant"], ["Early Childhood", "Early Childhood"], ["Post HCS Pre-K", "Post HCS Pre-K"], ["HCS After-school", "HCS After-school"]])
+      -# div #A, B,
 
-    - if (:status == "Infant")
+    #infant
       =render 'infant', form: c
-
-    =render 'yearly_template', form: c
+    #early_childhood
+      =render 'early_childhood', form: c
+    #post_pre-k
+      =render 'post_pre-k', form: c
+    #afterschool
+      =render 'afterschool', form: c
 
     -# .field
     -#   =c.label :address, "Address"

@@ -1,10 +1,10 @@
 %h1 Parent Portal
 
--if flash[:warning]
-    %h1= "#{flash[:warning]}"
-
--if flash[:notice]
-    %h1= "#{flash[:notice]}"
+-# -if flash[:warning]
+-#     %h1= "#{flash[:warning]}"
+-#
+-# -if flash[:notice]
+-#     %h1= "#{flash[:notice]}"
 
 %table
     %caption
@@ -27,14 +27,20 @@
         %td= "#{@parent.cell}"
         %td= "#{@parent.email}"
         %td= "#{@parent.email2}"
-
-=link_to("Edit parent info", edit_parent_path(@parent))
-=link_to("Register Children", new_parent_child_path(@parent))
-
+%br
+=link_to("Edit Parent Information", edit_parent_path(@parent))
+%br
+=link_to("Register a Child", new_parent_child_path(@parent))
+%br
+%br
 %table
+    %caption Children
     %tr
-        %th Name
-        %th DOB
+        -if @children.length > 0
+            %th Name
+            %th DOB
+        -else
+            %th No children registered yet.
 
     -@children.each do |x|
         %tr

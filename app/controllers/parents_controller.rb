@@ -45,7 +45,7 @@ class ParentsController < ApplicationController
         id = params[:id]
         p = Parent.find(id)
         if !(check_valid_info())
-            redirect_to parent_path(p) and return
+            redirect_to edit_parent_path(p) and return
         end
         p.update(create_update_params)
         if p.save

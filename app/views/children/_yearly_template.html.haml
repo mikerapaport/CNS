@@ -1,6 +1,7 @@
+=javascript_include_tag 'forms'
 
 =form_for @child, :method => :post, :url => parent_children_path do |c|
-
+  %p Days
   .field
     =c.label :mtwrf, "M, T, W, Th, F (5 days)"
     =c.check_box :mtwrf
@@ -10,7 +11,7 @@
   .field
     =c.label :tr, "T, Th (2 days)"
     =c.check_box :tr
-  %p
+  %p Time
   .field
     =c.label :full, "Full Day:   7:30 AM -  5:30 PM"
     =c.check_box :full
