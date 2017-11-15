@@ -1,6 +1,5 @@
-=javascript_include_tag 'forms'
-
 =form_for @child, :method => :post, :url => parent_children_path do |c|
+
   %p Days
   .field
     =c.label :mtwrf, "M, T, W, Th, F (5 days)"

@@ -1,14 +1,17 @@
-=javascript_include_tag 'forms'
+=javascript_include_tag 'second_forms'
 
 %h2 Early Childhood Registration
 
 =form_for @child, :method => :post, :url => parent_children_path do |c|
+
   .field
     =c.label :program, "Program"
-    =c.select :program, options_for_select([["10 Month", "10 Month"], ["Summer", "Summer"]])
+    =c.select :program, options_for_select([["Select a Program", "Select a Program"], ["10 Month", "10 Month"], ["Summer", "Summer"]])
 
-  %h3 10 Month Program
-  =render 'yearly_template', form: c
-  =render 'summer_template', form: c
+  #month
+    %h3 10 Month Program
+    =render 'yearly_template', form: c
+  #summer
+    =render 'summer_template', form: c
 
   -# =c.submit

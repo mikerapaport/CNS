@@ -1,11 +1,3 @@
-// jQuery("select").change(function () {
-//   jQuery('.optional').css('display', 'none');
-//   jQuery("select option:selected").each(function () {
-//     if (jQuery(this).val() == "Infant") {
-//       jQuery('.infant').css('display', 'block');
-//     }
-//   })
-// })
 jQuery('#child_status').on('change', function() {
   if (jQuery(this).val() == 'Infant') {
     jQuery('#infant').show();
