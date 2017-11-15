@@ -6,22 +6,23 @@ class CreateChildren < ActiveRecord::Migration[5.1]
       t.string :status
       t.string :program
       t.string :time
-      t.boolean :mtwrf
-      t.boolean :mwf
-      t.boolean :tr
+      t.integer :week
+      t.boolean :mtwrf #no neccessary
+      t.boolean :mwf #no neccessary
+      t.boolean :tr #no neccessary
       t.boolean :m2
-      t.boolean :m3
+      t.boolean :m3 #no neccessary
       t.boolean :t2
-      t.boolean :t3
+      t.boolean :t3 #no neccessary
       t.boolean :w2
-      t.boolean :w3
+      t.boolean :w3 #no neccessary
       t.boolean :r2
-      t.boolean :r3
+      t.boolean :r3 #no neccessary
       t.boolean :f2
-      t.boolean :f3
-      t.boolean :full
-      t.boolean :half_morning
-      t.boolean :half_afternoon
+      t.boolean :f3 #no neccessary
+      t.boolean :full #no neccessary
+      t.boolean :half_morning #no neccessary
+      t.boolean :half_afternoon #no neccessary 
       t.text :comments
       t.boolean :attending_rec
       t.boolean :w1

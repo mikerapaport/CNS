@@ -12,35 +12,35 @@
     %h3 10 Month Program
     %p Days and Times
     .field
-      =c.label :m2, "Monday 2:30 PM - 4:30 PM"
-      =c.check_box :m2
+      =c.radio_button :m2, :value => true
+      =c.label :m2, "Monday 2:30 PM - 4:30 PM", :value=> true
     .field
-      =c.label :m3, "Monday 2:30 PM - 5:30 PM"
-      =c.check_box :m3
+      =c.radio_button :m2, :value => false
+      =c.label :m2, "Monday 2:30 PM - 5:30 PM", :value=> false
     .field
-      =c.label :t2, "Tuesday 2:30 PM - 4:30 PM"
-      =c.check_box :t2
+      =c.radio_button :t2, :value => true
+      =c.label :t2, "Tuesday 2:30 PM - 4:30 PM", :value=> true
     .field
-      =c.label :t3, "Tuesday 2:30 PM - 5:30 PM"
-      =c.check_box :t3
+      =c.radio_button :t2, :value => false
+      =c.label :t2, "Tuesday 2:30 PM - 5:30 PM", :value=> false
     .field
-      =c.label :w2, "Wednesday 2:30 PM - 4:30 PM"
-      =c.check_box :w2
+      =c.radio_button :w2, :value => true
+      =c.label :w2, "Wednesday 2:30 PM - 4:30 PM", :value=> true
     .field
-      =c.label :w3, "Wednesday 2:30 PM - 5:30 PM"
-      =c.check_box :w3
+      =c.radio_button :w2, :value => false
+      =c.label :w2, "Wednesday 2:30 PM - 5:30 PM", :value=> false
     .field
-      =c.label :r2, "Thursday 2:30 PM - 4:30 PM"
-      =c.check_box :r2
+      =c.radio_button :r2, :value => true
+      =c.label :r2, "Thursday 2:30 PM - 4:30 PM", :value=> true
     .field
-      =c.label :r3, "Thursday 2:30 PM - 5:30 PM"
-      =c.check_box :r3
+      =c.radio_button :r2, :value => false
+      =c.label :r2, "Thursday 2:30 PM - 5:30 PM", :value=> false
     .field
-      =c.label :f2, "Friday 2:30 PM - 4:30 PM"
-      =c.check_box :f2
+      =c.radio_button :f2, :value => true
+      =c.label :f2, "Friday 2:30 PM - 4:30 PM", :value=> true
     .field
-      =c.label :f3, "Friday 2:30 PM - 5:30 PM"
-      =c.check_box :f3
+      =c.radio_button :f2, :value => false
+      =c.label :f2, "Friday 2:30 PM - 5:30 PM", :value=> false
 
   #summer
     =render 'summer_template', form: c

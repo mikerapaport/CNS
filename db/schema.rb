@@ -18,6 +18,7 @@ ActiveRecord::Schema.define(version: 20171103170659) do
     t.string "status"
     t.string "program"
     t.string "time"
+    t.integer "week"
     t.boolean "mtwrf"
     t.boolean "mwf"
     t.boolean "tr"

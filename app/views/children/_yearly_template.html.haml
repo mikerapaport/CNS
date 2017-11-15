@@ -2,20 +2,31 @@
 
   %p Days
   .field
-    =c.label :mtwrf, "M, T, W, Th, F (5 days)"
-    =c.check_box :mtwrf
+    =c.radio_button :week, 5
+    =c.label :week, "M, T, W, Th, F (5 days)", :value=> 5
   .field
-    =c.label :mwf, "M, W, F (3 days)"
-    =c.check_box :mwf
+    =c.radio_button :week, 3
+    =c.label :week, "M, W, F (3 days)", :value=> 3
   .field
-    =c.label :tr, "T, Th (2 days)"
-    =c.check_box :tr
+    =c.radio_button :week, 2
+    =c.label :week, "T, Th (2 days)", :value=> 2
+
+  -# .field
+  -#   =c.check_box :mtwrf
+  -#   =c.label :mtwrf, "M, T, W, Th, F (5 days)"
+  -# .field
+  -#   =c.check_box :mwf
+  -#   =c.label :mwf, "M, W, F (3 days)"
+  -# .field
+  -#   =c.check_box :tr
+  -#   =c.label :tr, "T, Th (2 days)"
+
   %p Time
   .field
-    =c.label :full, "Full Day:   7:30 AM -  5:30 PM"
-    =c.check_box :full
+    =c.radio_button :time, "7:30 AM - 5:30 PM"
+    =c.label :time, "Full Day:   7:30 AM -  5:30 PM", :value=> "7:30 AM - 5:30 PM"
   .field
-    =c.label :half_morning, "Half Day:   7:30 AM - 12:30 PM"
-    =c.check_box :half_morning
+    =c.radio_button :time, "7:30 AM - 12:30 PM"
+    =c.label :time, "Half Day:   7:30 AM - 12:30 PM", :value=> "7:30 AM - 12:30 PM"
 
   -# =c.submit

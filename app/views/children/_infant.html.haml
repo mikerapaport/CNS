@@ -12,12 +12,13 @@
     %h3 10 Month Program
     =render 'yearly_template', form: c
     .field
-      =c.label :half_afternoon, "Half Day:  12:30 AM -  5:30 PM"
-      =c.check_box :half_afternoon
+      =c.radio_button :time, "12:30 AM - 5:30 PM"
+      =c.label :time, "Half Day:  12:30 AM -  5:30 PM", :value=> "12:30 AM - 5:30 PM"
+
   #summer
     =render 'summer_template', form: c
     .field
-      =c.label :half_afternoon, "Half Day:  12:30 AM -  5:30 PM"
-      =c.check_box :half_afternoon
+      =c.radio_button :time, "12:30 AM - 5:30 PM"
+      =c.label :time, "Half Day:  12:30 AM -  5:30 PM", :value=> "12:30 AM - 5:30 PM"
 
   -# =c.submit
