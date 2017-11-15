@@ -8,7 +8,13 @@ class ParentsController < ApplicationController
     end
 
     def index
-        @parents = Parent.all
+        @parent = Parent.find(params[:id])
+        @user = @parent.user
+        if @parent == nil
+            #byebug
+            session[:id] = @user.id
+            redirect_to new_parent_path and return
+        end
     end
 
     def new

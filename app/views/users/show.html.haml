@@ -1,12 +1,10 @@
-%h3 User
+%h3 My Account
 %p
   Name: #{@user.name if @user.name}
 %p
   Email: #{@user.email if @user.email}
-%Parent Pages
+%Parent My Parent Information
 %table
-  %tr
-    %th Name
 
   %tr
     %td= link_to("#{@parent.name}", parent_path(@parent))

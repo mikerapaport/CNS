@@ -26,7 +26,7 @@ class ApplicationController < ActionController::Base
       # a new parent, you can be rerouted to the right user page
   end
 
-  
+
 
 
 
