@@ -6,4 +6,4 @@
   -# %p= "Days of week enrolled: #{@days}"
   -# %p= "Time enrolled: #{@hours}"
   %p= "Comments: #{@child.comments}"
-  =link_to("Back to Parent page", parent_path(@parent))
+  =link_to("Back to Parent page", parent_child_path(@parent, @child))
