@@ -1,3 +1,5 @@
+=javascript_include_tag 'forms'
+
 %h2 Infant Registration
 
 =form_for @child, :method => :post, :url => parent_children_path do |c|
@@ -10,7 +12,7 @@
   =render 'yearly_template', form: c
   -# - else
   =render 'summer_template', form: c
-  
+
   .field
     =c.label :half_afternoon, "Half Day:  12:30 AM -  5:30 PM"
     =c.check_box :half_afternoon

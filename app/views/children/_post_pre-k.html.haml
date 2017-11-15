@@ -1,3 +1,5 @@
+=javascript_include_tag 'forms'
+
 %h2 Post HCS Pre-K Registration
 
 =form_for @child, :method => :post, :url => parent_children_path do |c|
@@ -11,5 +13,5 @@
   .field
     =c.label :tr, "T, Th (2 days)"
     =c.check_box :tr
-    
+
   -# =c.submit
