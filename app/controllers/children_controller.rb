@@ -55,7 +55,7 @@ class ChildrenController < ApplicationController
   end
 
   def create
-    @parent = Parent.find(params[:id])
+    @parent = Parent.find(session[:id])
     #@user = @parent.user
     @child = Child.new(create_update_params)
     @child.parent_id = @parent
@@ -68,7 +68,7 @@ class ChildrenController < ApplicationController
           redirect_to new_parent_child_path(@parent) and return
       end
       flash[:notice] = "New child '#{@child.name}' created"
-      redirect_to parent_children_path(@parent, @child.parent_id) and return
+      redirect_to parent_path(@parent) and return
     else
         flash[:warning] = "Error creating new child"
         redirect_to new_parent_child_path(@parent) and return

@@ -40,7 +40,7 @@
             %th Name
             %th DOB
             %th Status
-            %th Program
+            -#%th Program
         -else
             %th No children registered yet.
 
@@ -49,4 +49,4 @@
             %td= link_to("#{x.name}", parent_child_path(@parent, x))
             %td= x.dob
             %td= x.status
-            %td= x.program
+            -# %td= x.program

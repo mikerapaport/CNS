@@ -5,8 +5,8 @@ Feature: Create a new parent
 
   Background: The parent already has a profile
     Given these Parents:
-      | name         | address         | phone  | cell | email             | email2 |
-      | Sam Burt     | 25 Brettwood Rd | 617    |      | sburt@gmail.com   |        |
+      | name         | address         | phone  | cell | email             | email2 | user_id |
+      | Sam Burt     | 25 Brettwood Rd | 617    |      | sburt@gmail.com   |        | 1       |
 
   Scenario: Create a new parent who's name is mark
     Given I am on the create new parent page

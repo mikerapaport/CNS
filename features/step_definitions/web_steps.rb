@@ -270,7 +270,9 @@ end
 
 Given /^these Parents/ do |table|
     table.hashes.each do |h|
-        Parent.create!(h)
+        p = Parent.create!(h)
+        user = User.find(session[:id])
+        p.user_id = session[:id]
     end
 end
 
