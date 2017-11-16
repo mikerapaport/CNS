@@ -2,23 +2,19 @@
 
 %h2 Infant Registration
 
-=form_for @child, :method => :post, :url => parent_children_path do |c|
+.field
+  =form.label :program, "Program"
+  =form.select :program, options_for_select([["Select a Program", "Select a Program"], ["10 Month", "10 Month"], ["Summer", "Summer"]])
 
+#month
+  %h3 10 Month Program
+  =render 'yearly_template', form: form
   .field
-    =c.label :program, "Program"
-    =c.select :program, options_for_select([["Select a Program", "Select a Program"], ["10 Month", "10 Month"], ["Summer", "Summer"]])
+    =form.radio_button :time, "12:30 AM - 5:30 PM"
+    =form.label :time, "Half Day:  12:30 AM -  5:30 PM", :value=> "12:30 AM - 5:30 PM"
 
-  #month
-    %h3 10 Month Program
-    =render 'yearly_template', form: c
-    .field
-      =c.radio_button :time, "12:30 AM - 5:30 PM"
-      =c.label :time, "Half Day:  12:30 AM -  5:30 PM", :value=> "12:30 AM - 5:30 PM"
-
-  #summer
-    =render 'summer_template', form: c
-    .field
-      =c.radio_button :time, "12:30 AM - 5:30 PM"
-      =c.label :time, "Half Day:  12:30 AM -  5:30 PM", :value=> "12:30 AM - 5:30 PM"
-
-  -# =c.submit
+#summer
+  =render 'summer_template', form: form
+  .field
+    =form.radio_button :time, "12:30 AM - 5:30 PM"
+    =form.label :time, "Half Day:  12:30 AM -  5:30 PM", :value=> "12:30 AM - 5:30 PM"

@@ -2,16 +2,13 @@
 
 %h2 Early Childhood Registration
 
-=form_for @child, :method => :post, :url => parent_children_path do |c|
+.field
+  =form.label :program, "Program"
+  =form.select :program, options_for_select([["Select a Program", "Select a Program"], ["10 Month", "10 Month"], ["Summer", "Summer"]])
 
-  .field
-    =c.label :program, "Program"
-    =c.select :program, options_for_select([["Select a Program", "Select a Program"], ["10 Month", "10 Month"], ["Summer", "Summer"]])
+#month
+  %h3 10 Month Program
+  =render 'yearly_template', form: form
 
-  #month
-    %h3 10 Month Program
-    =render 'yearly_template', form: c
-  #summer
-    =render 'summer_template', form: c
-
-  -# =c.submit
+#summer
+  =render 'summer_template', form: form

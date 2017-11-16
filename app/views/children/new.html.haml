@@ -2,7 +2,7 @@
 
 #main
 
-  %h3.header Registration
+  %h1.header Registration
 
   =form_for @child, :method => :post, :url => parent_children_path do |c|
     .field
@@ -19,10 +19,13 @@
 
     #infant
       =render 'infant', form: c
+
     #early_childhood
       =render 'early_childhood', form: c
+
     #post_pre-k
       =render 'post_pre-k', form: c
+
     #afterschool
       =render 'afterschool', form: c
 
@@ -45,11 +48,6 @@
     -# .field
     -#   =c.label :email2, "Second Email"
     -#   =c.email_field :email_field
-
-    -# .field
-    -#   =c.label :program, "Program Enrollment"
-    -#   =c.select options_for_select([["10 Month", 1], ["Summer", 2]])
-    -#
 
     .field
       =c.label :comments, "Additional Information"

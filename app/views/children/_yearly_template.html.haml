@@ -1,32 +1,28 @@
-=form_for @child, :method => :post, :url => parent_children_path do |c|
+%p Days
+.field
+  =form.radio_button :week, 5
+  =form.label :week, "M, T, W, Th, F (5 days)", :value=> 5
+.field
+  =form.radio_button :week, 3
+  =form.label :week, "M, W, F (3 days)", :value=> 3
+.field
+  =form.radio_button :week, 2
+  =form.label :week, "T, Th (2 days)", :value=> 2
 
-  %p Days
-  .field
-    =c.radio_button :week, 5
-    =c.label :week, "M, T, W, Th, F (5 days)", :value=> 5
-  .field
-    =c.radio_button :week, 3
-    =c.label :week, "M, W, F (3 days)", :value=> 3
-  .field
-    =c.radio_button :week, 2
-    =c.label :week, "T, Th (2 days)", :value=> 2
+-# .field
+-#   =c.check_box :mtwrf
+-#   =c.label :mtwrf, "M, T, W, Th, F (5 days)"
+-# .field
+-#   =c.check_box :mwf
+-#   =c.label :mwf, "M, W, F (3 days)"
+-# .field
+-#   =c.check_box :tr
+-#   =c.label :tr, "T, Th (2 days)"
 
-  -# .field
-  -#   =c.check_box :mtwrf
-  -#   =c.label :mtwrf, "M, T, W, Th, F (5 days)"
-  -# .field
-  -#   =c.check_box :mwf
-  -#   =c.label :mwf, "M, W, F (3 days)"
-  -# .field
-  -#   =c.check_box :tr
-  -#   =c.label :tr, "T, Th (2 days)"
-
-  %p Time
-  .field
-    =c.radio_button :time, "7:30 AM - 5:30 PM"
-    =c.label :time, "Full Day:   7:30 AM -  5:30 PM", :value=> "7:30 AM - 5:30 PM"
-  .field
-    =c.radio_button :time, "7:30 AM - 12:30 PM"
-    =c.label :time, "Half Day:   7:30 AM - 12:30 PM", :value=> "7:30 AM - 12:30 PM"
-
-  -# =c.submit
+%p Time
+.field
+  =form.radio_button :time, "7:30 AM - 5:30 PM"
+  =form.label :time, "Full Day:   7:30 AM -  5:30 PM", :value=> "7:30 AM - 5:30 PM"
+.field
+  =form.radio_button :time, "7:30 AM - 12:30 PM"
+  =form.label :time, "Half Day:   7:30 AM - 12:30 PM", :value=> "7:30 AM - 12:30 PM"

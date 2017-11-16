@@ -22,7 +22,7 @@ class CreateChildren < ActiveRecord::Migration[5.1]
       t.boolean :f3 #no neccessary
       t.boolean :full #no neccessary
       t.boolean :half_morning #no neccessary
-      t.boolean :half_afternoon #no neccessary 
+      t.boolean :half_afternoon #no neccessary
       t.text :comments
       t.boolean :attending_rec
       t.boolean :w1
