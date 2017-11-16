@@ -1,5 +1,5 @@
 jQuery('#child_program').on('change', function(ev) {
-  console.log(ev.target);
+  // console.log(ev.target);
   var selector_val = jQuery('#child_program').val();
   if (selector_val == '10 Month') {
     jQuery('#month').show();
