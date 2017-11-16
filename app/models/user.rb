@@ -1,6 +1,5 @@
 class User < ApplicationRecord
   #belongs_to :parent, optional: true
-
   has_one :parent
   enum role: [:user, :vip, :admin]
   after_initialize :set_default_role, :if => :new_record?

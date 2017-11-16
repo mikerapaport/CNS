@@ -39,6 +39,8 @@
         -if @children.length > 0
             %th Name
             %th DOB
+            %th Status
+            %th Program
         -else
             %th No children registered yet.
 
@@ -46,3 +48,5 @@
         %tr
             %td= link_to("#{x.name}", parent_child_path(@parent, x))
             %td= x.dob
+            %td= x.status
+            %td= x.program
