@@ -4,9 +4,13 @@ Feature: Update an existing parent profile
   I want to be able to update my information.
 
   Background: the website already has an existing parent profile
+    Given these Users:
+      | name      | email                  | password |
+      | Sam Burt  | samcoburt@gmail.com    | changeme |
+
     Given these Parents:
-      | name      | address              | phone  | cell | email                  | email2 |
-      | Sam Burt  | 25 Brettwood rd      | 911    |      | samcoburt@gmail.com    |        |
+      | name      | address              | phone  | cell | email                  | email2 | user_id |
+      | Sam Burt  | 25 Brettwood rd      | 911    |      | samcoburt@gmail.com    |        | 1       |
 
 
   Scenario: Update an existing parent

@@ -270,9 +270,13 @@ end
 
 Given /^these Parents/ do |table|
     table.hashes.each do |h|
-        p = Parent.create!(h)
-        user = User.find(session[:id])
-        p.user_id = session[:id]
+        Parent.create!(h)
+    end
+end
+
+Given /^these Users/ do |table|
+    table.hashes.each do |h|
+        User.create!(h)
     end
 end
 

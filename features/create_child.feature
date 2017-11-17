@@ -4,10 +4,13 @@ Feature: Create a new child
   I want to be able to select the correct registration form and fill it out
 
   Background: The parent already has a child
+    Given these Users:
+      | name      | email                  | password |
+      | Sam Burt  | samcoburt@gmail.com    | changeme |
 
     Given these Parents:
-      | name      | address              | phone  | cell | email                  | email2 |
-      | Sam Burt  | 25 Brettwood rd      | 911    |      | samcoburt@gmail.com    |        |
+      | name      | address              | phone  | cell | email                  | email2 | user_id |
+      | Sam Burt  | 25 Brettwood rd      | 911    |      | samcoburt@gmail.com    |        | 1       |
 
     Given these Children:
       | name         | dob        | status   | comments                | w1  | w2  | w3  | w4  | w5  | w6  | w7  | w8  | parent_id |

@@ -55,10 +55,10 @@ class ChildrenController < ApplicationController
   end
 
   def create
-    @parent = Parent.find(session[:id])
+    @parent = Parent.find(params[:parent_id])
     #@user = @parent.user
     @child = Child.new(create_update_params)
-    @child.parent_id = @parent
+    #@child.parent_id = @parent
     @parent.children << @child
     # check validity of what someone filled in
     # write custom validations before sending person to next form
