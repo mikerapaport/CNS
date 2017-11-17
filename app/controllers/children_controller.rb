@@ -55,7 +55,7 @@ class ChildrenController < ApplicationController
   end
 
   def create
-    @parent = Parent.find(session[:id])
+    @parent = Parent.find(params[parent_id])
     #@user = @parent.user
     @child = Child.new(create_update_params)
     @child.parent_id = @parent

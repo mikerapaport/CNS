@@ -12,7 +12,7 @@ class ParentsController < ApplicationController
         @user = @parent.user
         if @parent == nil
             #byebug
-            session[:id] = @user.id
+            session[:user_id] = @user.id
             redirect_to new_parent_path and return
         end
     end
@@ -23,8 +23,8 @@ class ParentsController < ApplicationController
 
     def create
         p = Parent.new(create_update_params)
-        user = User.find(session[:id])
-        p.user_id = session[:id]
+        user = User.find(session[:user_id])
+        p.user_id = session[:user_id]
         #byebug
 
         if p.save

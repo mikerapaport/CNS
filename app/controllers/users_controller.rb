@@ -21,7 +21,7 @@ class UsersController < ApplicationController
     #authorize @user
     if @user.parent == nil
         #byebug
-        session[:id] = @user.id
+        session[:user_id] = @user.id
         redirect_to new_parent_path and return
     else
         @parent = @user.parent
