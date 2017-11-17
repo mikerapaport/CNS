@@ -4,6 +4,7 @@ class ApplicationController < ActionController::Base
 
   protect_from_forgery with: :exception
   before_action :configure_permitted_parameters, if: :devise_controller?
+  #before_action :set_current_user
   #After_action to reroute after a user signs up or whatever their last action is
 
 
@@ -26,10 +27,11 @@ class ApplicationController < ActionController::Base
       # a new parent, you can be rerouted to the right user page
   end
 
-
-
-
-
-
+  def set_current_user
+      if session[:user_id]
+          @current_user ||= Customer.find(session[:user_id])
+      end
+      redirect_to 'visitor#index' and return unless @current_user
+  end
 
 end
