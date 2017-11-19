@@ -1,20 +1,20 @@
-=javascript_include_tag 'second_forms'
+-# =javascript_include_tag 'second_forms'
 
-%h2 Infant Registration
+%h2 Infant 10 Month Registration
 
+-# .field
+-#   =form.label :program, "Program"
+-#   =form.select :program, options_for_select([["Select a Program", "Select a Program"], ["10 Month", "10 Month"], ["Summer", "Summer"]])
+
+-# #month
+-#   %h3 10 Month Program
+=render 'yearly_template', form: form
 .field
-  =form.label :program, "Program"
-  =form.select :program, options_for_select([["Select a Program", "Select a Program"], ["10 Month", "10 Month"], ["Summer", "Summer"]])
+  =form.radio_button :time, "12:30 AM - 5:30 PM"
+  =form.label :time, "Half Day:  12:30 AM -  5:30 PM", :value=> "12:30 AM - 5:30 PM"
 
-#month
-  %h3 10 Month Program
-  =render 'yearly_template', form: form
-  .field
-    =form.radio_button :time, "12:30 AM - 5:30 PM"
-    =form.label :time, "Half Day:  12:30 AM -  5:30 PM", :value=> "12:30 AM - 5:30 PM"
-
-#summer
-  =render 'summer_template', form: form
-  .field
-    =form.radio_button :time, "12:30 AM - 5:30 PM"
-    =form.label :time, "Half Day:  12:30 AM -  5:30 PM", :value=> "12:30 AM - 5:30 PM"
+-# #summer
+-#   =render 'summer_template', form: form
+-#   .field
+-#     =form.radio_button :time, "12:30 AM - 5:30 PM"
+-#     =form.label :time, "Half Day:  12:30 AM -  5:30 PM", :value=> "12:30 AM - 5:30 PM"

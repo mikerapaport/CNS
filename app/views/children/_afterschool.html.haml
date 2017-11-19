@@ -1,47 +1,39 @@
-=javascript_include_tag 'second_forms'
+-# =javascript_include_tag 'second_forms'
 
-%h2 After school Registration
+%h2 After school 10 Month Registration
 
+-# .field
+-#   =form.label :program, "Program"
+-#   =form.select :program, options_for_select([["Select a Program", "Select a Program"], ["10 Month", "10 Month"], ["Summer", "Summer"]])
+
+%p Days and Times
 .field
-  =form.label :program, "Program"
-  =form.select :program, options_for_select([["Select a Program", "Select a Program"], ["10 Month", "10 Month"], ["Summer", "Summer"]])
-
-#month
-  %h3 10 Month Program
-  %p Days and Times
-  .field
-    =form.radio_button :m2, :value => true
-    =form.label :m2, "Monday 2:30 PM - 4:30 PM", :value=> true
-  .field
-    =form.radio_button :m2, :value => false
-    =form.label :m2, "Monday 2:30 PM - 5:30 PM", :value=> false
-  .field
-    =form.radio_button :t2, :value => true
-    =form.label :t2, "Tuesday 2:30 PM - 4:30 PM", :value=> true
-  .field
-    =form.radio_button :t2, :value => false
-    =form.label :t2, "Tuesday 2:30 PM - 5:30 PM", :value=> false
-  .field
-    =form.radio_button :w2, :value => true
-    =form.label :w2, "Wednesday 2:30 PM - 4:30 PM", :value=> true
-  .field
-    =form.radio_button :w2, :value => false
-    =form.label :w2, "Wednesday 2:30 PM - 5:30 PM", :value=> false
-  .field
-    =form.radio_button :r2, :value => true
-    =form.label :r2, "Thursday 2:30 PM - 4:30 PM", :value=> true
-  .field
-    =form.radio_button :r2, :value => false
-    =form.label :r2, "Thursday 2:30 PM - 5:30 PM", :value=> false
-  .field
-    =form.radio_button :f2, :value => true
-    =form.label :f2, "Friday 2:30 PM - 4:30 PM", :value=> true
-  .field
-    =form.radio_button :f2, :value => false
-    =form.label :f2, "Friday 2:30 PM - 5:30 PM", :value=> false
-
-#summer
-  =render 'summer_template', form: form
-  .field
-    =form.label :attending_rec, "Is your child attending the Hamilton Summer Rec Program?"
-    =form.check_box :attending_rec
+  =form.radio_button :m2, :value => true
+  =form.label :m2, "Monday 2:30 PM - 4:30 PM", :value=> true
+.field
+  =form.radio_button :m2, :value => false
+  =form.label :m2, "Monday 2:30 PM - 5:30 PM", :value=> false
+.field
+  =form.radio_button :t2, :value => true
+  =form.label :t2, "Tuesday 2:30 PM - 4:30 PM", :value=> true
+.field
+  =form.radio_button :t2, :value => false
+  =form.label :t2, "Tuesday 2:30 PM - 5:30 PM", :value=> false
+.field
+  =form.radio_button :w2, :value => true
+  =form.label :w2, "Wednesday 2:30 PM - 4:30 PM", :value=> true
+.field
+  =form.radio_button :w2, :value => false
+  =form.label :w2, "Wednesday 2:30 PM - 5:30 PM", :value=> false
+.field
+  =form.radio_button :r2, :value => true
+  =form.label :r2, "Thursday 2:30 PM - 4:30 PM", :value=> true
+.field
+  =form.radio_button :r2, :value => false
+  =form.label :r2, "Thursday 2:30 PM - 5:30 PM", :value=> false
+.field
+  =form.radio_button :f2, :value => true
+  =form.label :f2, "Friday 2:30 PM - 4:30 PM", :value=> true
+.field
+  =form.radio_button :f2, :value => false
+  =form.label :f2, "Friday 2:30 PM - 5:30 PM", :value=> false

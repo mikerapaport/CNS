@@ -14,20 +14,48 @@
       =c.date_field :dob
 
     .field
-      =c.label :status, "Child Program"
+      =c.label :status, "Child Status"
       =c.select :status, options_for_select([["Select a Program", "Select a Program"], ["Infant", "Infant"], ["Early Childhood", "Early Childhood"], ["Post HCS Pre-K", "Post HCS Pre-K"], ["HCS After-school", "HCS After-school"]])
 
+    .field
+      =c.label :program, "Child Program"
+      =c.select :program, options_for_select([["Select a Program", "Select a Program"], ["10 Month", "10 Month"], ["Summer", "Summer"]], :disabled => [["Select a Program", "Select a Program"], ["10 Month", "10 Month"]])
+
     #infant
-      =render 'infant', form: c
+      %h2 Infant 10 Month Registration
+      =render 'yearly_template', form: c
+      .field
+        =c.radio_button :time, "12:30 AM - 5:30 PM"
+        =c.label :time, "Half Day:  12:30 AM -  5:30 PM", :value=> "12:30 AM - 5:30 PM"
+
+    #infant_summer
+      %h2 Infant Summer Registration
+      =render 'summer_template', form: c
+      .field
+        =c.radio_button :time, "12:30 AM - 5:30 PM"
+        =c.label :time, "Half Day:  12:30 AM -  5:30 PM", :value=> "12:30 AM - 5:30 PM"
 
     #early_childhood
-      =render 'early_childhood', form: c
+      %h2 Early Childhood 10 Month Program
+      =render 'yearly_template', form: c
+
+    #early_childhood_summer
+      %h2 Early Childhood Summer Program
+      =render 'summer_template', form: c
 
     #post_pre-k
       =render 'post_pre-k', form: c
 
     #afterschool
       =render 'afterschool', form: c
+
+    #afterschool_summer
+      %h2 After school Summer Registration
+      =render 'summer_template', form: c
+      %br
+      .field
+        =c.check_box :attending_rec
+        =c.label :attending_rec, "Is your child attending the Hamilton Summer Rec Program?"
 
     -# .field
     -#   =c.label :address, "Address"

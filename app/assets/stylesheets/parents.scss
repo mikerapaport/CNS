@@ -1,3 +1,20 @@
 // Place all the styles related to the Parent controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+body .parent_table {
+  position: relative;
+  top: 10px;
+  width: 80%;
+  padding: 10px;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+body .children_table {
+  position: relative;
+  top: 10px;
+  width: 60%;
+  padding: 10px;
+  margin-bottom: 20px;
+  text-align: left;
+}
