@@ -13,7 +13,16 @@ class ChildrenController < ApplicationController
     id = params[:id]
     @child = Child.find(id)
 
-    #@child.days = ""
+    @child.days = ""
+
+    if @child.week == 5
+      @child.days = "M, T, W, Th, F"
+    elsif @child.week == 3
+      @child.days = "M, W, F"
+    elsif @child.week == 2
+      @child.days = "T, Th"
+    end
+    
     if !@child.m2.nil?
       @child.days += "M, "
     end
@@ -31,14 +40,6 @@ class ChildrenController < ApplicationController
     end
     if @child.days =~ /, $/
       @child.days.chop!.chop!
-    end
-
-    if @child.week == 5
-      @child.days = "M, T, W, Th, F"
-    elsif @child.week == 3
-      @child.days = "M, W, F"
-    elsif @child.week == 2
-      @child.days = "T, Th"
     end
 
   end
