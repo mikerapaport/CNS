@@ -3,10 +3,10 @@ Feature: Display a child's schedule
   so that I can see my child's schedule
   I want to view a weekly schedule of daily times
 
-  Background: Parent has at least one child registered
+  Background: Parent is logged in and authorized, and has at least one child registered
     Given these Users:
-      | name      | email                  | password |
-      | Sam Burt  | samcoburt@gmail.com    | changeme |
+      | name      | email                  | password | role |
+      | Sam Burt  | samcoburt@gmail.com    | changeme | user |
 
     Given these Parents:
       | name      | address              | phone  | cell | email                  | email2 | user_id |
@@ -20,7 +20,7 @@ Feature: Display a child's schedule
 
   Scenario: Child has a full schedule
     Given I am on the parents profile page
-    Then I should see "Jane"
+    And I should see "Jane"
     And I should see that "Jane" has a dob of "03/09/2014"
     When I follow "Jane"
     Then I should see "Infant"

@@ -26,19 +26,19 @@ class ChildrenController < ApplicationController
       @child.days = "T, Th"
     end
 
-    if !@child.m2.nil?
+    if !@child.m2.nil? && @child.week.nil?
       @child.days += "M, "
     end
-    if !@child.t2.nil?
+    if !@child.t2.nil? && @child.week.nil?
       @child.days += "T, "
     end
-    if !@child.w2.nil?
+    if !@child.w2.nil? && @child.week.nil?
       @child.days += "W, "
     end
-    if !@child.r2.nil?
+    if !@child.r2.nil? && @child.week.nil?
       @child.days += "Th, "
     end
-    if !@child.nil?
+    if !@child.f2.nil? && @child.week.nil?
       @child.days += "F"
     end
     if @child.days =~ /, $/

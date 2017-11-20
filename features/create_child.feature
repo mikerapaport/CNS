@@ -22,6 +22,8 @@ Feature: Create a new child
         | Name            | Mikaela Shiffrin           |
         | Date of Birth   | 1/1/2013                   |
 
+    When I select "Early Childhood" from "Child Status"
+    When I select "10 Month" from "Child Program"
 
     When I write "She is so good at skiing" in "Additional Information"
     And I press "Register"

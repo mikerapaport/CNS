@@ -42,6 +42,9 @@ module NavigationHelpers
         when /^the children page$/
             self.send(["children"].push('path').join('_').to_sym)
 
+        when /^my user profile$/
+            user_path(User.find_by($1))
+
     else
       begin
         page_name =~ /^the (.*) page$/
