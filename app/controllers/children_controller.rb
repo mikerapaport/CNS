@@ -55,11 +55,9 @@ class ChildrenController < ApplicationController
   end
 
   def create
-<<<<<<< HEAD
+
     @parent = Parent.find(params[:parent_id])
-=======
-    @parent = Parent.find(params[parent_id])
->>>>>>> 22319e87eee0668f7e01c4b1c306d61309d7aad7
+
     #@user = @parent.user
     @child = Child.new(create_update_params)
     #@child.parent_id = @parent

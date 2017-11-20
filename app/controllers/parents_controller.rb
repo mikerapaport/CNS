@@ -1,5 +1,8 @@
 class ParentsController < ApplicationController
 
+    #before_action :set_current_user
+
+
     def show
         @parent = Parent.find(params[:id])
         @children = @parent.children
@@ -63,7 +66,14 @@ class ParentsController < ApplicationController
         end
     end
 
-    private
+    protected
+        def set_current_user
+            if session[:user_id]
+                @current_user ||= User.find(session[:user_id])
+            end
+            redirect_to 'visitor#index' and return unless @current_user
+        end
+
         def create_update_params
             params.require(:parent).permit(:name, :address, :phone, :cell, :email, :email2)
         end
