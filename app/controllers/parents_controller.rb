@@ -33,7 +33,7 @@ class ParentsController < ApplicationController
         p = Parent.new(create_update_params)
         user = User.find(session[:user_id])
         p.user_id = session[:user_id]
-        authorize user
+        #authorize user
         #byebug
 
         if p.save

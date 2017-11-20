@@ -2,7 +2,7 @@ class ChildrenController < ApplicationController
 
   def new
     @child = Child.new()
-    authorize @child.parent.user
+    #authorize @child.parent.user
   end
 
   def index
@@ -51,9 +51,10 @@ class ChildrenController < ApplicationController
     @parent = Parent.find(params[:parent_id])
     #@user = @parent.user
     @child = Child.new(create_update_params)
-    authorize @child.parent.user
+
     #@child.parent_id = @parent
     @parent.children << @child
+    #authorize @child.parent.user
     # check validity of what someone filled in
     # write custom validations before sending person to next form
     # create custom routes?
