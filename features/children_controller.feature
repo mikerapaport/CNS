@@ -53,7 +53,7 @@ Feature: Display a child's schedule
 
   Scenario: Child's schedule is edited to remove Friday
     Given I am on the parents profile page
-    When I follow "Edit child info"
+    When I follow "Register a Child"
     When I uncheck the Friday box
     And I press "Update child"
     Then I should see "M, T, W, Th"
@@ -61,7 +61,7 @@ Feature: Display a child's schedule
 
   Scenario: Child's schedule is changed from full day to Post Pre-K
     Given I am on the parents profile page
-    When I follow "Edit child info"
+    When I follow "Register a Child"
     When I select "Post HCS Pre-K"
     And I press "Update child"
     Then I should see "M, T, W, Th"
