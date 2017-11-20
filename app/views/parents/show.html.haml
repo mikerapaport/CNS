@@ -6,7 +6,7 @@
 -# -if flash[:notice]
 -#     %h1= "#{flash[:notice]}"
 
-%table
+%table.parent_table
     %caption
         Parent details for
         %span.parent_name= @parent.name
@@ -33,7 +33,7 @@
 =link_to("Register a Child", new_parent_child_path(@parent))
 %br
 %br
-%table
+%table.children_table
     %caption Children
     %tr
         -if @children.length > 0
@@ -45,8 +45,8 @@
             %th No children registered yet.
 
     -@children.each do |x|
-        %tr
-            %td= link_to("#{x.name}", parent_child_path(@parent, x))
-            %td= x.dob
-            %td= x.status
+        %tr.child
+            %td.name= link_to("#{x.name}", parent_child_path(@parent, x))
+            %td.dob= x.dob
+            %td.status= x.status
             -# %td= x.program

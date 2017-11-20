@@ -14,11 +14,11 @@ Feature: Update an existing parent profile
 
 
   Scenario: Update an existing parent
-    Given I am on the parents page
-    When I follow "Sam Burt"
+    Given I am on the parents profile page
+    Then I should see "Sam Burt"
     Then I should see "25 Brettwood rd"
     And I should see "911"
-    When I follow "Edit parent info"
+    When I follow "Edit Parent Information"
     And I fill in "Primary Phone Number" with "411"
     And I fill in "Secondary Email" with "meals@wheels.com"
     And I press "Update Parent"
@@ -26,10 +26,9 @@ Feature: Update an existing parent profile
     And I should see "meals@wheels.com"
 
   Scenario: Updating a parent with an invalid email address
-    Given I am on the parents page
-    When I follow "Sam Burt"
-    When I follow "Edit parent info"
+    Given I am on the parents profile page
+    When I follow "Edit Parent Information"
     And I fill in "Primary Email" with "notgood.nobueno"
     And I press "Update Parent"
-    Then I should see "Error, invalid email"
-    And I should see "samcoburt@gmail.com"
+    Then I should be on the update parent page
+    And I should see "Error, invalid email"

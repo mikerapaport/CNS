@@ -13,51 +13,39 @@ class ChildrenController < ApplicationController
     id = params[:id]
     @child = Child.find(id)
 
-    @days = ""
-    if @child.m2 || @child.m3
-      @days += "M, "
-    end
-    if @child.t2 || @child.t3
-      @days += "T, "
-    end
-    if @child.w2 || @child.w3
-      @days += "W, "
-    end
-    if @child.r2 || @child.r3
-      @days += "Th, "
-    end
-    if @child.f2 || @child.f3
-      @days += "F"
-    end
-    if @days =~ /, $/
-      @days.chop!.chop!
+    @child.days = ""
+
+    if @child.week == 5
+      @child.days = "M, T, W, Th, F"
+    elsif @child.week == 3
+      @child.days = "M, W, F"
+    elsif @child.week == 2
+      @child.days = "T, Th"
     end
 
-    if @child.mtwrf
-      @days = "M, T, W, Th, F"
-    elsif @child.mwf
-      @days = "M, W, F"
-    elsif @child.tr
-      @days = "T, Th"
+    if !@child.m2.nil?
+      @child.days += "M, "
     end
-
-    @hours = ""
-    if @child.time == "Full Day"
-      @hours = "Full Day (7:30AM - 5:30PM)"
-    elsif @child.time == "Half Day Morning"
-      @hours = "Half Day Morning (7:30AM - 12:30PM)"
-    elsif @child.time == "Half Day Afternoon"
-      @hours = "Half Day Afternoon (12:30PM - 5:30PM)"
-    elsif @child.program == "Post HCS Pre-K"
-      @hours = "11:30AM - 5:30PM"
+    if !@child.t2.nil?
+      @child.days += "T, "
+    end
+    if !@child.w2.nil?
+      @child.days += "W, "
+    end
+    if !@child.r2.nil?
+      @child.days += "Th, "
+    end
+    if !@child.nil?
+      @child.days += "F"
+    end
+    if @child.days =~ /, $/
+      @child.days.chop!.chop!
     end
 
   end
 
   def create
-
     @parent = Parent.find(params[:parent_id])
-
     #@user = @parent.user
     @child = Child.new(create_update_params)
     #@child.parent_id = @parent
@@ -79,7 +67,7 @@ class ChildrenController < ApplicationController
 
   private
       def create_update_params
-          params.require(:child).permit(:name, :dob, :status, :program, :time, :mtwrf, :mwf, :tr, :m2, :m3, :t2, :t3, :w2, :w3, :r2, :r3, :f2, :f3, :full, :half_morning, :half_afternoon, :comments, :attending_rec, :w1, :w2, :w3, :w4, :w5, :w6, :w7, :w8, :parent_id)
+          params.require(:child).permit(:name, :dob, :status, :program, :time, :week, :m2, :t2, :w2, :r2, :f2, :time, :comments, :attending_rec, :w1, :w2, :w3, :w4, :w5, :w6, :w7, :w8, :parent_id)
       end
 
       def check_valid_info()

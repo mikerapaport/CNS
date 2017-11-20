@@ -21,8 +21,13 @@ module NavigationHelpers
     #
     #   when /^(.*)'s profile page$/i
     #     user_profile_path(User.find_by_login($1))
+
         when /^the create new child page$/
-            self.send(["new", "parent", "child"].push('path').join('_').to_sym)
+            #self.send(["new", "parent", "child"].push('path').join('_').to_sym)
+            new_parent_child_path(Parent.find_by($1))
+
+        when /^the parents profile page$/
+            parent_path(Parent.find_by($1))
 
         when /^the parents page$/
             self.send(["parents"].push('path').join('_').to_sym)
@@ -31,7 +36,8 @@ module NavigationHelpers
             self.send(["new", "parent"].push('path').join('_').to_sym)
 
         when /^the update parent page$/
-            self.send(["edit", "parent"].push('path').join('_').to_sym)
+            edit_parent_path(Parent.find_by($1))
+            #self.send(["edit", "parent"].push('path').join('_').to_sym)
 
         when /^the children page$/
             self.send(["children"].push('path').join('_').to_sym)

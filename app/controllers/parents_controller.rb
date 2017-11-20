@@ -80,7 +80,7 @@ class ParentsController < ApplicationController
 
         def check_valid_info()
             parent_hash = params[:parent]
-            if !(parent_hash[:email] =~ /.+@.+\..+/)
+            if !(parent_hash[:email] =~ /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\z/i)
                 flash[:warning] = "Error, invalid email"
                 return false
             end

@@ -16,6 +16,9 @@ class UsersController < ApplicationController
   end
 
   def show
+    #if current_user.id != params[:id]
+      #redirect_to root_path and return
+    #end
     @user = User.find(params[:id])
     #Need to get this authorize to work, Sam Burt commented this out
     authorize @user
