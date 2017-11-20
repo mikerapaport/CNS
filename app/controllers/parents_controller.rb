@@ -7,6 +7,7 @@ class ParentsController < ApplicationController
         @parent = Parent.find(params[:id])
         @children = @parent.children
         @user = @parent.user
+        authorize @user
         #byebug
     end
 
@@ -48,11 +49,14 @@ class ParentsController < ApplicationController
     def edit
         id = params[:id]
         @parent = Parent.find(id)
+        authorize @parent.user
     end
 
     def update
         id = params[:id]
         p = Parent.find(id)
+        @user = p.users
+        authorize @user
         if !(check_valid_info())
             redirect_to edit_parent_path(p) and return
         end
@@ -67,12 +71,12 @@ class ParentsController < ApplicationController
     end
 
     protected
-        def set_current_user
-            if session[:user_id]
-                @current_user ||= User.find(session[:user_id])
-            end
-            redirect_to 'visitor#index' and return unless @current_user
-        end
+        # def set_current_user
+        #     if session[:user_id]
+        #         @current_user ||= User.find(session[:user_id])
+        #     end
+        #     redirect_to 'visitor#index' and return unless @current_user
+        # end
 
         def create_update_params
             params.require(:parent).permit(:name, :address, :phone, :cell, :email, :email2)

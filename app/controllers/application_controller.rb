@@ -1,7 +1,7 @@
 class ApplicationController < ActionController::Base
 
   include Pundit
-  
+
   protect_from_forgery with: :exception
   before_action :configure_permitted_parameters, if: :devise_controller?
   #before_action :set_current_user
@@ -36,8 +36,6 @@ class ApplicationController < ActionController::Base
   #     end
   #     redirect_to 'visitor#index' and return unless @current_user
   # end
-
-  private
 
   def user_not_authorized
     flash[:alert] = "You are not authorized to perform this action."
