@@ -13,42 +13,38 @@ class ChildrenController < ApplicationController
     id = params[:id]
     @child = Child.find(id)
 
-    @days = ""
+    #@child.days = ""
     if !@child.m2.nil?
-      @days += "M, "
+      @child.days += "M, "
     end
     if !@child.t2.nil?
-      @days += "T, "
+      @child.days += "T, "
     end
     if !@child.w2.nil?
-      @days += "W, "
+      @child.days += "W, "
     end
     if !@child.r2.nil?
-      @days += "Th, "
+      @child.days += "Th, "
     end
     if !@child.nil?
-      @days += "F"
+      @child.days += "F"
     end
-    if @days =~ /, $/
-      @days.chop!.chop!
+    if @child.days =~ /, $/
+      @child.days.chop!.chop!
     end
 
     if @child.week == 5
-      @days = "M, T, W, Th, F"
+      @child.days = "M, T, W, Th, F"
     elsif @child.week == 3
-      @days = "M, W, F"
+      @child.days = "M, W, F"
     elsif @child.week == 2
-      @days = "T, Th"
+      @child.days = "T, Th"
     end
 
   end
 
   def create
-# <<<<<<< HEAD
     @parent = Parent.find(params[:parent_id])
-# =======
-#     @parent = Parent.find(params[parent_id])
-# >>>>>>> 22319e87eee0668f7e01c4b1c306d61309d7aad7
     #@user = @parent.user
     @child = Child.new(create_update_params)
     #@child.parent_id = @parent

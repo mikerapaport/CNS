@@ -45,8 +45,8 @@
             %th No children registered yet.
 
     -@children.each do |x|
-        %tr
-            %td= link_to("#{x.name}", parent_child_path(@parent, x))
-            %td= x.dob
-            %td= x.status
+        %tr.child
+            %td.name= link_to("#{x.name}", parent_child_path(@parent, x))
+            %td.dob= x.dob
+            %td.status= x.status
             -# %td= x.program
