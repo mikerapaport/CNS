@@ -31,7 +31,7 @@ class ParentsController < ApplicationController
 
     def create
         p = Parent.new(create_update_params)
-        user = User.find(session[:user_id])
+        #user = User.find(session[:user_id])
         p.user_id = session[:user_id]
         #authorize user
         #byebug
@@ -44,7 +44,7 @@ class ParentsController < ApplicationController
             #user = session[:user]
             #name = user.name
             #user.parent << p
-            redirect_to user_path(user) and return
+            redirect_to user_path(p.user_id) and return
         else
             flash[:warning] = "Error creating new parent"
             redirect_to new_parent_path(p) and return
@@ -60,7 +60,7 @@ class ParentsController < ApplicationController
     def update
         id = params[:id]
         p = Parent.find(id)
-        @user = p.users
+        @user = p.user
         authorize @user
         if !(check_valid_info())
             redirect_to edit_parent_path(p) and return

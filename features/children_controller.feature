@@ -4,6 +4,9 @@ Feature: Display a child's schedule
   I want to view a weekly schedule of daily times
 
   Background: Parent is logged in and authorized, and has at least one child registered
+    Given I am logged in
+    Then I should be authorized as a user
+    
     Given these Users:
       | name      | email                  | password | role |
       | Sam Burt  | samcoburt@gmail.com    | changeme | user |

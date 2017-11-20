@@ -4,6 +4,9 @@ Feature: Create a new child
   I want to be able to select the correct registration form and fill it out
 
   Background: The parent already has a child
+    Given I am logged in
+    Then I should be authorized as a user
+    
     Given these Users:
       | name      | email                  | password |
       | Sam Burt  | samcoburt@gmail.com    | changeme |

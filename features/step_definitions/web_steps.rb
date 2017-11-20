@@ -24,6 +24,154 @@ require 'cgi'
 require File.expand_path(File.join(File.dirname(__FILE__), "..", "support", "paths"))
 require File.expand_path(File.join(File.dirname(__FILE__), "..", "support", "selectors"))
 
+# UTILITY METHODS #
+def create_visitor
+  @visitor ||= { :name => "Testy McUserton", :email => "example@example.com",
+    :password => "changeme", :password_confirmation => "changeme" }
+end
+
+def find_user
+  @user ||= User.where(:email => @visitor[:email]).first
+end
+
+def find_parent
+  @parent ||= Parent.where(:email => @visitor[:email]).first
+end
+
+def create_unconfirmed_user
+  create_visitor
+  delete_user
+  sign_up
+  visit '/users/sign_out'
+end
+
+def create_user
+  create_visitor
+  delete_user
+  @user = FactoryGirl.create(:user, @visitor)
+end
+
+def delete_user
+  @user ||= User.where(:email => @visitor[:email]).first
+  @user.destroy unless @user.nil?
+end
+
+def sign_up
+  delete_user
+  visit '/users/sign_up'
+  fill_in "Name", :with => @visitor[:name]
+  fill_in "Email", :with => @visitor[:email]
+  fill_in "Password", :with => @visitor[:password]
+  fill_in "Password confirmation", :with => @visitor[:password_confirmation]
+  click_button "Sign up"
+  find_user
+end
+
+def sign_in
+  visit '/users/sign_in'
+  fill_in "Email", :with => @visitor[:email]
+  fill_in "Password", :with => @visitor[:password]
+  click_button "Sign in"
+end
+
+# GIVEN #
+Given /^I am not logged in$/ do
+  visit '/users/sign_out'
+end
+
+Given /^I am logged in$/ do
+  create_user
+  sign_in
+end
+
+Given /^I exist as a user$/ do
+  create_user
+end
+
+Given /^I do not exist as a user$/ do
+  create_visitor
+  delete_user
+end
+
+Given /^I exist as an unconfirmed user$/ do
+  create_unconfirmed_user
+end
+
+# WHEN #
+When /^I sign in with valid credentials$/ do
+  create_visitor
+  sign_in
+end
+
+When /^I sign out$/ do
+  visit '/users/sign_out'
+end
+
+When /^I sign up with valid user data$/ do
+  create_visitor
+  sign_up
+end
+
+When /^I sign up with an invalid email$/ do
+  create_visitor
+  @visitor = @visitor.merge(:email => "notanemail")
+  sign_up
+end
+
+When /^I sign up without a password confirmation$/ do
+  create_visitor
+  @visitor = @visitor.merge(:password_confirmation => "")
+  sign_up
+end
+
+When /^I sign up without a password$/ do
+  create_visitor
+  @visitor = @visitor.merge(:password => "")
+  sign_up
+end
+
+When /^I sign up with a mismatched password confirmation$/ do
+  create_visitor
+  @visitor = @visitor.merge(:password_confirmation => "changeme123")
+  sign_up
+end
+
+When /^I return to the site$/ do
+  visit '/'
+end
+
+When /^I sign in with a wrong email$/ do
+  @visitor = @visitor.merge(:email => "wrong@example.com")
+  sign_in
+end
+
+When /^I sign in with a wrong password$/ do
+  @visitor = @visitor.merge(:password => "wrongpass")
+  sign_in
+end
+
+# THEN #
+Then /^I should be signed in$/ do
+  page.should have_content "Logout"
+  page.should_not have_content "Sign up"
+  page.should_not have_content "Login"
+end
+
+Then /^I should be signed out$/ do
+  page.should have_content "Sign up"
+  page.should have_content "Login"
+  page.should_not have_content "Logout"
+end
+
+Then /^I should be authorized as a user$/ do
+  authorize @user, :create?
+end
+
+Then /^I should be authorized as a parent$/ do
+  find_parent
+  authorize @parent, :create?
+end
+
 module WithinHelpers
   def with_scope(locator)
     locator ? within(*selector_for(locator)) { yield } : yield
@@ -73,18 +221,9 @@ end
 #     | Note           | Nice guy   |
 #     | Wants Email?   |            |
 #
-# TODO: Add support for checkbox, select or option
-# based on naming conventions.
-#
-# When /^(?:|I )fill in the following:$/ do |fields|
-#   fields.rows_hash.each do |name, value|
-#     When %{I fill in "#{name}" with "#{value}"}
-#   end
-# end
 
 When /^(?:|I )fill in the following:$/ do |fields|
   fields.rows_hash.each do |name, value|
-    #When %{I fill in "#{name}" with "#{value}"}
     fill_in(name, :with => value)
   end
 end

@@ -3,26 +3,21 @@ Feature: Create a new parent
   so that I can register my child for CNS
   I want to be able to create a parent profile to store my information
 
-  Background: The parent already has a profile
-    Given these Users:
-      | name      | email                  | password |
-      | Sam Burt  | samcoburt@gmail.com    | changeme |
+  Background: The parent is logged in, but doesn't have a profile
+    Given I am logged in
+    Then I should be authorized as a user
 
-    Given these Parents:
-      | name         | address         | phone  | cell | email             | email2 | user_id |
-      | Sam Burt     | 25 Brettwood Rd | 617    |      | sburt@gmail.com   |        | 1       |
-
-  Scenario: Create a new parent whose name is Mark
+  Scenario: Create a parent profile for Sam Burt
     Given I am on the create new parent page
     When I fill in the following:
-        | Primary Email          | sburt@sad.com                 |
-        | Primary Phone Number   | 1234234                       |
-        | Address                | 13 oak drive                  |
+        | Name                   | Sam Burt                      |
+        | Primary Email          | samcoburt@gmail.com           |
+        | Home Address           | 25 Brettwood Rd               |
+        | Primary Phone Number   | 6177770000                    |
 
-    When I write "Mark" in "Name"
     And I press "Create Parent"
-    Then I should be on the parents page
-    And I should see "New parent 'Mark' created"
+    Then I should see "New parent 'Sam Burt' create"
+    And I should be on the user profile page
 
   Scenario: Create a new parent with an invalid email
     Given I am on the create new parent page

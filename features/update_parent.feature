@@ -4,6 +4,10 @@ Feature: Update an existing parent profile
   I want to be able to update my information.
 
   Background: the website already has an existing parent profile
+    Given I am logged in
+    Then I should be authorized as a user
+    And I should be authorized as a parent
+
     Given these Users:
       | name      | email                  | password |
       | Sam Burt  | samcoburt@gmail.com    | changeme |
