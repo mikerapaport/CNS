@@ -12,6 +12,8 @@ class ParentsController < ApplicationController
     end
 
     def index
+        #Authorize has not yet been added to this function because
+        # Sam Burt was not sure who should be authorized to see all users
         @parent = Parent.find(params[:id])
         @user = @parent.user
         if @parent == nil
@@ -22,6 +24,8 @@ class ParentsController < ApplicationController
     end
 
     def new
+        #Athorize not included in new... need to figure out how to user
+        # method properly in this one
         @parent = Parent.new
     end
 
@@ -29,6 +33,7 @@ class ParentsController < ApplicationController
         p = Parent.new(create_update_params)
         user = User.find(session[:user_id])
         p.user_id = session[:user_id]
+        authorize user
         #byebug
 
         if p.save

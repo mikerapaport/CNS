@@ -2,16 +2,19 @@ class ChildrenController < ApplicationController
 
   def new
     @child = Child.new()
+    authorize @child.parent.user
   end
 
   def index
     @parent = Parent.find(params[:parent_id])
     @children = @parent.children
+    authorize @child.parent.user
   end
 
   def show
     id = params[:id]
     @child = Child.find(id)
+    authorize @child.parent.user
 
     @child.days = ""
 
@@ -48,6 +51,7 @@ class ChildrenController < ApplicationController
     @parent = Parent.find(params[:parent_id])
     #@user = @parent.user
     @child = Child.new(create_update_params)
+    authorize @child.parent.user
     #@child.parent_id = @parent
     @parent.children << @child
     # check validity of what someone filled in

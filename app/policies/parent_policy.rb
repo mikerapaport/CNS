@@ -12,6 +12,11 @@ class ParentPolicy < ApplicationPolicy
     user == record
   end
 
+  def create?
+    user == record
+  end
+
+
 
   class Scope < Scope
     def resolve
