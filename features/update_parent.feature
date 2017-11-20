@@ -35,4 +35,4 @@ Feature: Update an existing parent profile
     And I fill in "Primary Email" with "notgood.nobueno"
     And I press "Update Parent"
     Then I should be on the update parent page
-    And I should see "Error, invalid email"
+    And I should see "Error updating parent"

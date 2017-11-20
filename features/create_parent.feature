@@ -28,4 +28,4 @@ Feature: Create a new parent
 
     When I write "123412skljagdlf" in "Primary Email"
     And I press "Create Parent"
-    And I should see "Error, invalid email"
+    Then I should see "Error creating new parent"

@@ -36,10 +36,11 @@ class ParentsController < ApplicationController
         #authorize user
         #byebug
 
-        if p.save
-            if !(check_valid_info)
-                redirect_to edit_parent_path(p) and return
-            end
+        if p.save && check_valid_info
+            # if !(check_valid_info)
+            #     flash[:warning] = "Error creating new parent"
+            #     redirect_to edit_parent_path(p) and return
+            # end
             flash[:notice] = "New parent '#{p.name}' created"
             #user = session[:user]
             #name = user.name
@@ -62,11 +63,11 @@ class ParentsController < ApplicationController
         p = Parent.find(id)
         @user = p.user
         authorize @user
-        if !(check_valid_info())
-            redirect_to edit_parent_path(p) and return
-        end
+        # if !(check_valid_info())
+        #     redirect_to edit_parent_path(p) and return
+        # end
         p.update(create_update_params)
-        if p.save
+        if p.save && check_valid_info
             flash[:notice] = "\"#{p.name}\" updated"
             redirect_to parent_path(p) and return
         else
@@ -90,7 +91,7 @@ class ParentsController < ApplicationController
         def check_valid_info()
             parent_hash = params[:parent]
             if !(parent_hash[:email] =~ /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\z/i)
-                flash[:warning] = "Error, invalid email"
+                #flash[:warning] = "Error, invalid email"
                 return false
             end
             # if !(parent_hash[:email2].nil?) && !(parent_hash[:email2] =~ /.+@.+\..+/)
