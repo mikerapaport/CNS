@@ -1,7 +1,7 @@
 {
   "Cucumber Features": {
     "coverage": {
-      "/Users/laura/Documents/Senior/Software Engineering/CNS/app/controllers/application_controller.rb": [
+      "/Users/ljsubaldo/Documents/Senior Year 2017-2018/Fall Semester 2017/Software Engineering/CNS/app/controllers/application_controller.rb": [
         1,
         null,
         1,
@@ -48,19 +48,19 @@
         null,
         null
       ],
-      "/Users/laura/Documents/Senior/Software Engineering/CNS/app/helpers/application_helper.rb": [
+      "/Users/ljsubaldo/Documents/Senior Year 2017-2018/Fall Semester 2017/Software Engineering/CNS/app/helpers/application_helper.rb": [
         1,
         null
       ],
-      "/Users/laura/Documents/Senior/Software Engineering/CNS/app/helpers/child_helper.rb": [
+      "/Users/ljsubaldo/Documents/Senior Year 2017-2018/Fall Semester 2017/Software Engineering/CNS/app/helpers/child_helper.rb": [
         1,
         null
       ],
-      "/Users/laura/Documents/Senior/Software Engineering/CNS/app/helpers/parents_helper.rb": [
+      "/Users/ljsubaldo/Documents/Senior Year 2017-2018/Fall Semester 2017/Software Engineering/CNS/app/helpers/parents_helper.rb": [
         1,
         null
       ],
-      "/Users/laura/Documents/Senior/Software Engineering/CNS/app/models/user.rb": [
+      "/Users/ljsubaldo/Documents/Senior Year 2017-2018/Fall Semester 2017/Software Engineering/CNS/app/models/user.rb": [
         1,
         null,
         1,
@@ -78,12 +78,12 @@
         null,
         null
       ],
-      "/Users/laura/Documents/Senior/Software Engineering/CNS/app/models/application_record.rb": [
+      "/Users/ljsubaldo/Documents/Senior Year 2017-2018/Fall Semester 2017/Software Engineering/CNS/app/models/application_record.rb": [
         1,
         1,
         null
       ],
-      "/Users/laura/Documents/Senior/Software Engineering/CNS/app/controllers/users_controller.rb": [
+      "/Users/ljsubaldo/Documents/Senior Year 2017-2018/Fall Semester 2017/Software Engineering/CNS/app/controllers/users_controller.rb": [
         1,
         1,
         null,
@@ -142,7 +142,7 @@
         null,
         null
       ],
-      "/Users/laura/Documents/Senior/Software Engineering/CNS/app/policies/user_policy.rb": [
+      "/Users/ljsubaldo/Documents/Senior Year 2017-2018/Fall Semester 2017/Software Engineering/CNS/app/policies/user_policy.rb": [
         1,
         null,
         null,
@@ -168,7 +168,7 @@
         null,
         null
       ],
-      "/Users/laura/Documents/Senior/Software Engineering/CNS/app/policies/application_policy.rb": [
+      "/Users/ljsubaldo/Documents/Senior Year 2017-2018/Fall Semester 2017/Software Engineering/CNS/app/policies/application_policy.rb": [
         1,
         1,
         null,
@@ -224,7 +224,7 @@
         null,
         null
       ],
-      "/Users/laura/Documents/Senior/Software Engineering/CNS/app/models/parent.rb": [
+      "/Users/ljsubaldo/Documents/Senior Year 2017-2018/Fall Semester 2017/Software Engineering/CNS/app/models/parent.rb": [
         1,
         1,
         null,
@@ -234,7 +234,7 @@
         null,
         null
       ],
-      "/Users/laura/Documents/Senior/Software Engineering/CNS/app/controllers/parents_controller.rb": [
+      "/Users/ljsubaldo/Documents/Senior Year 2017-2018/Fall Semester 2017/Software Engineering/CNS/app/controllers/parents_controller.rb": [
         1,
         null,
         null,
@@ -354,7 +354,7 @@
         null,
         null
       ],
-      "/Users/laura/Documents/Senior/Software Engineering/CNS/app/models/child.rb": [
+      "/Users/ljsubaldo/Documents/Senior Year 2017-2018/Fall Semester 2017/Software Engineering/CNS/app/models/child.rb": [
         1,
         1,
         1,
@@ -362,7 +362,7 @@
         null,
         null
       ],
-      "/Users/laura/Documents/Senior/Software Engineering/CNS/app/controllers/children_controller.rb": [
+      "/Users/ljsubaldo/Documents/Senior Year 2017-2018/Fall Semester 2017/Software Engineering/CNS/app/controllers/children_controller.rb": [
         1,
         null,
         1,
@@ -451,75 +451,72 @@
         null,
         null
       ],
-      "/Users/laura/Documents/Senior/Software Engineering/CNS/app/mailers/application_mailer.rb": [
+      "/Users/ljsubaldo/Documents/Senior Year 2017-2018/Fall Semester 2017/Software Engineering/CNS/app/channels/application_cable/channel.rb": [
         0,
         0,
         0,
         0
       ],
-      "/Users/laura/Documents/Senior/Software Engineering/CNS/app/policies/child_policy.rb": [
-        0,
-        null,
-        0,
-        0,
-        0,
-        null,
-        0,
-        0,
-        0,
-        null,
-        0,
-        0,
-        0,
-        null,
-        0,
-        0,
-        0,
-        null,
-        0,
-        0,
-        0,
-        null,
-        0,
-        0,
-        0,
-        null,
-        0,
-        0,
+      "/Users/ljsubaldo/Documents/Senior Year 2017-2018/Fall Semester 2017/Software Engineering/CNS/app/channels/application_cable/connection.rb": [
         0,
         0,
         0,
         0
       ],
-      "/Users/laura/Documents/Senior/Software Engineering/CNS/app/policies/parent_policy.rb": [
-        0,
+      "/Users/ljsubaldo/Documents/Senior Year 2017-2018/Fall Semester 2017/Software Engineering/CNS/app/controllers/admin/application_controller.rb": [
         null,
-        0,
-        0,
-        0,
         null,
-        0,
-        0,
-        0,
         null,
-        0,
-        0,
-        0,
-        null,
-        0,
-        0,
-        0,
         null,
         null,
         null,
         0,
         0,
         0,
+        null,
         0,
+        null,
+        0,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
         0,
         0
       ],
-      "/Users/laura/Documents/Senior/Software Engineering/CNS/app/dashboards/user_dashboard.rb": [
+      "/Users/ljsubaldo/Documents/Senior Year 2017-2018/Fall Semester 2017/Software Engineering/CNS/app/controllers/admin/users_controller.rb": [
+        0,
+        0,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        0,
+        0
+      ],
+      "/Users/ljsubaldo/Documents/Senior Year 2017-2018/Fall Semester 2017/Software Engineering/CNS/app/controllers/visitors_controller.rb": [
+        0,
+        null,
+        null,
+        null,
+        0
+      ],
+      "/Users/ljsubaldo/Documents/Senior Year 2017-2018/Fall Semester 2017/Software Engineering/CNS/app/dashboards/user_dashboard.rb": [
         0,
         null,
         0,
@@ -605,67 +602,43 @@
         null,
         0
       ],
-      "/Users/laura/Documents/Senior/Software Engineering/CNS/app/jobs/application_job.rb": [
+      "/Users/ljsubaldo/Documents/Senior Year 2017-2018/Fall Semester 2017/Software Engineering/CNS/app/jobs/application_job.rb": [
         0,
         0
       ],
-      "/Users/laura/Documents/Senior/Software Engineering/CNS/app/controllers/admin/application_controller.rb": [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
+      "/Users/ljsubaldo/Documents/Senior Year 2017-2018/Fall Semester 2017/Software Engineering/CNS/app/mailers/application_mailer.rb": [
         0,
         0,
-        0,
-        null,
-        0,
-        null,
-        0,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
         0,
         0
       ],
-      "/Users/laura/Documents/Senior/Software Engineering/CNS/app/controllers/admin/users_controller.rb": [
-        0,
-        0,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        0,
-        0
-      ],
-      "/Users/laura/Documents/Senior/Software Engineering/CNS/app/controllers/visitors_controller.rb": [
+      "/Users/ljsubaldo/Documents/Senior Year 2017-2018/Fall Semester 2017/Software Engineering/CNS/app/policies/child_policy.rb": [
         0,
         null,
-        null,
-        null,
-        0
-      ],
-      "/Users/laura/Documents/Senior/Software Engineering/CNS/app/services/create_admin_service.rb": [
         0,
         0,
         0,
+        null,
+        0,
+        0,
+        0,
+        null,
+        0,
+        0,
+        0,
+        null,
+        0,
+        0,
+        0,
+        null,
+        0,
+        0,
+        0,
+        null,
+        0,
+        0,
+        0,
+        null,
         0,
         0,
         0,
@@ -673,24 +646,51 @@
         0,
         0
       ],
-      "/Users/laura/Documents/Senior/Software Engineering/CNS/app/channels/application_cable/connection.rb": [
+      "/Users/ljsubaldo/Documents/Senior Year 2017-2018/Fall Semester 2017/Software Engineering/CNS/app/policies/parent_policy.rb": [
+        0,
+        null,
+        0,
+        0,
+        0,
+        null,
+        0,
+        0,
+        0,
+        null,
+        0,
+        0,
+        0,
+        null,
+        0,
+        0,
+        0,
+        null,
+        null,
+        null,
+        0,
+        0,
         0,
         0,
         0,
         0
       ],
-      "/Users/laura/Documents/Senior/Software Engineering/CNS/app/channels/application_cable/channel.rb": [
+      "/Users/ljsubaldo/Documents/Senior Year 2017-2018/Fall Semester 2017/Software Engineering/CNS/app/services/create_admin_service.rb": [
+        0,
+        0,
+        0,
+        0,
+        0,
         0,
         0,
         0,
         0
       ]
     },
-    "timestamp": 1511243191
+    "timestamp": 1511286028
   },
   "RSpec": {
     "coverage": {
-      "/Users/laura/Documents/Senior/Software Engineering/CNS/app/controllers/application_controller.rb": [
+      "/Users/ljsubaldo/Documents/Senior Year 2017-2018/Fall Semester 2017/Software Engineering/CNS/app/controllers/application_controller.rb": [
         1,
         null,
         1,
@@ -737,19 +737,19 @@
         null,
         null
       ],
-      "/Users/laura/Documents/Senior/Software Engineering/CNS/app/helpers/application_helper.rb": [
+      "/Users/ljsubaldo/Documents/Senior Year 2017-2018/Fall Semester 2017/Software Engineering/CNS/app/helpers/application_helper.rb": [
         1,
         null
       ],
-      "/Users/laura/Documents/Senior/Software Engineering/CNS/app/helpers/child_helper.rb": [
+      "/Users/ljsubaldo/Documents/Senior Year 2017-2018/Fall Semester 2017/Software Engineering/CNS/app/helpers/child_helper.rb": [
         1,
         null
       ],
-      "/Users/laura/Documents/Senior/Software Engineering/CNS/app/helpers/parents_helper.rb": [
+      "/Users/ljsubaldo/Documents/Senior Year 2017-2018/Fall Semester 2017/Software Engineering/CNS/app/helpers/parents_helper.rb": [
         1,
         null
       ],
-      "/Users/laura/Documents/Senior/Software Engineering/CNS/app/models/user.rb": [
+      "/Users/ljsubaldo/Documents/Senior Year 2017-2018/Fall Semester 2017/Software Engineering/CNS/app/models/user.rb": [
         1,
         null,
         1,
@@ -767,12 +767,12 @@
         null,
         null
       ],
-      "/Users/laura/Documents/Senior/Software Engineering/CNS/app/models/application_record.rb": [
+      "/Users/ljsubaldo/Documents/Senior Year 2017-2018/Fall Semester 2017/Software Engineering/CNS/app/models/application_record.rb": [
         1,
         1,
         null
       ],
-      "/Users/laura/Documents/Senior/Software Engineering/CNS/app/policies/parent_policy.rb": [
+      "/Users/ljsubaldo/Documents/Senior Year 2017-2018/Fall Semester 2017/Software Engineering/CNS/app/policies/parent_policy.rb": [
         1,
         null,
         1,
@@ -800,7 +800,7 @@
         null,
         null
       ],
-      "/Users/laura/Documents/Senior/Software Engineering/CNS/app/policies/application_policy.rb": [
+      "/Users/ljsubaldo/Documents/Senior Year 2017-2018/Fall Semester 2017/Software Engineering/CNS/app/policies/application_policy.rb": [
         1,
         1,
         null,
@@ -856,7 +856,7 @@
         null,
         null
       ],
-      "/Users/laura/Documents/Senior/Software Engineering/CNS/app/policies/user_policy.rb": [
+      "/Users/ljsubaldo/Documents/Senior Year 2017-2018/Fall Semester 2017/Software Engineering/CNS/app/policies/user_policy.rb": [
         1,
         null,
         null,
@@ -882,7 +882,7 @@
         null,
         null
       ],
-      "/Users/laura/Documents/Senior/Software Engineering/CNS/app/controllers/users_controller.rb": [
+      "/Users/ljsubaldo/Documents/Senior Year 2017-2018/Fall Semester 2017/Software Engineering/CNS/app/controllers/users_controller.rb": [
         1,
         1,
         null,
@@ -941,7 +941,7 @@
         null,
         null
       ],
-      "/Users/laura/Documents/Senior/Software Engineering/CNS/app/models/parent.rb": [
+      "/Users/ljsubaldo/Documents/Senior Year 2017-2018/Fall Semester 2017/Software Engineering/CNS/app/models/parent.rb": [
         1,
         1,
         null,
@@ -951,7 +951,7 @@
         null,
         null
       ],
-      "/Users/laura/Documents/Senior/Software Engineering/CNS/app/controllers/parents_controller.rb": [
+      "/Users/ljsubaldo/Documents/Senior Year 2017-2018/Fall Semester 2017/Software Engineering/CNS/app/controllers/parents_controller.rb": [
         1,
         null,
         null,
@@ -1071,152 +1071,26 @@
         null,
         null
       ],
-      "/Users/laura/Documents/Senior/Software Engineering/CNS/app/controllers/visitors_controller.rb": [
+      "/Users/ljsubaldo/Documents/Senior Year 2017-2018/Fall Semester 2017/Software Engineering/CNS/app/controllers/visitors_controller.rb": [
         1,
         null,
         null,
         null,
         null
       ],
-      "/Users/laura/Documents/Senior/Software Engineering/CNS/app/mailers/application_mailer.rb": [
+      "/Users/ljsubaldo/Documents/Senior Year 2017-2018/Fall Semester 2017/Software Engineering/CNS/app/channels/application_cable/channel.rb": [
         0,
         0,
         0,
         0
       ],
-      "/Users/laura/Documents/Senior/Software Engineering/CNS/app/models/child.rb": [
-        0,
-        0,
-        0,
-        0,
-        null,
-        0
-      ],
-      "/Users/laura/Documents/Senior/Software Engineering/CNS/app/policies/child_policy.rb": [
-        0,
-        null,
-        0,
-        0,
-        0,
-        null,
-        0,
-        0,
-        0,
-        null,
-        0,
-        0,
-        0,
-        null,
-        0,
-        0,
-        0,
-        null,
-        0,
-        0,
-        0,
-        null,
-        0,
-        0,
-        0,
-        null,
-        0,
-        0,
+      "/Users/ljsubaldo/Documents/Senior Year 2017-2018/Fall Semester 2017/Software Engineering/CNS/app/channels/application_cable/connection.rb": [
         0,
         0,
         0,
         0
       ],
-      "/Users/laura/Documents/Senior/Software Engineering/CNS/app/dashboards/user_dashboard.rb": [
-        0,
-        null,
-        0,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        null,
-        null,
-        null,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        null,
-        null,
-        null,
-        null,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        0
-      ],
-      "/Users/laura/Documents/Senior/Software Engineering/CNS/app/jobs/application_job.rb": [
-        0,
-        0
-      ],
-      "/Users/laura/Documents/Senior/Software Engineering/CNS/app/controllers/admin/application_controller.rb": [
+      "/Users/ljsubaldo/Documents/Senior Year 2017-2018/Fall Semester 2017/Software Engineering/CNS/app/controllers/admin/application_controller.rb": [
         null,
         null,
         null,
@@ -1239,7 +1113,7 @@
         0,
         0
       ],
-      "/Users/laura/Documents/Senior/Software Engineering/CNS/app/controllers/admin/users_controller.rb": [
+      "/Users/ljsubaldo/Documents/Senior Year 2017-2018/Fall Semester 2017/Software Engineering/CNS/app/controllers/admin/users_controller.rb": [
         0,
         0,
         null,
@@ -1262,7 +1136,7 @@
         0,
         0
       ],
-      "/Users/laura/Documents/Senior/Software Engineering/CNS/app/controllers/children_controller.rb": [
+      "/Users/ljsubaldo/Documents/Senior Year 2017-2018/Fall Semester 2017/Software Engineering/CNS/app/controllers/children_controller.rb": [
         0,
         null,
         0,
@@ -1270,41 +1144,12 @@
         null,
         0,
         null,
-        0,
-        0,
-        0,
-        0,
-        0,
         null,
-        0,
-        0,
-        0,
-        0,
         null,
-        0,
         null,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
         null,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+        null,
+        null,
         0,
         0,
         0,
@@ -1314,6 +1159,35 @@
         null,
         0,
         0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        null,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        null,
+        0,
+        null,
+        0,
+        0,
         null,
         0,
         null,
@@ -1324,9 +1198,9 @@
         null,
         null,
         0,
-        0,
-        0,
-        0,
+        null,
+        null,
+        null,
         0,
         0,
         0,
@@ -1351,10 +1225,137 @@
         null,
         0
       ],
-      "/Users/laura/Documents/Senior/Software Engineering/CNS/app/services/create_admin_service.rb": [
+      "/Users/ljsubaldo/Documents/Senior Year 2017-2018/Fall Semester 2017/Software Engineering/CNS/app/dashboards/user_dashboard.rb": [
+        0,
+        null,
+        0,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
         0,
         0,
         0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        null,
+        null,
+        null,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        null,
+        null,
+        null,
+        null,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        0
+      ],
+      "/Users/ljsubaldo/Documents/Senior Year 2017-2018/Fall Semester 2017/Software Engineering/CNS/app/jobs/application_job.rb": [
+        0,
+        0
+      ],
+      "/Users/ljsubaldo/Documents/Senior Year 2017-2018/Fall Semester 2017/Software Engineering/CNS/app/mailers/application_mailer.rb": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "/Users/ljsubaldo/Documents/Senior Year 2017-2018/Fall Semester 2017/Software Engineering/CNS/app/models/child.rb": [
+        0,
+        0,
+        0,
+        0,
+        null,
+        0
+      ],
+      "/Users/ljsubaldo/Documents/Senior Year 2017-2018/Fall Semester 2017/Software Engineering/CNS/app/policies/child_policy.rb": [
+        0,
+        null,
+        0,
+        0,
+        0,
+        null,
+        0,
+        0,
+        0,
+        null,
+        0,
+        0,
+        0,
+        null,
+        0,
+        0,
+        0,
+        null,
+        0,
+        0,
+        0,
+        null,
+        0,
+        0,
+        0,
+        null,
         0,
         0,
         0,
@@ -1362,19 +1363,18 @@
         0,
         0
       ],
-      "/Users/laura/Documents/Senior/Software Engineering/CNS/app/channels/application_cable/connection.rb": [
+      "/Users/ljsubaldo/Documents/Senior Year 2017-2018/Fall Semester 2017/Software Engineering/CNS/app/services/create_admin_service.rb": [
         0,
         0,
         0,
-        0
-      ],
-      "/Users/laura/Documents/Senior/Software Engineering/CNS/app/channels/application_cable/channel.rb": [
+        0,
+        0,
         0,
         0,
         0,
         0
       ]
     },
-    "timestamp": 1511239803
+    "timestamp": 1511286083
   }
 }
