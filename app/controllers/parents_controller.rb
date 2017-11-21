@@ -11,17 +11,17 @@ class ParentsController < ApplicationController
         #byebug
     end
 
-    def index
-        #Authorize has not yet been added to this function because
-        # Sam Burt was not sure who should be authorized to see all users
-        @parent = Parent.find(params[:id])
-        @user = @parent.user
-        if @parent == nil
-            #byebug
-            session[:user_id] = @user.id
-            redirect_to new_parent_path and return
-        end
-    end
+    # def index
+    #     #Authorize has not yet been added to this function because
+    #     # Sam Burt was not sure who should be authorized to see all users
+    #     @parent = Parent.find(params[:id])
+    #     @user = @parent.user
+    #     if @parent == nil
+    #         #byebug
+    #         session[:user_id] = @user.id
+    #         redirect_to new_parent_path and return
+    #     end
+    # end
 
     def new
         #Athorize not included in new... need to figure out how to user

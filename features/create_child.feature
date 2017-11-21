@@ -6,7 +6,7 @@ Feature: Create a new child
   Background: The parent already has a child
     Given I am logged in
     Then I should be authorized as a user
-    
+
     Given these Users:
       | name      | email                  | password |
       | Sam Burt  | samcoburt@gmail.com    | changeme |
@@ -33,3 +33,11 @@ Feature: Create a new child
     Then I should be on the parents profile page
     And I should see "New child 'Mikaela Shiffrin' created"
     And I should see that "Mikaela Shiffrin" has a dob of "1/1/2013"
+
+  Scenario: Attempt to create child without specifying status
+    Given I am on the create new child page
+    When I fill in the following:
+        | Name            | Mikaela Shiffrin           |
+        | Date of Birth   | 1/1/2013                   |
+    And I press "Register"
+    Then I should see "Error creating new child"

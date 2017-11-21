@@ -5,11 +5,11 @@ class ChildrenController < ApplicationController
     #authorize @child.parent.user
   end
 
-  def index
-    @parent = Parent.find(params[:parent_id])
-    @children = @parent.children
-    authorize @child.parent.user
-  end
+  # def index
+  #   @parent = Parent.find(params[:parent_id])
+  #   @children = @parent.children
+  #   authorize @child.parent.user
+  # end
 
   def show
     id = params[:id]
@@ -58,10 +58,10 @@ class ChildrenController < ApplicationController
     # check validity of what someone filled in
     # write custom validations before sending person to next form
     # create custom routes?
-    if @child.save
-      if !(check_valid_info)
-          redirect_to new_parent_child_path(@parent) and return
-      end
+    if @child.save && check_valid_info
+      # if !(check_valid_info)
+          # redirect_to new_parent_child_path(@parent) and return
+      # end
       flash[:notice] = "New child '#{@child.name}' created"
       redirect_to parent_path(@parent) and return
     else
@@ -77,7 +77,7 @@ class ChildrenController < ApplicationController
 
       def check_valid_info()
           child_hash = params[:child]
-          if child_hash[:status].nil?
+          if child_hash[:status] == "Select a Program"
               flash[:warning] = "Error, need to specify status"
               return false
           end
