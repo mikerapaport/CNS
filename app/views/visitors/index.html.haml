@@ -1,5 +1,3 @@
-%h3 Welcome to the CNS Registration Portal
+%h3.welcome Welcome to the CNS Registration Portal
 -if !user_signed_in?
-    %span Click
-    =link_to 'here', new_user_session_path
-    to sign in or sign up!
+    %div.click= "Click #{link_to 'here', '/users/sign_in'} to sign in or sign up!".html_safe

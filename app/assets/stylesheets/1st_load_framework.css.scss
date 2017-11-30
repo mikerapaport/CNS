@@ -2,6 +2,14 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+.welcome {
+  text-align: center;
+}
+
+.click{
+  text-align: center;
+}
+
 // make all images responsive by default
 img {
   @extend .img-responsive;
@@ -35,8 +43,8 @@ img {
 // to make views framework-neutral
 main {
   @extend .container;
-  background-color: #eee;
-  padding-bottom: 80px;
+  background-color: DarkGray;
+  padding-bottom: 100%;
   width: 100%;
   margin-top: 51px; // accommodate the navbar
   }
