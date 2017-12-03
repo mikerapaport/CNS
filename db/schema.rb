@@ -10,22 +10,51 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171103170659) do
+ActiveRecord::Schema.define(version: 20171203204340) do
+
+  create_table "admins", force: :cascade do |t|
+    t.string "email", default: "", null: false
+    t.string "encrypted_password", default: "", null: false
+    t.string "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.integer "sign_in_count", default: 0, null: false
+    t.datetime "current_sign_in_at"
+    t.datetime "last_sign_in_at"
+    t.string "current_sign_in_ip"
+    t.string "last_sign_in_ip"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["email"], name: "index_admins_on_email", unique: true
+    t.index ["reset_password_token"], name: "index_admins_on_reset_password_token", unique: true
+  end
 
   create_table "children", force: :cascade do |t|
     t.string "name"
     t.string "dob"
+    t.string "status"
     t.string "program"
     t.string "time"
-    t.boolean "monday"
-    t.boolean "tuesday"
-    t.boolean "wednesday"
-    t.boolean "thursday"
-    t.boolean "friday"
-    t.text "comments"
-    t.boolean "w1"
+    t.integer "week"
+    t.boolean "mtwrf"
+    t.boolean "mwf"
+    t.boolean "tr"
+    t.boolean "m2"
+    t.boolean "m3"
+    t.boolean "t2"
+    t.boolean "t3"
     t.boolean "w2"
     t.boolean "w3"
+    t.boolean "r2"
+    t.boolean "r3"
+    t.boolean "f2"
+    t.boolean "f3"
+    t.boolean "full"
+    t.boolean "half_morning"
+    t.boolean "half_afternoon"
+    t.text "comments"
+    t.boolean "attending_rec"
+    t.boolean "w1"
     t.boolean "w4"
     t.boolean "w5"
     t.boolean "w6"
@@ -63,6 +92,7 @@ ActiveRecord::Schema.define(version: 20171103170659) do
     t.datetime "updated_at", null: false
     t.string "name"
     t.integer "role"
+    t.boolean "admin", default: false
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
