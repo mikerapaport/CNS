@@ -4,7 +4,7 @@ class UserPolicy < ApplicationPolicy
   # user = user
 
   def index?
-    record.admin?
+    user.admin?
   end
 
   def show?
