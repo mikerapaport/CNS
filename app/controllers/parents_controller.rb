@@ -7,7 +7,7 @@ class ParentsController < ApplicationController
         @parent = Parent.find(params[:id])
         @children = @parent.children
         @user = @parent.user
-        authorize @user
+        authorize @user unless current_user.admin?
         #byebug
     end
 
@@ -55,14 +55,14 @@ class ParentsController < ApplicationController
     def edit
         id = params[:id]
         @parent = Parent.find(id)
-        authorize @parent.user
+        authorize @parent.user unless current_user.admin?
     end
 
     def update
         id = params[:id]
         p = Parent.find(id)
         @user = p.user
-        authorize @user
+        authorize @user unless current_user.admin?
         # if !(check_valid_info())
         #     redirect_to edit_parent_path(p) and return
         # end

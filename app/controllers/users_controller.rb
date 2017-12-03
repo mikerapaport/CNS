@@ -1,9 +1,9 @@
 class UsersController < ApplicationController
-  before_action :authenticate_user!
+  before_action :authenticate_user! unless -> {current_user.admin?}
 
-  #This was throwing an error so I (Sam Burt) jsut commented it out, we probably should have it back in
-  after_action :verify_authorized
-  after_action :verify_authenticity_token
+
+  after_action :verify_authorized unless -> {current_user.admin?}
+  after_action :verify_authenticity_token unless -> {current_user.admin?}
 
 
 
@@ -16,12 +16,9 @@ class UsersController < ApplicationController
   end
 
   def show
-    #if current_user.id != params[:id]
-      #redirect_to root_path and return
-    #end
     @user = User.find(params[:id])
-    #Need to get this authorize to work, Sam Burt commented this out
-    authorize @user
+
+    authorize @user unless current_user.admin?
     if @user.parent == nil
         #byebug
         session[:user_id] = @user.id
@@ -33,7 +30,7 @@ class UsersController < ApplicationController
 
   def update
     @user = User.find(params[:id])
-    authorize @user
+    authorize @user unless current_user.admin?
     if @user.update_attributes(secure_params)
       redirect_to users_path, :notice => "User updated."
     else
@@ -42,9 +39,9 @@ class UsersController < ApplicationController
   end
 
   def destroy
-    user = User.find(params[:id])
-    authorize user
-    user.destroy
+    @user = User.find(params[:id])
+    authorize @user unless current_user.admin?
+    @user.destroy
     redirect_to users_path, :notice => "User deleted."
   end
 

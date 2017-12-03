@@ -15,11 +15,11 @@
 
     .field
       =c.label :status, "Child Status"
-      =c.select :status, options_for_select([["Select a Program", "Select a Program"], ["Infant", "Infant"], ["Early Childhood", "Early Childhood"], ["Post HCS Pre-K", "Post HCS Pre-K"], ["HCS After-school", "HCS After-school"]])
+      =c.select :status, options_for_select([["Select a Program", nil], ["Infant", "Infant"], ["Early Childhood", "Early Childhood"], ["Post HCS Pre-K", "Post HCS Pre-K"], ["HCS After-school", "HCS After-school"]])
 
     .field
       =c.label :program, "Child Program"
-      =c.select :program, options_for_select([["Select a Program", "Select a Program"], ["10 Month", "10 Month"], ["Summer", "Summer"]], :disabled => [["Select a Program", "Select a Program"], ["10 Month", "10 Month"]])
+      =c.select :program, options_for_select([["Select a Program", nil], ["10 Month", "10 Month"], ["Summer", "Summer"]], :disabled => [["Select a Program", "Select a Program"], ["10 Month", "10 Month"]])
 
     #infant
       %h2 Infant 10 Month Registration

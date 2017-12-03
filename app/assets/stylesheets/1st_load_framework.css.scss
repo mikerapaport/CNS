@@ -20,6 +20,13 @@ img {
   font-size: inherit;
   }
 
+
+
+// .navbar.navbar-inverse.navbar-fixed-top {
+//   background-color: #80BEE3;
+//   }
+
+
 // THESE ARE EXAMPLES YOU CAN MODIFY
 // create your own classes
 // to make views framework-neutral
@@ -43,7 +50,7 @@ img {
 // to make views framework-neutral
 main {
   @extend .container;
-  background-color: DarkGray;
+  background-color: #FFFBE8;
   padding-bottom: 100%;
   width: 100%;
   margin-top: 51px; // accommodate the navbar
