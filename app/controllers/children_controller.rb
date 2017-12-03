@@ -1,7 +1,7 @@
 class ChildrenController < ApplicationController
 
   def new
-    @child = Child.new()
+    @child = Child.new
     #authorize @child.parent.user
   end
 
@@ -10,6 +10,34 @@ class ChildrenController < ApplicationController
   #   @children = @parent.children
   #   authorize @child.parent.user
   # end
+
+  def edit
+    @child = Child.find(params[:id])
+  end
+
+  def update
+    c = Child.find(params[:id])
+    date_of_birth = c.dob
+    old_status = c.status
+    old_program = c.program
+    c.update(create_update_params)
+    if c.save
+      if c.dob != date_of_birth
+        # c.dob = date_of_birth
+        c.save
+      elsif c.status != old_status
+        # c.status =
+        c.save
+      elsif c.program != old_program
+        c.save
+      end
+      flash[:notice] = "#{c.name} was registered."
+      redirect_to parent_children_path
+    else
+      flash[:notice] = "Error registering #{c.name}"
+      redirect_to edit_parent_child_path(c)
+    end
+  end
 
   def show
     id = params[:id]
@@ -72,7 +100,7 @@ class ChildrenController < ApplicationController
 
   private
       def create_update_params
-          params.require(:child).permit(:name, :dob, :status, :program, :time, :week, :m2, :t2, :w2, :r2, :f2, :time, :comments, :attending_rec, :w1, :w2, :w3, :w4, :w5, :w6, :w7, :w8, :parent_id)
+          params.require(:child).permit(:name, :dob, :status, :program, :time, :week, :m2, :t2, :w2, :r2, :f2, :comments, :attending_rec, :w1, :w2, :w3, :w4, :w5, :w6, :w7, :w8, :parent_id)
       end
 
       def check_valid_info()

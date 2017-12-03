@@ -1,0 +1,73 @@
+=javascript_include_tag 'forms'
+
+#main
+
+  %h1.header Registration
+
+  =form_for [@parent, @child], :method => :put, :url => parent_children_path do |c|
+    .field
+      =c.label :name, "Child's Name"
+      =c.text_field :name
+
+    .field
+      =c.label :dob, "Date of Birth"
+      =c.date_field :dob
+
+    .field
+      =c.label :status, "Child Status"
+      =c.select :status, options_for_select([["Select a Program", "Select a Program"], ["Infant", "Infant"], ["Early Childhood", "Early Childhood"], ["Post HCS Pre-K", "Post HCS Pre-K"], ["HCS After-school", "HCS After-school"]]), :selected => params[:status]
+
+    .field
+      =c.label :program, "Child Program"
+      =c.select :program, options_for_select([["Select a Program", "Select a Program"], ["10 Month", "10 Month"], ["Summer", "Summer"]], :disabled => [["Select a Program", "Select a Program"], ["10 Month", "10 Month"]]), :selected => params[:program]
+
+    #infant
+      %h2 Infant 10 Month Registration
+      =render 'yearly_template', form: c
+      .field
+        =c.radio_button :time, "12:30 AM - 5:30 PM"
+        =c.label :time, "Half Day:  12:30 AM -  5:30 PM", :value=> "12:30 AM - 5:30 PM"
+
+    #infant_summer
+      %h2 Infant Summer Registration
+      =render 'summer_template', form: c
+      .field
+        =c.radio_button :time, "12:30 AM - 5:30 PM"
+        =c.label :time, "Half Day:  12:30 AM -  5:30 PM", :value=> "12:30 AM - 5:30 PM"
+
+    #early_childhood
+      %h2 Early Childhood 10 Month Program
+      =render 'yearly_template', form: c
+
+    #early_childhood_summer
+      %h2 Early Childhood Summer Program
+      =render 'summer_template', form: c
+
+    #post_pre-k
+      =render 'post_pre-k', form: c
+
+    #afterschool
+      =render 'afterschool', form: c
+      %p Note: Children must be registered for at least 2 days per week and for at least 2 hours per day.
+      %p This program is only available for children in grades K - 3.
+
+
+    #afterschool_summer
+      %h2 After school Summer Registration
+      =render 'summer_template', form: c
+      %br
+      .field
+        =c.check_box :attending_rec
+        =c.label :attending_rec, "Is your child attending the Hamilton Summer Rec Program?"
+
+    .field
+      =c.label :comments, "Additional Information"
+      %br
+      =c.text_area :comments
+
+    -# .field
+    -#   =c.label :signature, "Signature"
+    -#   =c.text_field :signature
+
+    .field
+      =c.submit "Register"

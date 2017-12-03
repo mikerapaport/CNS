@@ -5,7 +5,7 @@ git_source(:github) do |repo_name|
 end
 #gem 'rails', github: 'rails/rails', branch: "5-0-stable"
 #gem 'rails', '~> 5.0.0', '>= 5.0.0.1'
-ruby '2.4.2'
+ruby '2.4.1'
 gem 'rails', '~> 5.1.4'
 gem 'puma', '~> 3.7'
 gem 'sass-rails', '~> 5.0'
