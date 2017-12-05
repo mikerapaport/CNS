@@ -4,7 +4,7 @@
 
   %h1.header Registration
 
-  =form_for [@parent, @child], :method => :put, :url => parent_children_path do |c|
+  =form_for [@parent, @child], :method => :put, :url => parent_child_path(@child) do |c|
     .field
       =c.label :name, "Child's Name"
       =c.text_field :name

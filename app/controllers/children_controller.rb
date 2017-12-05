@@ -32,7 +32,7 @@ class ChildrenController < ApplicationController
         c.save
       end
       flash[:notice] = "#{c.name} was registered."
-      redirect_to parent_children_path
+      redirect_to parent_child_path(c)
     else
       flash[:notice] = "Error registering #{c.name}"
       redirect_to edit_parent_child_path(c)
