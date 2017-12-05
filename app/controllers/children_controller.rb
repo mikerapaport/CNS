@@ -42,7 +42,7 @@ class ChildrenController < ApplicationController
   def show
     id = params[:id]
     @child = Child.find(id)
-    authorize @child.parent.user
+    authorize @child.parent.user unless current_user.admin?
 
     @child.days = ""
 
