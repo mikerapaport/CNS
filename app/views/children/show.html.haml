@@ -1,5 +1,5 @@
 #main.container
-  %h3.header #{@child.name}
+  %h3.header= "#{@child.firstname} #{@child.lastname}"
 
   %p= "Date of Birth: #{@child.dob}"
   %p= "Enrolled in #{@child.status} #{@child.program}"

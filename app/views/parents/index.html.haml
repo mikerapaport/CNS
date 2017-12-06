@@ -6,7 +6,7 @@
 %table
     %tr
         %th name
-    %th= link_to("#{@parent.name}", parent_path(x))
+    %th= link_to("#{@parent.firstname} #{@parent.lastname}", parent_path(x))
 
 -if user_signed_in? && @parent.nil?
     =link_to("Enter parent information here", new_parent_path)

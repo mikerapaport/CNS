@@ -30,7 +30,8 @@ ActiveRecord::Schema.define(version: 20171203204340) do
   end
 
   create_table "children", force: :cascade do |t|
-    t.string "name"
+    t.string "firstname"
+    t.string "lastname"
     t.string "dob"
     t.string "status"
     t.string "program"
@@ -66,8 +67,12 @@ ActiveRecord::Schema.define(version: 20171203204340) do
   end
 
   create_table "parents", force: :cascade do |t|
-    t.string "name"
-    t.string "address"
+    t.string "firstname"
+    t.string "lastname"
+    t.string "street"
+    t.string "city"
+    t.string "state"
+    t.string "zipcode"
     t.string "phone"
     t.string "cell"
     t.string "email"

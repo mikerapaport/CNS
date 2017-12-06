@@ -41,7 +41,7 @@ class ParentsController < ApplicationController
             #     flash[:warning] = "Error creating new parent"
             #     redirect_to edit_parent_path(p) and return
             # end
-            flash[:notice] = "New parent '#{p.name}' created"
+            flash[:notice] = "New parent '#{p.firstname} #{p.lastname}' created"
             #user = session[:user]
             #name = user.name
             #user.parent << p
@@ -68,7 +68,7 @@ class ParentsController < ApplicationController
         # end
         p.update(create_update_params)
         if p.save && check_valid_info
-            flash[:notice] = "\"#{p.name}\" updated"
+            flash[:notice] = "\"#{p.firstname} #{p.lastname}\" updated"
             redirect_to parent_path(p) and return
         else
             flash[:warning] = "Error updating parent"
@@ -85,7 +85,7 @@ class ParentsController < ApplicationController
         # end
 
         def create_update_params
-            params.require(:parent).permit(:name, :address, :phone, :cell, :email, :email2)
+            params.require(:parent).permit(:firstname, :lastname, :street, :city, :state, :zipcode, :phone, :cell, :email, :email2)
         end
 
         def check_valid_info()

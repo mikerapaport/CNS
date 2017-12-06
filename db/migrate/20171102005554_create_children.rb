@@ -1,7 +1,8 @@
 class CreateChildren < ActiveRecord::Migration[5.1]
   def change
     create_table :children do |t|
-      t.string :name
+      t.string :firstname
+      t.string :lastname
       t.string :dob
       t.string :status
       t.string :program

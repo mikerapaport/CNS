@@ -31,10 +31,10 @@ class ChildrenController < ApplicationController
       elsif c.program != old_program
         c.save
       end
-      flash[:notice] = "#{c.name} was registered."
+      flash[:notice] = "#{c.firstname} #{c.lastname} was registered."
       redirect_to parent_child_path(c)
     else
-      flash[:notice] = "Error registering #{c.name}"
+      flash[:notice] = "Error registering #{c.firstname} #{c.lastname}"
       redirect_to edit_parent_child_path(c)
     end
   end
@@ -90,7 +90,7 @@ class ChildrenController < ApplicationController
       # if !(check_valid_info)
           # redirect_to new_parent_child_path(@parent) and return
       # end
-      flash[:notice] = "New child '#{@child.name}' created"
+      flash[:notice] = "New child '#{@child.firstname} #{@child.lastname}' created"
       redirect_to parent_path(@parent) and return
     else
         flash[:warning] = "Error creating new child"
@@ -100,7 +100,7 @@ class ChildrenController < ApplicationController
 
   private
       def create_update_params
-          params.require(:child).permit(:name, :dob, :status, :program, :time, :week, :m2, :t2, :w2, :r2, :f2, :comments, :attending_rec, :w1, :w2, :w3, :w4, :w5, :w6, :w7, :w8, :parent_id)
+          params.require(:child).permit(:firstname, :lastname, :dob, :status, :program, :time, :week, :m2, :t2, :w2, :r2, :f2, :comments, :attending_rec, :w1, :w2, :w3, :w4, :w5, :w6, :w7, :w8, :parent_id)
       end
 
       def check_valid_info()

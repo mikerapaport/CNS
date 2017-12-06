@@ -8,12 +8,29 @@
 
 =form_for @parent, :method => :put do |f|
     .field
-        =f.label :name, "Name"
-        =f.text_field :name
+        =f.label :firstname, "First Name"
+        =f.text_field :firstname
 
     .field
-        =f.label :address, "Home Address"
-        =f.text_field :address
+        =f.label :lastname, "Last Name"
+        =f.text_field :lastname
+
+    Address
+    .field
+        =f.label :street, "Street"
+        =f.text_field :street
+
+    .field
+        =f.label :city, "City"
+        =f.text_field :city
+
+    .field
+        =f.label :state, "State"
+        =f.text_field :state
+
+    .field
+        =f.label :zipcode, "Zip Code"
+        =f.number_field :zipcode
 
     .field
         =f.label :phone, "Primary Phone Number"

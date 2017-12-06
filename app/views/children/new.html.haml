@@ -6,8 +6,12 @@
 
   =form_for @child, :method => :post, :url => parent_children_path do |c|
     .field
-      =c.label :name, "Child's Name"
-      =c.text_field :name
+      =c.label :firstname, "Child's First Name"
+      =c.text_field :firstname
+
+    .field
+      =c.label :lastname, "Child's Last Name"
+      =c.text_field :lastname
 
     .field
       =c.label :dob, "Date of Birth"
