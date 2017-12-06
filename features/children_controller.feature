@@ -64,12 +64,14 @@ Feature: Display a child's schedule
     Then I should see "M, T, W, Th"
     And I should see "Full Day (7:30AM - 5:30PM)"
 
-  Scenario: Child's schedule is changed from full day to Post Pre-K
+  Scenario: Child's schedule is changed from Early Childhood to Post Pre-K
     Given I am on the parents profile page
-    When I follow "Register a Child"
-    When I select "Post HCS Pre-K"
-    And I press "Update child"
-    Then I should see "M, T, W, Th"
+    When I follow "Joyce"
+    When I follow "Register child for another session"
+    When I select "Post HCS Pre-K" from "Child Status"
+    When I select "10 Month" from "Child Program"
+    And I press "Register"
+    Then I should see "M, T, W, Th, F"
     And I should see "11:30 AM - 5:30 PM"
 
   Scenario: Child is registered in five days of after school 10-month program

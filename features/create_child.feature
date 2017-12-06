@@ -16,8 +16,8 @@ Feature: Create a new child
       | Sam Burt  | 25 Brettwood rd      | 911    |      | samcoburt@gmail.com    |        | 1       |
 
     Given these Children:
-      | name         | dob        | status   | comments                | w1  | w2  | w3  | w4  | w5  | w6  | w7  | w8  | parent_id |
-      | John Stewart | 12/12/2015 | Infant   | He's a really sweet boy | nil | nil | nil | nil | nil | nil | nil | nil | 1         |
+      | name  | dob        | status            | program   | week | days             | time                         | comments | parent_id | m2   | t2   | w2   | r2   | f2    |
+      | Jane  | 03/09/2014 | Infant            | 10 Month  | 5    | "M, T, W, Th, F" | "Full Day (7:30AM - 5:30PM)" |          | 1         |      |      |      |      |       |
 
   Scenario: Create a new child
     Given I am on the create new child page
