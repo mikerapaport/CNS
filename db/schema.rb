@@ -69,6 +69,7 @@ ActiveRecord::Schema.define(version: 20171203204340) do
   create_table "parents", force: :cascade do |t|
     t.string "firstname"
     t.string "lastname"
+    t.string "address"
     t.string "street"
     t.string "city"
     t.string "state"

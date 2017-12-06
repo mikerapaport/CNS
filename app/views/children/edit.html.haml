@@ -20,11 +20,11 @@
       // LOOK AT OPTIONS SYNTAX
     .field
       =c.label :status, "Child Status"
-      =c.select :status, options_for_select([["Select a Program", "Select a Program"], ["Infant", "Infant"], ["Early Childhood", "Early Childhood"], ["Post HCS Pre-K", "Post HCS Pre-K"], ["HCS After-school", "HCS After-school"]]), :selected => @child.status
+      =c.select :status, options_for_select(["Select a Program", "Infant", "Early Childhood", "Post HCS Pre-K", "HCS After-school"], c.object.status)
 
     .field
       =c.label :program, "Child Program"
-      =c.select :program, options_for_select([["Select a Program", "Select a Program"], ["10 Month", "10 Month"], ["Summer", "Summer"]], :disabled => [["Select a Program", "Select a Program"], ["10 Month", "10 Month"]]), :selected => @child.program
+      =c.select :program, options_for_select(["Select a Program", "10 Month", "Summer"], c.object.program)
 
     #infant
       %h2 Infant 10 Month Registration
