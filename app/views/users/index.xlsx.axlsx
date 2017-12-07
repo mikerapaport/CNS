@@ -70,7 +70,7 @@ wb.add_worksheet(name: "Users") do |sheet|
         sum_weeks = sum_weeks + "8, "
       end
 
-      byebug
+      
       sheet.add_row [user.id, user.name, user.email, user.parent.firstname, user.parent.lastname,
       user.parent.street, user.parent.city, user.parent.state, user.parent.zipcode, user.parent.phone,
       user.parent.cell, user.parent.email, user.parent.email2, child.firstname, child.lastname,
