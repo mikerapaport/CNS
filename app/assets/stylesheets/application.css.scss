@@ -47,6 +47,21 @@ footer {
   padding-bottom: 10%;
 }
 
-footer.links {
-  color: #FFFFFF;
+.links {
+  //color: #FFFFFF;
+  position: relative;
+  left: -40px;
+  bottom: -40px;
+}
+
+.address {
+  position: relative;
+  right: -40px;
+  bottom: -30px;
+}
+
+.contact {
+  position: relative;
+  right: -90px;
+  bottom: -40px;
 }
