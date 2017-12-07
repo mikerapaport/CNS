@@ -1,14 +1,81 @@
 wb = xlsx_package.workbook
 
 wb.add_worksheet(name: "Users") do |sheet|
+
   # this is the head row of your spreadsheet
-  sheet.add_row %w(id user_name user_email parent_firstname parent_lastname parent_street parent_city parent_state parent_zipcode parent_phone parent_cell parent_email parent_email2 child_firstname child_lastname child_dob child_comments child_created_at child updated_at)
+  sheet.add_row %w(id user_name user_email parent_firstname parent_lastname parent_street
+  parent_city parent_state parent_zipcode parent_phone parent_cell parent_email parent_email2
+  child_firstname child_lastname child_dob child_age_group child_summer/tenmonth child_day_length
+  child_days child_after_school_days child_attending_summer_program child_summer_weeks child_comments child_created_at child_updated_at)
 
   # each user is a row on your spreadsheet
   @users.each do |user|
     @children = user.parent.children
     @children.each do |child|
-      sheet.add_row [user.id, user.name, user.email, user.parent.firstname, user.parent.lastname, user.parent.street, user.parent.city, user.parent.state, user.parent.zipcode, user.parent.phone, user.parent.cell, user.parent.email, user.parent.email2, child.firstname, child.lastname, child.dob, child.comments, child.created_at, child.updated_at]
+
+      after_school = ""
+      if (child.m2 != nil && child.m2 == true)
+        after_school = after_school + "Mon 2hrs: "
+      elsif (child.m2 != nil && child.m2 == false)
+        after_school = after_school + "Mon 3hrs: "
+      end
+
+      if (child.t2 != nil && child.t2 == true)
+        after_school = after_school + "Tues 2hrs: "
+      elsif (child.t2 != nil && child.t2 == false)
+        after_school = after_school + "Tues 3hrs: "
+      end
+
+      if (child.w2 != nil && child.w2 == true)
+        after_school = after_school + "Wed 2hrs: "
+      elsif (child.w2 != nil && child.w2 == false)
+        after_school = after_school + "Wed 3hrs: "
+      end
+
+      if (child.r2 != nil && child.r2 == true)
+        after_school = after_school + "Thurs 2hrs: "
+      elsif (child.r2 != nil && child.r2 == false)
+        after_school = after_school + "Thurs 3hrs: "
+      end
+
+      if (child.f2 != nil && child.f2 == true)
+        after_school = after_school + "Fri 2hrs: "
+      elsif (child.f2 != nil && child.f2 == false)
+        after_school = after_school + "Fri 3hrs: "
+      end
+
+      sum_weeks = ""
+      if (child.week1 == true)
+        sum_weeks = sum_weeks + "1, "
+      end
+      if (child.week2 == true)
+        sum_weeks = sum_weeks + "2, "
+      end
+      if (child.week3 == true)
+        sum_weeks = sum_weeks + "3, "
+      end
+      if (child.week4 == true)
+        sum_weeks = sum_weeks + "4, "
+      end
+      if (child.week5 == true)
+        sum_weeks = sum_weeks + "5, "
+      end
+      if (child.week6 == true)
+        sum_weeks = sum_weeks + "6, "
+      end
+      if (child.week7 == true)
+        sum_weeks = sum_weeks + "7, "
+      end
+      if (child.week8 == true)
+        sum_weeks = sum_weeks + "8, "
+      end
+
+      byebug
+      sheet.add_row [user.id, user.name, user.email, user.parent.firstname, user.parent.lastname,
+      user.parent.street, user.parent.city, user.parent.state, user.parent.zipcode, user.parent.phone,
+      user.parent.cell, user.parent.email, user.parent.email2, child.firstname, child.lastname,
+      child.dob, child.status, child.program, child.time, child.week, after_school, child.attending_rec,
+      sum_weeks, child.comments, child.created_at, child.updated_at]
     end
   end
 end

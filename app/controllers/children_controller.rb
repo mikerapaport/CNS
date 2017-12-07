@@ -43,7 +43,7 @@ class ChildrenController < ApplicationController
     id = params[:id]
     @child = Child.find(id)
     authorize @child.parent.user unless current_user.admin?
-
+    #byebug
     @child.days = ""
 
     if @child.week == 5
@@ -100,7 +100,7 @@ class ChildrenController < ApplicationController
 
   private
       def create_update_params
-          params.require(:child).permit(:firstname, :lastname, :dob, :status, :program, :time, :week, :m2, :t2, :w2, :r2, :f2, :comments, :attending_rec, :w1, :w2, :w3, :w4, :w5, :w6, :w7, :w8, :parent_id)
+          params.require(:child).permit(:firstname, :lastname, :dob, :status, :program, :time, :week, :m2, :t2, :w2, :r2, :f2, :comments, :attending_rec, :week1, :week2, :week3, :week4, :week5, :week6, :week7, :week8, :parent_id)
       end
 
       def check_valid_info()

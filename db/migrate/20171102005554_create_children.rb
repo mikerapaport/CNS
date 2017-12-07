@@ -15,14 +15,14 @@ class CreateChildren < ActiveRecord::Migration[5.1]
       t.boolean :f2 #after school: 2 hours is true, 3 hours if false, day not chosen if nil
       t.text :comments
       t.boolean :attending_rec
-      t.boolean :w1 #Summer weeks
-      t.boolean :w2
-      t.boolean :w3
-      t.boolean :w4
-      t.boolean :w5
-      t.boolean :w6
-      t.boolean :w7
-      t.boolean :w8
+      t.boolean :week1 #Summer weeks
+      t.boolean :week2
+      t.boolean :week3
+      t.boolean :week4
+      t.boolean :week5
+      t.boolean :week6
+      t.boolean :week7
+      t.boolean :week8
       t.integer :parent_id
 
       t.timestamps
