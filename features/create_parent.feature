@@ -10,9 +10,13 @@ Feature: Create a new parent
   Scenario: Create a parent profile for Sam Burt
     Given I am on the create new parent page
     When I fill in the following:
-        | Name                   | Sam Burt                      |
+        | First Name             | Sam                           |
+        | Last Name              | Burt                          |
         | Primary Email          | samcoburt@gmail.com           |
-        | Home Address           | 25 Brettwood Rd               |
+        | Street                 | 25 Brettwood Rd               |
+        | City                   | Bayshore                      |
+        | State                  | NY                            |
+        | Zip Code               | 11706                         |
         | Primary Phone Number   | 6177770000                    |
 
     And I press "Create Parent"
@@ -22,9 +26,13 @@ Feature: Create a new parent
   Scenario: Create a new parent with an invalid email
     Given I am on the create new parent page
     When I fill in the following:
-          | Name                   | Jayson Taytum                 |
+          | First Name             | Jayson                        |
+          | Last Name              | Taytum                        |
           | Primary Phone Number   | 1234234                       |
-          | Address                | 13 oak drive                  |
+          | Street                 | 13 Oak Drive                  |
+          | City                   | Hamilton                      |
+          | State                  | NY                            |
+          | Zip Code               | 13346                         |
 
     When I write "123412skljagdlf" in "Primary Email"
     And I press "Create Parent"
