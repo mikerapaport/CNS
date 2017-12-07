@@ -4,36 +4,25 @@ class CreateChildren < ActiveRecord::Migration[5.1]
       t.string :firstname
       t.string :lastname
       t.string :dob
-      t.string :status
-      t.string :program
-      t.string :time
-      t.integer :week
-      t.boolean :mtwrf #no neccessary
-      t.boolean :mwf #no neccessary
-      t.boolean :tr #no neccessary
-      t.boolean :m2
-      t.boolean :m3 #no neccessary
-      t.boolean :t2
-      t.boolean :t3 #no neccessary
-      t.boolean :w2
-      t.boolean :w3 #no neccessary
-      t.boolean :r2
-      t.boolean :r3 #no neccessary
-      t.boolean :f2
-      t.boolean :f3 #no neccessary
-      t.boolean :full #no neccessary
-      t.boolean :half_morning #no neccessary
-      t.boolean :half_afternoon #no neccessary
+      t.string :status #Child age program
+      t.string :program #Summmer or ten month
+      t.string :time #Full day, half day, other half day
+      t.integer :week #5 day, 3 day, 2 day
+      t.boolean :m2 #after school: 2 hours is true, 3 hours if false, day not chosen if nil
+      t.boolean :t2 #after school: 2 hours is true, 3 hours if false, day not chosen if nil
+      t.boolean :w2 #after school: 2 hours is true, 3 hours if false, day not chosen if nil
+      t.boolean :r2 #after school: 2 hours is true, 3 hours if false, day not chosen if nil
+      t.boolean :f2 #after school: 2 hours is true, 3 hours if false, day not chosen if nil
       t.text :comments
       t.boolean :attending_rec
-      t.boolean :w1
-      t.boolean :w2
-      t.boolean :w3
-      t.boolean :w4
-      t.boolean :w5
-      t.boolean :w6
-      t.boolean :w7
-      t.boolean :w8
+      t.boolean :week1 #Summer weeks
+      t.boolean :week2
+      t.boolean :week3
+      t.boolean :week4
+      t.boolean :week5
+      t.boolean :week6
+      t.boolean :week7
+      t.boolean :week8
       t.integer :parent_id
 
       t.timestamps

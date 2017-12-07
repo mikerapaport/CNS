@@ -13,6 +13,8 @@ class ParentsController < ApplicationController
 
     # def index
     #   @parents = Parent.all
+    #   authorize @parents
+    # end
         #Authorize has not yet been added to this function because
         # Sam Burt was not sure who should be authorized to see all users
         #@parent = Parent.find(params[:id])
