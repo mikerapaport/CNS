@@ -3,10 +3,16 @@
 -if flash[:notice]
     %h3= "#{flash[:notice]}"
 
-%table
+%table.parent_table
     %tr
-        %th name
-    %th= link_to("#{@parent.firstname} #{@parent.lastname}", parent_path(x))
+        - if @parents.length > 0
+            %th Name
+        - else
+            %th No parents registered yet
+    -@parents.each do |p|
+        %tr.parent
+            %td.name= link_to("#{p.firstname} #{p.lastname}", parent_path(p))
+    -# %th= link_to("#{@parent.firstname} #{@parent.lastname}", parent_path(x))
 
 -if user_signed_in? && @parent.nil?
     =link_to("Enter parent information here", new_parent_path)
