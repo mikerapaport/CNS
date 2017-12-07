@@ -16,3 +16,15 @@
       = image_tag "banner.jpg"
       = render 'layouts/messages'
       = yield
+    %footer
+      %table.table
+        %tbody
+          %tr
+            %td.address
+              %h4 Chenango Nursery School
+              %p 59 W Kendrick Ave
+              %p Hamilton, NY 13346
+            %td.links
+              = link_to("Home", root_path)
+              %br
+              = link_to("About Us", '/pages/about')

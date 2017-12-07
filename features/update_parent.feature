@@ -13,14 +13,14 @@ Feature: Update an existing parent profile
       | Sam Burt  | samcoburt@gmail.com    | changeme |
 
     Given these Parents:
-      | name      | address              | phone  | cell | email                  | email2 | user_id |
-      | Sam Burt  | 25 Brettwood rd      | 911    |      | samcoburt@gmail.com    |        | 1       |
+      | firstname  | lastname     | street           | city         | state  | zipcode  | phone  | cell | email                  | email2 | user_id |
+      | Sam        | Burt         | 25 Brettwood Rd  | Bayshore     | NY     | 11706    | 911    |      | samcoburt@gmail.com    |        | 1       |
 
 
   Scenario: Update an existing parent
     Given I am on the parents profile page
     Then I should see "Sam Burt"
-    Then I should see "25 Brettwood rd"
+    Then I should see "25 Brettwood Rd, Bayshore, NY, 11706"
     And I should see "911"
     When I follow "Edit Parent Information"
     And I fill in "Primary Phone Number" with "411"

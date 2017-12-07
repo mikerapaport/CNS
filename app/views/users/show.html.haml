@@ -3,8 +3,5 @@
   Name: #{@user.name if @user.name}
 %p
   Email: #{@user.email if @user.email}
-%Parent My Parent Information
-%table
-
-  %tr
-    %td= link_to("#{@parent.firstname} #{@parent.lastname}", parent_path(@parent))
+%p= link_to("My Parent Portal", parent_path(@parent))
+-# %p= link_to("#{@parent.firstname} #{@parent.lastname}", parent_path(@parent))
