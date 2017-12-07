@@ -2,7 +2,7 @@ class ChildrenController < ApplicationController
 
   def new
     @child = Child.new
-    authorize @child.parent.user
+    #authorize @child.parent.user
   end
 
   # def index

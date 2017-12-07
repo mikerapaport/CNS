@@ -2,10 +2,13 @@ wb = xlsx_package.workbook
 
 wb.add_worksheet(name: "Users") do |sheet|
   # this is the head row of your spreadsheet
-  sheet.add_row %w(id user_name user_email parent_firstname parent_lastname parent_street parent_city parent_state parent_zipcode parent_phone parent_cell parent_email parent_email2 child_name)
+  sheet.add_row %w(id user_name user_email parent_firstname parent_lastname parent_street parent_city parent_state parent_zipcode parent_phone parent_cell parent_email parent_email2 child_firstname child_lastname child_dob child_comments child_created_at child updated_at)
 
   # each user is a row on your spreadsheet
   @users.each do |user|
-    sheet.add_row [user.id, user.name, user.email, user.parent.firstname, user.parent.lastname, user.parent.street, user.parent.city, user.parent.state, user.parent.zipcode, user.parent.phone, user.parent.cell, user.parent.email, user.parent.email2, user.parent.children.name]
+    @children = user.parent.children
+    @children.each do |child|
+      sheet.add_row [user.id, user.name, user.email, user.parent.firstname, user.parent.lastname, user.parent.street, user.parent.city, user.parent.state, user.parent.zipcode, user.parent.phone, user.parent.cell, user.parent.email, user.parent.email2, child.firstname, child.lastname, child.dob, child.comments, child.created_at, child.updated_at]
+    end
   end
 end
