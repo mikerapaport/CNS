@@ -3,10 +3,13 @@
 @import "bootstrap";
 
 .welcome {
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+  font-weight: bold;
   text-align: center;
 }
 
 .click{
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
   text-align: center;
 }
 
@@ -54,6 +57,7 @@ main {
   padding-bottom: 30%;
   width: 100%;
   margin-top: 51px; // accommodate the navbar
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
   }
 section {
   @extend .row;
