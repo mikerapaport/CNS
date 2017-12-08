@@ -1,6 +1,6 @@
 =javascript_include_tag 'forms'
 
-#main
+#register
 
   %h1.header Registration
 
@@ -26,14 +26,14 @@
       =c.select :program, options_for_select([["Select a Program", nil], ["10 Month", "10 Month"], ["Summer", "Summer"]], :disabled => [["Select a Program", "Select a Program"], ["10 Month", "10 Month"]])
 
     #infant
-      %h2 Infant 10 Month Registration
+      %h2 Infant 10 Month Program
       =render 'yearly_template', form: c
       .field
         =c.radio_button :time, "12:30 PM - 5:30 PM"
         =c.label :time, "Half Day:  12:30 PM -  5:30 PM", :value=> "12:30 PM - 5:30 PM"
 
     #infant_summer
-      %h2 Infant Summer Registration
+      %h2 Infant Summer Program
       =render 'summer_template', form: c
       .field
         =c.radio_button :time, "12:30 PM - 5:30 PM"
@@ -52,17 +52,18 @@
 
     #afterschool
       =render 'afterschool', form: c
+      %br
       %p Note: Children must be registered for at least 2 days per week and for at least 2 hours per day.
       %p This program is only available for children in grades K - 3.
 
 
     #afterschool_summer
-      %h2 After school Summer Registration
+      %h2 After school Summer Program
       =render 'summer_template', form: c
       %br
       .field
         =c.check_box :attending_rec
-        =c.label :attending_rec, "Is your child attending the Hamilton Summer Rec Program?"
+        =c.label :attending_rec, "Will be attending the Hamilton Summer Rec Program?"
 
     -# .field
     -#   =c.label :address, "Address"
@@ -83,7 +84,7 @@
     -# .field
     -#   =c.label :email2, "Second Email"
     -#   =c.email_field :email_field
-
+    %br
     .field
       =c.label :comments, "Additional Information"
       %br

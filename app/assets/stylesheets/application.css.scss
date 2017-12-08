@@ -67,6 +67,34 @@ footer {
 }
 
 body .parent_table {
+  // padding: 24px;
+  // border-radius: 6px;
+  // background-color: #F5F5F5;
+  // border: 1px solid #E3E3E3;
+  // margin: 0 auto;
   position: relative;
-  padding: 50px;
+  top: 10px;
+  width: 80%;
+  left: 10%;
+  padding: 24px;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+body .children_table {
+  position: relative;
+  top: 10px;
+  width: 80%;
+  left: 10%;
+  padding: 24px;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+body h1 {
+  text-align: center;
+}
+
+body #register h2 {
+  text-align: center;
 }

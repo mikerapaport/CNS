@@ -99,3 +99,16 @@ section {
   @extend .btn-primary;
   @extend .btn-xs;
 }
+
+#register {
+  padding: 24px;
+  border-radius: 6px;
+  background-color: #F5F5F5;
+  border: 1px solid #E3E3E3;
+  // box-sizing: border-box;
+  // top: 10px;
+  width: 30%;
+  // left: 50%;
+  // background-color: #FDF7EB;// #FAEAD1;// #DEFAF5;// #DEFAED; // #90F0C4; // #F0DA90;
+  margin: 0 auto;
+}
