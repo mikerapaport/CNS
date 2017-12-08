@@ -2,7 +2,7 @@ jQuery('#child_program').on('change', function(ev) {
   // console.log(ev.target);
   var selector_val = jQuery('#child_status').val();
   var program_val = jQuery('#child_program').val();
-  if (selector_val == 'Infant') { 
+  if (selector_val == 'Infant') {
     if (program_val == '10 Month'){
       jQuery('#infant').show();
       jQuery('#infant_summer').hide();
@@ -14,6 +14,7 @@ jQuery('#child_program').on('change', function(ev) {
     jQuery('#early_childhood_summer').hide();
     jQuery('#post_pre-k').hide();
     jQuery('#afterschool').hide();
+    jQuery('#afterschool_summer').hide();
   } else if (selector_val == 'Early Childhood') {
     if (program_val == '10 Month'){
       jQuery('#early_childhood').show();
@@ -26,6 +27,7 @@ jQuery('#child_program').on('change', function(ev) {
     jQuery('#infant_summer').hide();
     jQuery('#post_pre-k').hide();
     jQuery('#afterschool').hide();
+    jQuery('#afterschool_summer').hide();
   } else if (selector_val == 'Post HCS Pre-K') {
     if (program_val == '10 Month') {
       jQuery('#post_pre-k').show();

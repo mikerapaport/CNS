@@ -17,6 +17,7 @@ class ChildrenController < ApplicationController
 
   def update
     c = Child.find(params[:id])
+    authorize c.parent.user unless current_user.admin?
     date_of_birth = c.dob
     old_status = c.status
     old_program = c.program
@@ -79,13 +80,9 @@ class ChildrenController < ApplicationController
     @parent = Parent.find(params[:parent_id])
     #@user = @parent.user
     @child = Child.new(create_update_params)
-
-    #@child.parent_id = @parent
+    #authorize @child.parent.user unless current_user.admin?
     @parent.children << @child
-    #authorize @child.parent.user
-    # check validity of what someone filled in
-    # write custom validations before sending person to next form
-    # create custom routes?
+    #byebug
     if @child.save && check_valid_info
       # if !(check_valid_info)
           # redirect_to new_parent_child_path(@parent) and return

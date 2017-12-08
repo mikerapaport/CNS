@@ -32,16 +32,10 @@
         =c.radio_button :time, "12:30 PM - 5:30 PM"
         =c.label :time, "Half Day:  12:30 PM -  5:30 PM", :value=> "12:30 PM - 5:30 PM"
 
-    #infant_summer
-      %h2 Infant Summer Registration
-      =render 'summer_template', form: c
-      .field
-        =c.radio_button :time, "12:30 PM - 5:30 PM"
-        =c.label :time, "Half Day:  12:30 AM -  5:30 PM", :value=> "12:30 PM - 5:30 PM"
-
     #early_childhood
       %h2 Early Childhood 10 Month Program
       =render 'yearly_template', form: c
+
 
     #early_childhood_summer
       %h2 Early Childhood Summer Program
@@ -63,7 +57,13 @@
       .field
         =c.check_box :attending_rec
         =c.label :attending_rec, "Is your child attending the Hamilton Summer Rec Program?"
-
+        
+    #infant_summer
+      %h2 Infant Summer Registration
+      =render 'summer_template', form: c
+      .field
+        =c.radio_button :time, "12:30 PM - 5:30 PM"
+        =c.label :time, "Half Day:  12:30 AM -  5:30 PM", :value=> "12:30 PM - 5:30 PM"
     -# .field
     -#   =c.label :address, "Address"
     -#   =c.text_field :address
