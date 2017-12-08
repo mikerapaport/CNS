@@ -26,26 +26,21 @@
       =c.label :program, "Child Program"
       =c.select :program, options_for_select(["Select a Program", "10 Month", "Summer"], c.object.program)
 
-    #infant
+    #infant_yearly
       %h2 Infant 10 Month Program
-      =render 'yearly_template', form: c
-      .field
-        =c.radio_button :time, "12:30 PM - 5:30 PM"
-        =c.label :time, "Half Day:  12:30 PM -  5:30 PM", :value=> "12:30 PM - 5:30 PM"
-
     #infant_summer
-      %h2 Infant Summer Program
-      =render 'summer_template', form: c
-      .field
-        =c.radio_button :time, "12:30 PM - 5:30 PM"
-        =c.label :time, "Half Day:  12:30 PM -  5:30 PM", :value=> "12:30 PM - 5:30 PM"
-
-    #early_childhood
+      %h2 Infant Summer Registration
+    #early_childhood_yearly
       %h2 Early Childhood 10 Month Program
-      =render 'yearly_template', form: c
-
     #early_childhood_summer
       %h2 Early Childhood Summer Program
+    -# #afterschool_summer
+    -#   %h2 After-school Summer Program
+
+    #yearly
+      =render 'yearly_template', form: c
+
+    #summer
       =render 'summer_template', form: c
 
     #post_pre-k
@@ -53,17 +48,21 @@
 
     #afterschool
       =render 'afterschool', form: c
+      %br
       %p Note: Children must be registered for at least 2 days per week and for at least 2 hours per day.
       %p This program is only available for children in grades K - 3.
 
+    #infant
+      .field
+        =c.radio_button :time, "12:30 PM - 5:30 PM"
+        =c.label :time, "Half Day:  12:30 PM -  5:30 PM", :value=> "12:30 PM - 5:30 PM"
 
     #afterschool_summer
-      %h2 After school Summer Registration
-      =render 'summer_template', form: c
-      %br
+    %br
       .field
         =c.check_box :attending_rec
         =c.label :attending_rec, "Will be attending the Hamilton Summer Rec Program?"
+    
     %br
     .field
       =c.label :comments, "Additional Information"
