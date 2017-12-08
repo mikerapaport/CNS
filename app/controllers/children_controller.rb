@@ -1,7 +1,11 @@
 class ChildrenController < ApplicationController
 
   def new
-    @child = Child.new
+    if user_signed_in?
+      @child = Child.new
+    else
+      redirect_to new_user_registration_path and return
+    end
     #authorize @child.parent.user
   end
 
