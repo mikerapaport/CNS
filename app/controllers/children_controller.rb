@@ -2,6 +2,7 @@ class ChildrenController < ApplicationController
 
   def new
     if user_signed_in?
+      @parent = Parent.find(params[:parent_id])
       @child = Child.new
     else
       redirect_to new_user_registration_path and return
