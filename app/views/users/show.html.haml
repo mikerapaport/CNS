@@ -3,5 +3,5 @@
   Name: #{@user.name if @user.name}
 %p
   Email: #{@user.email if @user.email}
-%p= link_to("My Parent Portal", parent_path(@parent))
+%p= link_to("My Parent Portal", parent_path(@parent), :class => 'btn btn-default')
 -# %p= link_to("#{@parent.firstname} #{@parent.lastname}", parent_path(@parent))

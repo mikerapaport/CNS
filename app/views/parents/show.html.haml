@@ -28,7 +28,7 @@
         %td= "#{@parent.email}"
         %td= "#{@parent.email2}"
 %br
-=link_to("Edit Parent Information", edit_parent_path(@parent))
+=link_to("Edit Parent Information", edit_parent_path(@parent), :class => 'btn btn-default')
 
 %br
 %br
@@ -50,4 +50,4 @@
             %td.status= x.status
             -# %td= x.program
 %br
-=link_to("Register a Child", new_parent_child_path(@parent))
+=link_to("Register a Child", new_parent_child_path(@parent), :class => 'btn btn-default')

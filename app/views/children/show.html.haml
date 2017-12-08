@@ -7,6 +7,8 @@
   %p= "Time enrolled: #{@child.time}"
   %p= "Comments: #{@child.comments}"
 
-  =link_to("Register Child for Another Session", edit_parent_child_path)
   %br
-  =link_to("Back to Parent Page", parent_path(@child.parent_id))
+  =link_to("Register Child for Another Session", edit_parent_child_path, :class => 'btn btn-default')
+  %br
+  %br
+  =link_to("Back to My Parent Portal", parent_path(@child.parent_id), :class => 'btn btn-default')
