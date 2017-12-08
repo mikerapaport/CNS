@@ -1,50 +1,52 @@
-%h1 Create a new parent profile
+%br
+#register
+    %h1 Create a new parent profile
 
-%h2 Please enter your personal information below, this will be used for all of your children
+    %p Please enter your personal information below, this will be used for all of your children
 
-=form_for @parent, :method => :post do |f|
-    .field
-        =f.label :firstname, "First Name"
-        =f.text_field :firstname
+    =form_for @parent, :method => :post do |f|
+        .field
+            =f.label :firstname, "First Name"
+            =f.text_field :firstname
 
-    .field
-        =f.label :lastname, "Last Name"
-        =f.text_field :lastname
+        .field
+            =f.label :lastname, "Last Name"
+            =f.text_field :lastname
 
-    %br
-    Address
-    .field
-        =f.label :street, "Street"
-        =f.text_field :street
+        %br
+        Address
+        .field
+            =f.label :street, "Street"
+            =f.text_field :street
 
-    .field
-        =f.label :city, "City"
-        =f.text_field :city
+        .field
+            =f.label :city, "City"
+            =f.text_field :city
 
-    .field
-        =f.label :state, "State"
-        =f.text_field :state
+        .field
+            =f.label :state, "State"
+            =f.text_field :state
 
-    .field
-        =f.label :zipcode, "Zip Code"
-        =f.number_field :zipcode
+        .field
+            =f.label :zipcode, "Zip Code"
+            =f.number_field :zipcode
 
-    %br
-    .field
-        =f.label :phone, "Primary Phone Number"
-        =f.number_field :phone
+        %br
+        .field
+            =f.label :phone, "Primary Phone Number"
+            =f.number_field :phone
 
-    .field
-        =f.label :cell, "Secondary Phone Number"
-        =f.number_field :cell
+        .field
+            =f.label :cell, "Secondary Phone Number"
+            =f.number_field :cell
 
-    .field
-        =f.label :email, "Primary Email"
-        =f.email_field :email
+        .field
+            =f.label :email, "Primary Email"
+            =f.email_field :email
 
-    .field
-        =f.label :email2, "Secondary Email"
-        =f.email_field :email2
-
-    .field
-        =f.submit
+        .field
+            =f.label :email2, "Secondary Email"
+            =f.email_field :email2
+        %br
+        .field
+            =f.submit :class => 'btn btn-default'
