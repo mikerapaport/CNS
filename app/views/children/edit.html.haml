@@ -1,6 +1,6 @@
 =javascript_include_tag 'forms'
 
-#main
+#register
 
   %h1.header Registration
 
@@ -27,14 +27,14 @@
       =c.select :program, options_for_select(["Select a Program", "10 Month", "Summer"], c.object.program)
 
     #infant
-      %h2 Infant 10 Month Registration
+      %h2 Infant 10 Month Program
       =render 'yearly_template', form: c
       .field
         =c.radio_button :time, "12:30 PM - 5:30 PM"
         =c.label :time, "Half Day:  12:30 PM -  5:30 PM", :value=> "12:30 PM - 5:30 PM"
 
     #infant_summer
-      %h2 Infant Summer Registration
+      %h2 Infant Summer Program
       =render 'summer_template', form: c
       .field
         =c.radio_button :time, "12:30 PM - 5:30 PM"
@@ -63,8 +63,8 @@
       %br
       .field
         =c.check_box :attending_rec
-        =c.label :attending_rec, "Is your child attending the Hamilton Summer Rec Program?"
-
+        =c.label :attending_rec, "Will be attending the Hamilton Summer Rec Program?"
+    %br
     .field
       =c.label :comments, "Additional Information"
       %br
@@ -75,4 +75,7 @@
     -#   =c.text_field :signature
 
     .field
-      =c.submit "Register"
+      =c.submit "Register", :class => 'btn btn-default'
+
+    %br
+    =link_to("Back to Child Info", parent_child_path(@child), :class => 'btn btn-default')

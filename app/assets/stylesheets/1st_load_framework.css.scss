@@ -3,10 +3,13 @@
 @import "bootstrap";
 
 .welcome {
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+  font-weight: bold;
   text-align: center;
 }
 
 .click{
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
   text-align: center;
 }
 
@@ -51,9 +54,10 @@ img {
 main {
   @extend .container;
   background-color: #FFFBE8;
-  padding-bottom: 30%;
+  padding-bottom: 25%;
   width: 100%;
   margin-top: 51px; // accommodate the navbar
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
   }
 section {
   @extend .row;
@@ -94,4 +98,17 @@ section {
   @extend .btn;
   @extend .btn-primary;
   @extend .btn-xs;
+}
+
+#register {
+  padding: 24px;
+  border-radius: 6px;
+  background-color: #F5F5F5;
+  border: 1px solid #E3E3E3;
+  // box-sizing: border-box;
+  // top: 10px;
+  width: 30%;
+  // left: 50%;
+  // background-color: #FDF7EB;// #FAEAD1;// #DEFAF5;// #DEFAED; // #90F0C4; // #F0DA90;
+  margin: 0 auto;
 }

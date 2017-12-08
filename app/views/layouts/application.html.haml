@@ -13,7 +13,7 @@
     %header
       = render 'layouts/navigation'
     %main{:role => "main"}
-      = image_tag "banner.jpg"
+      = image_tag "banner3.jpg"
       = render 'layouts/messages'
       = yield
     %footer
@@ -22,13 +22,13 @@
           %tr
             %td.address
               %h4 Chenango Nursery School
-              %p 59 W Kendrick Ave
+              %p 59 West Kendrick Ave
               %p Hamilton, NY 13346
             %td.links
               %p= link_to("Home", root_path)
               %p= link_to("About Us", '/pages/about')
+              %p= link_to("Contact Us", '/pages/contact')
             %td.contact
               %p Copyright © Chenango Nursery School 2017
-              %p Contact Us
               %p Phone: (315) 824 - 1810
               %p Fax: (315) 824 - 8258
