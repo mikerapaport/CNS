@@ -56,13 +56,13 @@ Feature: Display a child's schedule
     And I should see "T, Th"
     And I should see "Half Day (7:30AM - 12:30PM)"
 
-  Scenario: Child's schedule is edited to remove Friday
-    Given I am on the parents profile page
-    When I follow "Register a Child"
-    When I uncheck the Friday box
-    And I press "Update child"
-    Then I should see "M, T, W, Th"
-    And I should see "Full Day (7:30AM - 5:30PM)"
+  # Scenario: Child's schedule is edited to remove Friday
+  #   Given I am on the parents profile page
+  #   When I follow "Register a Child"
+  #   When I uncheck the Friday box
+  #   And I press "Update child"
+  #   Then I should see "M, T, W, Th"
+  #   And I should see "Full Day (7:30AM - 5:30PM)"
 
   Scenario: Child's schedule is changed from Early Childhood to Post Pre-K
     Given I am on the parents profile page
