@@ -2,7 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 body .parent_table {
-  position: relative;
+  position: fixed;
   top: 10px;
   width: 80%;
   padding: 10px;
@@ -11,7 +11,7 @@ body .parent_table {
 }
 
 body .children_table {
-  position: relative;
+  position: sticky;
   top: 10px;
   width: 60%;
   padding: 10px;

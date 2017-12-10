@@ -6,48 +6,48 @@
 -# -if flash[:notice]
 -#     %h1= "#{flash[:notice]}"
 
-%table.parent_table
+%table
     %caption
         Parent details for
         %span.parent_name= "#{@parent.firstname} #{@parent.lastname}"
 
 
     %tr
-        %th Name
-        %th Home Address
-        %th Primary Phone Number
-        %th Secondary Phone Number
-        %th Primary Email
-        %th Secondary Email
+        %th.parentinfo Name
+        %th.parentinfo Home Address
+        %th.parentinfo Primary Phone Number
+        %th.parentinfo Secondary Phone Number
+        %th.parentinfo Primary Email
+        %th.parentinfo Secondary Email
 
     %tr
-        %td= "#{@parent.firstname} #{@parent.lastname}"
-        %td= "#{@parent.street}, #{@parent.city}, #{@parent.state}, #{@parent.zipcode}"
-        %td= "#{@parent.phone}"
-        %td= "#{@parent.cell}"
-        %td= "#{@parent.email}"
-        %td= "#{@parent.email2}"
+        %td.parentinfo= "#{@parent.firstname} #{@parent.lastname}"
+        %td.parentinfo= "#{@parent.street}, #{@parent.city}, #{@parent.state}, #{@parent.zipcode}"
+        %td.parentinfo= "#{@parent.phone}"
+        %td.parentinfo= "#{@parent.cell}"
+        %td.parentinfo= "#{@parent.email}"
+        %td.parentinfo= "#{@parent.email2}"
 %br
 =link_to("Edit Parent Information", edit_parent_path(@parent), :class => 'btn btn-default')
 
 %br
 %br
-%table.children_table
+%table
     %caption Children
     %tr
         -if @children.length > 0
-            %th Name
-            %th DOB
-            %th Status
+            %th.parentinfo Name
+            %th.parentinfo DOB
+            %th.parentinfo Status
             -#%th Program
         -else
-            %th No children registered yet.
+            %th.parentinfo No children registered yet.
 
     -@children.each do |x|
-        %tr.child
-            %td.name= link_to("#{x.firstname} #{x.lastname}", parent_child_path(@parent, x))
-            %td.dob= x.dob
-            %td.status= x.status
+        %tr.child.parentinfo
+            %td.name.parentinfo= link_to("#{x.firstname} #{x.lastname}", parent_child_path(@parent, x))
+            %td.dob.parentinfo= x.dob
+            %td.status.parentinfo= x.status
             -# %td= x.program
 %br
 =link_to("Register a Child", new_parent_child_path(@parent), :class => 'btn btn-default')
