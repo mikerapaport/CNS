@@ -136,8 +136,8 @@ class ChildrenController < ApplicationController
 
       def check_valid_info()
           child_hash = params[:child]
-          if child_hash[:status] == "Select a Program"
-              flash[:warning] = "Error, need to specify status"
+          if child_hash[:status] == "Select a Program" || child_hash[:status].nil?
+              #flash[:warning] = "Error, need to specify status"
               return false
           end
           return true

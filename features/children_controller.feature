@@ -67,12 +67,11 @@ Feature: Display a child's schedule
   Scenario: Child's schedule is changed from Early Childhood to Post Pre-K
     Given I am on the parents profile page
     When I follow "Joyce B"
-    When I follow "Register child for another session"
+    When I follow "Register Child for Another Session"
     When I select "Post HCS Pre-K" from "Child Status"
     When I select "10 Month" from "Child Program"
     And I press "Register"
     Then I should see "M, W, F"
-    And I should see "Half Day (7:30 AM - 12:30 PM)"
 
   Scenario: Child is registered in five days of after school 10-month program
     Given I am on the parents profile page
