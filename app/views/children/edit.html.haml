@@ -26,14 +26,14 @@
       =c.label :program, "Child Program"
       =c.select :program, options_for_select(["Select a Program", "10 Month", "Summer"], c.object.program)
 
-    #infant_yearly
-      %h2 Infant 10 Month Program
-    #infant_summer
-      %h2 Infant Summer Registration
-    #early_childhood_yearly
-      %h2 Early Childhood 10 Month Program
-    #early_childhood_summer
-      %h2 Early Childhood Summer Program
+    -# #infant_yearly
+    -#   %h2 Infant 10 Month Program
+    -# #infant_summer
+    -#   %h2 Infant Summer Registration
+    -# #early_childhood_yearly
+    -#   %h2 Early Childhood 10 Month Program
+    -# #early_childhood_summer
+    -#   %h2 Early Childhood Summer Program
     -# #afterschool_summer
     -#   %h2 After-school Summer Program
 
@@ -58,11 +58,11 @@
         =c.label :time, "Half Day:  12:30 PM -  5:30 PM", :value=> "12:30 PM - 5:30 PM"
 
     #afterschool_summer
-    %br
+      %br
       .field
         =c.check_box :attending_rec
         =c.label :attending_rec, "Will be attending the Hamilton Summer Rec Program?"
-    
+
     %br
     .field
       =c.label :comments, "Additional Information"
