@@ -5,6 +5,8 @@
   %p= "Enrolled in #{@child.status} #{@child.program}"
   %p= "Days of week enrolled: #{@child.days}"
   %p= "Time enrolled: #{@child.time}"
+  -if @child.week1 || @child.week2 || @child.week3 || @child.week4 || @child.week5 || @child.week6 || @child.week7 || @child.week8
+    %p= "Summer weeks enrolled: #{@child.weeks}"
   %p= "Comments: #{@child.comments}"
 
   %br
