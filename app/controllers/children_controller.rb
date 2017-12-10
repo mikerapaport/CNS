@@ -79,6 +79,35 @@ class ChildrenController < ApplicationController
       @child.days.chop!.chop!
     end
 
+    @child.weeks = ""
+    if @child.week1
+      @child.weeks += "1, "
+    end
+    if @child.week2
+      @child.weeks += "2, "
+    end
+    if @child.week3
+      @child.weeks += "3, "
+    end
+    if @child.week4
+      @child.weeks += "4, "
+    end
+    if @child.week5
+      @child.weeks += "5, "
+    end
+    if @child.week6
+      @child.weeks += "6, "
+    end
+    if @child.week7
+      @child.weeks += "7, "
+    end
+    if @child.week8
+      @child.weeks += "8"
+    end
+    if @child.weeks =~ /, $/
+      @child.weeks.chop!.chop!
+    end
+
   end
 
   def create
