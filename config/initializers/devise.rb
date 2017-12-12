@@ -14,7 +14,7 @@ Devise.setup do |config|
   # with default "from" parameter.
 
   # ERROR HERE when deploying to Heroku: TypeError: no implicit conversion of nil into String
-  # config.mailer_sender = 'no-reply@' + Rails.application.secrets.domain_name
+  config.mailer_sender = 'no-reply@' + Rails.application.secrets.domain_name
 
   # Configure the class responsible to send e-mails.
   # config.mailer = 'Devise::Mailer'
