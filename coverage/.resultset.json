@@ -841,13 +841,32 @@
         1,
         null,
         1,
-        45,
+        36,
         null,
         null,
         null,
         null,
         null,
         1,
+        null,
+        null
+      ],
+      "/Users/mrapaport/Documents/College/4.1/480/CNS/app/models/child.rb": [
+        1,
+        1,
+        1,
+        1,
+        null,
+        null
+      ],
+      "/Users/mrapaport/Documents/College/4.1/480/CNS/app/models/parent.rb": [
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
         null,
         null
       ],
@@ -884,9 +903,9 @@
         1,
         null,
         1,
-        19,
-        19,
-        19,
+        12,
+        12,
+        12,
         null,
         null,
         1,
@@ -946,18 +965,18 @@
         null,
         null,
         1,
-        8,
-        7,
+        5,
+        5,
         null,
         null,
         1,
-        2,
+        0,
         null,
         null,
         null,
         1,
-        2,
-        1,
+        0,
+        0,
         null,
         null,
         null
@@ -1018,17 +1037,6 @@
         null,
         1,
         0,
-        null,
-        null,
-        null
-      ],
-      "/Users/mrapaport/Documents/College/4.1/480/CNS/app/models/parent.rb": [
-        1,
-        1,
-        null,
-        null,
-        1,
-        1,
         null,
         null,
         null
@@ -1465,14 +1473,6 @@
         0,
         0
       ],
-      "/Users/mrapaport/Documents/College/4.1/480/CNS/app/models/child.rb": [
-        0,
-        0,
-        0,
-        0,
-        null,
-        0
-      ],
       "/Users/mrapaport/Documents/College/4.1/480/CNS/app/policies/child_policy.rb": [
         0,
         null,
@@ -1519,6 +1519,6 @@
         0
       ]
     },
-    "timestamp": 1513037159
+    "timestamp": 1513046239
   }
 }

@@ -16,7 +16,10 @@ feature 'User index page', :devise do
   #   When I visit the user index page
   #   Then I see my own email address
   scenario 'user sees own email address' do
+    #fails because parent isn't set up for admin...
     user = FactoryGirl.create(:user, :admin)
+    #user = FactoryGirl.create(:user)
+    # user.parent = Parent.new(firstname: 'admin', lastname:'d', street:'d', city:'d', state:'d', zipcode:'d', phone:'d', email: user.email)
     login_as(user, scope: :user)
     visit users_path
     expect(page).to have_content user.email
