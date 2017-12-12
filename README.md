@@ -22,7 +22,7 @@ This application uses:
 Learn more about [Installing Rails](http://railsapps.github.io/installing-rails.html).
 
 
-Intstallation
+Installation
 -------------
 - Clone the git repo at: https://github.com/mikerapaport/CNS.git
 - Run bundle install to install gems

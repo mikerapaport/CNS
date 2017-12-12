@@ -27,7 +27,7 @@ class ChildrenController < ApplicationController
     old_status = c.status
     old_program = c.program
     c.update(create_update_params)
-    if c.save
+    if c.save && check_valid_info()
       if c.dob != date_of_birth
         # c.dob = date_of_birth
         c.save

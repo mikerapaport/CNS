@@ -92,3 +92,12 @@ Feature: Display a child's schedule
     And I should see "10 Month"
     And I should see "02/14/2011"
     And I should see "M, T, W, Th"
+
+  Scenario: Attempt to reregister child without specifying status
+    Given I am on the parents profile page
+    And I should see "Joe B"
+    When I follow "Joe B"
+    And I follow "Register Child for Another Session"
+    When I select "Select a Program" from "Child Status"
+    And I press "Register"
+    Then I should see "Error registering Joe B"

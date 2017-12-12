@@ -45,6 +45,9 @@ module NavigationHelpers
         when /^the user profile page$/
             user_path(User.find_by($1))
 
+        when /^the update child page$/
+            edit_parent_child_path(Child.find_by($1))
+
     else
       begin
         page_name =~ /^the (.*) page$/
