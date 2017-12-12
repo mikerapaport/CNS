@@ -102,7 +102,7 @@ class ChildrenController < ApplicationController
       @child.weeks += "7, "
     end
     if @child.week8
-      @child.weeks += "8"
+      @child.weeks += "8, "
     end
     if @child.weeks =~ /, $/
       @child.weeks.chop!.chop!
