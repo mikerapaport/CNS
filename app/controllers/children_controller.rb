@@ -27,7 +27,7 @@ class ChildrenController < ApplicationController
     old_status = c.status
     old_program = c.program
     c.update(create_update_params)
-    if c.save
+    if c.save && check_valid_info()
       if c.dob != date_of_birth
         # c.dob = date_of_birth
         c.save
@@ -136,7 +136,7 @@ class ChildrenController < ApplicationController
 
       def check_valid_info()
           child_hash = params[:child]
-          if child_hash[:status] == "Select a Program" || child_hash[:status].nil?
+          if child_hash[:status] == "Select a Program" || child_hash[:status].nil? || child_hash[:program] == "Select a Program" || child_hash[:program].nil?
               #flash[:warning] = "Error, need to specify status"
               return false
           end
