@@ -4,5 +4,6 @@ class Parent < ApplicationRecord
   #has_one :user
   belongs_to :user
   has_many :children
+  # attr_reader :firstname, :lastname
 
 end

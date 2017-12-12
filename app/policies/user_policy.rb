@@ -8,6 +8,7 @@ class UserPolicy < ApplicationPolicy
   end
 
   def show?
+    return false if record.nil?
     record.admin? or user == record
   end
 
@@ -17,7 +18,7 @@ class UserPolicy < ApplicationPolicy
   end
 
   def destroy?
-    return false if record = user
+    return false if record == user
     record.admin?
   end
 

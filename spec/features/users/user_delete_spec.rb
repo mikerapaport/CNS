@@ -25,8 +25,5 @@ feature 'User delete', :devise, :js do
     expect(page).to have_content I18n.t 'devise.registrations.destroyed'
   end
 
+
 end
-
-
-
-
