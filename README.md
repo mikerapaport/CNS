@@ -10,7 +10,19 @@ This project was designed and developed by students at Colgate University.
 
 Project Features
 ----------------
-*for sam to do*
+- Create a user account with an associated username and password.
+- Create a parent account linked to your user account.
+- Register any number of children who will all be associated with your parent account.
+- All associated children will inherit the parents information.
+- Edit and delete all information associated with users, parents and children.
+- While creating or updating the children's information, the form will dynamically
+  generate to only show relevant questions based off of the questions you have
+  already answered.
+- Create an admin account.
+- Give other accounts admin privileges.
+- Export all parent and children information in an easy to read excel document.
+- As an admin, you can view and edit all other users parent and children information.
+
 
 
 Dependencies
